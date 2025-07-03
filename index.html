@@ -2,10 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Home | Wander Prints</title>
+    <title>Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Reset CSS (normalize/reset spacing, margin, box model) -->
+    <!-- Reset CSS -->
     <link rel="stylesheet" href="assets/css/reset.css" />
 
     <!-- Bootstrap 5 -->
@@ -18,40 +18,177 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
 
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <!-- Custom Styles -->
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body>
     <div class="wrapper d-flex flex-column min-vh-100">
-      <!-- ✅ Header -->
+      <!-- Header -->
       <header id="header"></header>
 
-      <!-- ✅ Main Content -->
+      <!-- Main Content -->
       <main class="flex-fill">
         <!-- Hero Banner Section -->
-        <section class="py-5 bg-light text-center">
+        <section class="py-5 text-center">
           <div class="container">
-            <h1 class="mb-3">Welcome to Wander Prints</h1>
-            <p class="lead">
-              Find the perfect personalized gifts for any occasion.
-            </p>
+            <img
+              src="assets/images/banner.png"
+              alt="Hero Banner"
+              class="img-fluid rounded"
+            />
           </div>
         </section>
 
-        <!-- Top Trending Products Section -->
+        <!-- Product Categories Section -->
         <section class="py-5">
-          <div class="container">
-            <h2 class="mb-4">Top Trending Gifts</h2>
-            <div class="row row-cols-1 row-cols-md-3 g-4" id="product-list">
-              <!-- Product Cards will be inserted here -->
+          <div class="container text-center">
+            <h2 class="text-uppercase fw-bolder mb-4 text-color section-product">Product Categories</h2>
+            <div class="swiper category-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="assets/images/Rectangle 7.png" alt="Canvas flag" class="img-fluid rounded mb-2" />
+                  <div class="text-with-img">Canvas flag</div>
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/images/Rectangle 85.png" alt="Poster" class="img-fluid rounded mb-2" />
+                  <div class="text-with-img">Poster</div>
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/images/Rectangle 87.png" alt="Tranh canvas" class="img-fluid rounded mb-2" />
+                  <div class="text-with-img">Tranh canvas</div>
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/images/Rectangle 89.png" alt="Blanket" class="img-fluid rounded mb-2" />
+                  <div class="text-with-img">Blanket</div>
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/images/Rectangle 91.png" alt="Stuffed Animal" class="img-fluid rounded mb-2" />
+                  <div class="text-with-img">Stuffed Animal</div>
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/images/Rectangle 93.png" alt="Stuffed Animal" class="img-fluid rounded mb-2" />
+                  <div class="text-with-img">Stuffed Animal</div>
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/images/Rectangle 89.png" alt="Blanket" class="img-fluid rounded mb-2" />
+                  <div class="text-with-img">Blanket</div>
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/images/Rectangle 91.png" alt="Stuffed Animal" class="img-fluid rounded mb-2" />
+                  <div class="text-with-img">Stuffed Animal</div>
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/images/Rectangle 93.png" alt="Stuffed Animal" class="img-fluid rounded mb-2" />
+                  <div class="text-with-img">Stuffed Animal</div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
+
+        <!-- Hot Trend Section -->
+        <section class="py-5">
+          <div class="container">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <h2 style="margin: 0;" class="text-color text-uppercase fw-bold">Hot Trend</h2>
+              <a href="#" class="btn btn-outline-custom d-flex">Discover all 
+                <i class="bi bi-chevron-right ms-2"></i></a>
+            </div>
+            <div class="row">
+              <!-- Phần bên trái chiếm 25% -->
+              <div class="col-12 col-md-3">
+                <!-- Bạn có thể đặt nội dung hoặc hình ảnh đặc biệt ở đây -->
+                <div class="card card-custom h-100">
+                  <img src="assets/images/Rectangle 13.png" class="card-img-top card-img-fixed" alt="Product" />
+                </div>
+              </div>
+
+              <!-- Phần bên phải chiếm 75% -->
+              <div class="col-12 col-md-9">
+                <div class="row g-3">
+                  <!-- Product Cards -->
+                  <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card card-custom h-100 shadow-sm">
+                      <img src="assets/images/Rectangle 15.png" class="card-img-top" alt="Product" />
+                      <div class="card-body text-start">
+                        <p class="card-text small text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet</p>
+                        <h6 class="fw-bold">$29.99</h6>
+                        <a href="#" class="btn btn-outline-custom btn-sm">Make it Yours <i class="bi bi-chevron-right ms-2"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card card-custom h-100 shadow-sm">
+                      <img src="assets/images/Rectangle 15.png" class="card-img-top" alt="Product" />
+                      <div class="card-body text-start">
+                        <p class="card-text small text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet</p>
+                        <h6 class="fw-bold">$29.99</h6>
+                        <a href="#" class="btn btn-outline-custom btn-sm">Make it Yours <i class="bi bi-chevron-right ms-2"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card card-custom h-100 shadow-sm">
+                      <img src="assets/images/Rectangle 15.png" class="card-img-top" alt="Product" />
+                      <div class="card-body text-start">
+                        <p class="card-text small text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet</p>
+                        <h6 class="fw-bold">$29.99</h6>
+                        <a href="#" class="btn btn-outline-custom btn-sm">Make it Yours <i class="bi bi-chevron-right ms-2"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card card-custom h-100 shadow-sm">
+                      <img src="assets/images/Rectangle 15.png" class="card-img-top" alt="Product" />
+                      <div class="card-body text-start">
+                        <p class="card-text small text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet</p>
+                        <h6 class="fw-bold">$29.99</h6>
+                        <a href="#" class="btn btn-outline-custom btn-sm">Make it Yours <i class="bi bi-chevron-right ms-2"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
       </main>
 
-      <!-- ✅ Footer -->
+      <!-- Footer -->
       <footer id="footer" class="mt-auto"></footer>
     </div>
+
+    <script>
+      const swiper = new Swiper('.category-swiper', {
+        loop: true,
+        speed: 5000,
+        autoplay: {
+          delay: 0,
+          disableOnInteraction: false,
+        },
+        slidesPerView: 5.5,
+        spaceBetween: 16,
+        freeMode: true,
+        freeModeMomentum: false,
+        breakpoints: {
+          768: {
+            slidesPerView: 4,
+          },
+          992: {
+            slidesPerView: 5.5,
+          }
+        }
+      });
+    </script>
 
     <!-- Custom Script -->
     <script src="assets/js/main.js"></script>

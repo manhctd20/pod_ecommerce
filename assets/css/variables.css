@@ -1,5 +1,91 @@
 :root {
-  --primary: #e05d26;
-  --secondary: #fff0e5;
-  --text-color: #333;
+  --font-base: "Montserrat", sans-serif;
+  
+  --primary: #ff5b6b;
+  --secondary: #f59547;
+  --text-color: #ff5b6b;
+
+  --radius: 75px;
+  --transition-fast: all 0.3s ease;
+  --transition-slow: transform 0.4s ease;
+  --shadow-light: 0 6px 16px rgba(0, 0, 0, 0.08);
+  --banner-min-height: 300px;
+  --banner-padding: 40px;
 }
+
+/* Base text color */
+.text-primary-custom {
+  color: var(--primary) !important;
+}
+
+.text-secondary-custom {
+  color: var(--secondary) !important;
+}
+
+/* Background colors */
+.bg-primary-custom {
+  background-color: var(--primary) !important;
+  color: #fff;
+}
+
+.bg-secondary-custom {
+  background-color: var(--secondary) !important;
+  color: #fff;
+}
+
+/* Border */
+.border-primary-custom {
+  border: 1px solid var(--primary) !important;
+}
+
+.border-secondary-custom {
+  border: 1px solid var(--secondary) !important;
+}
+
+/* Button Style */
+.btn-outline-custom {
+  color: var(--text-color);
+  border: 1px solid var(--primary);
+  border-radius: var(--radius);
+  transition: var(--transition-fast);
+}
+
+.btn-outline-custom:hover {
+  color: var(--secondary);
+  border: 1px solid var(--secondary);
+}
+
+/* Custom card with shadow */
+.card-custom {
+  border: none;
+  border-radius: 20px;
+  box-shadow: var(--shadow-light);
+  transition: var(--transition-fast);
+}
+
+.card-custom:hover {
+  transform: translateY(-5px);
+}
+
+/* Rounded utilities */
+.rounded-custom {
+  border-radius: var(--radius) !important;
+}
+
+/* Smooth scale on hover */
+.hover-scale {
+  transition: var(--transition-slow);
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+.card-img-fixed {
+  height: 100%;
+  max-height: 100%; 
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+

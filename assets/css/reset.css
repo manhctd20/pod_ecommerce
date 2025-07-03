@@ -1,4 +1,6 @@
 /* reset.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 *,
 *::before,
 *::after {
@@ -9,9 +11,12 @@
 
 html, body {
   height: 100%;
-  font-family: 'Segoe UI', sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  font-family: var(--font-base) !important;
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
 }
 
 img,
@@ -32,3 +37,11 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+a {
+  transition: 0.2s ease;
+}
+a:hover {
+  color: var(--primary);
+}
+

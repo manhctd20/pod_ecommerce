@@ -1,52 +1,60 @@
 <header class="header shadow-sm">
-  <!-- Promo Top Bar -->
-  <div class="promo-bar d-flex justify-content-between align-items-center px-3 text-white small">
-    <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
-    <span>
-      <img src="https://cdn.shopify.com/static/images/flags/us.svg" width="20" class="me-1" alt="US Flag" />
-      United States
-    </span>
+  <!-- Top Bar (FOMO) -->
+  <div class="promo-bar position-relative text-white small">
+  <!-- Promo message center -->
+    <div class="promo-message position-absolute top-50 start-50 translate-middle text-center">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    </div>
+
+    <!-- Country info right -->
+    <div class="position-absolute top-50 end-0 translate-middle-y d-flex align-items-center gap-2 pe-3 country-info">
+      <img src="https://cdn.shopify.com/static/images/flags/us.svg" width="20" alt="US Flag" />
+      <span>United States</span>
+    </div>
   </div>
 
   <!-- Main Header -->
-  <div class="container py-3">
-    <div class="row align-items-center">
+  <div class="main-header container">
+    <div class="row justify-content-between align-items-center h-100 mt-1">
       <!-- Logo -->
       <div class="col-12 col-md-2 text-center text-md-start mb-3 mb-md-0">
-        <div class="logo text-white fw-bold py-2 px-4 rounded text-center">Logo</div>
+        <div class="logo text-white fw-bold py-2 px-4 rounded">Logo</div>
       </div>
 
       <!-- Search Box -->
-      <div class="col-12 col-md-8">
-        <form class="position-relative">
+      <div class="col-12 col-md-7">
+        <form class="position-relative custom-form-control-focus">
           <input
             type="text"
             class="form-control search-input px-4 py-2 rounded-pill"
             placeholder="Search..."
             aria-label="Search"
           />
-          <button type="submit" class="btn position-absolute top-50 end-0 translate-middle-y me-3 text-primary">
-            <i class="bi bi-search fs-5"></i>
+          <button
+            type="submit"
+            class="btn position-absolute top-50 end-0 translate-middle-y me-3"
+          >
+            <i class="bi bi-search fs-5 text-color"></i>
           </button>
         </form>
       </div>
 
       <!-- Cart & Track -->
       <div class="col-12 col-md-2 text-md-end mt-3 mt-md-0">
-        <a href="#" class="text-primary me-3 text-decoration-none">Track Order</a>
-        <i class="bi bi-cart3 text-primary fs-5"></i>
+        <a href="#" class="me-3 text-decoration-none text-color">Track Order</a>
+        <i class="bi bi-cart3 fs-5 text-color"></i>
       </div>
     </div>
 
     <!-- Navigation -->
-    <div class="row justify-content-center mt-4">
+    <div class="row justify-content-center mb-2">
       <nav class="nav justify-content-center gap-4">
-        <a class="nav-link text-primary fw-semibold px-2" href="#">Shop by Gender</a>
-        <a class="nav-link text-primary fw-semibold px-2" href="#">Keepsakes</a>
-        <a class="nav-link text-primary fw-semibold px-2" href="#">Clothing</a>
-        <a class="nav-link text-primary fw-semibold px-2" href="#">Bedding Set</a>
-        <a class="nav-link text-primary fw-semibold px-2" href="#">Feeding Set</a>
-        <a class="nav-link text-primary fw-semibold px-2" href="#">Blog</a>
+        <a class="nav-link fw-semibold px-2" href="#">Shop by Gender</a>
+        <a class="nav-link fw-semibold px-2" href="#">Keepsakes</a>
+        <a class="nav-link fw-semibold px-2" href="#">Clothing</a>
+        <a class="nav-link fw-semibold px-2" href="#">Bedding Set</a>
+        <a class="nav-link fw-semibold px-2" href="#">Feeding Set</a>
+        <a class="nav-link fw-semibold px-2" href="#">Blog</a>
       </nav>
     </div>
   </div>

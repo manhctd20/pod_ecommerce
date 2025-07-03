@@ -1,43 +1,88 @@
-@import url('variables.css');
+@import url("variables.css");
 
-header .promo-bar {
-  background-color: var(--primary);
-  padding: 0.5rem 0;
+.header {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
+/* Promo bar (FOMO) */
+header .promo-bar {
+  height: 45px;
+  background-color: var(--primary);
+  position: relative;
+  overflow: hidden;
+}
+
+header .promo-message {
+  font-size: 15px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+header .country-info {
+  font-size: 0.875rem;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+/* Main header */
+.main-header {
+  height: 125px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Logo */
 header .logo {
   background-color: var(--primary);
+  color: #fff;
   font-size: 1rem;
+  width: 150px;
+  height: 40px;
+  text-align: center;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
+  display: inline-block;
 }
 
+/* Search */
 header .search-input.form-control {
-  border: 2px solid var(--primary) !important;
+  border: 1px solid var(--primary) !important;
   border-radius: 999px;
-  padding-right: 3rem; /* space for button */
+  padding-right: 3rem;
 }
 
 header .search-input::placeholder {
   color: #bbb;
 }
 
-header .search-btn {
-  position: absolute;
-  top: 50%;
-  right: 8px;
-  transform: translateY(-50%);
-  border: none;
-  background: transparent;
-  color: var(--primary);
-  font-size: 1.2rem;
+header .btn {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
 }
 
-/* Nav link style */
+header .btn:focus,
+header .btn:active,
+header .btn:focus-visible {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.custom-form-control-focus .form-control:focus {
+  box-shadow: none;
+}
+
+/* Nav */
 header .nav-link {
   color: var(--primary);
   font-weight: 600;
 }
 header .nav-link:hover {
   color: var(--secondary);
+}
+
+.text-color {
+  color: var(--primary);
 }
