@@ -2,3 +2,90 @@
 @import url("variables.css");
 @import url("header.css");
 @import url("content.css");
+
+
+.trustpilot-stars i {
+  color: #00b67a;
+  font-size: 1.5rem;
+  margin-right: 4px;
+}
+
+.testimonial-card {
+  border-radius: 12px;
+  padding: 20px;
+  background-color: #fff;
+  height: 100%;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.testimonial-card .name {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.testimonial-card .location {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.testimonial-card .stars i {
+  color: #fbc02d;
+  font-size: 1.2rem;
+}
+
+.testimonial-card .text {
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.testimonial-swiper .swiper-slide {
+  height: auto;
+}
+
+.testimonial-navigation {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  display: flex;
+  gap: 10px;
+}
+
+.testimonial-navigation .btn-nav {
+  width: 36px;
+  height: 36px;
+  background-color: white;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.testimonial-navigation .btn-nav:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+.card-custom {
+  border-radius: 16px;
+  /* overflow: hidden; */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-img-fixed {
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.card-custom .card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}

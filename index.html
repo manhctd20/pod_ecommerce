@@ -19,7 +19,10 @@
     />
 
     <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -48,46 +51,105 @@
         <!-- Product Categories Section -->
         <section class="py-5">
           <div class="container text-center">
-            <h2 class="text-uppercase fw-bolder mb-4 text-color section-product">Product Categories</h2>
-            <div class="swiper category-swiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <img src="assets/images/Rectangle 7.png" alt="Canvas flag" class="img-fluid rounded mb-2" />
-                  <div class="text-with-img">Canvas flag</div>
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/images/Rectangle 85.png" alt="Poster" class="img-fluid rounded mb-2" />
-                  <div class="text-with-img">Poster</div>
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/images/Rectangle 87.png" alt="Tranh canvas" class="img-fluid rounded mb-2" />
-                  <div class="text-with-img">Tranh canvas</div>
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/images/Rectangle 89.png" alt="Blanket" class="img-fluid rounded mb-2" />
-                  <div class="text-with-img">Blanket</div>
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/images/Rectangle 91.png" alt="Stuffed Animal" class="img-fluid rounded mb-2" />
-                  <div class="text-with-img">Stuffed Animal</div>
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/images/Rectangle 93.png" alt="Stuffed Animal" class="img-fluid rounded mb-2" />
-                  <div class="text-with-img">Stuffed Animal</div>
-                </div>
+            <h2
+              class="text-uppercase fw-bolder mb-4 text-color section-product"
+            >
+              Product Categories
+            </h2>
+            <div class="position-relative swiper-category-wrapper">
+              <!-- Swiper -->
+              <div class="swiper category-swiper">
+                <div class="swiper-wrapper">
+                  <!-- Slide -->
+                  <div class="swiper-slide">
+                    <div
+                      class="category-slide rounded overflow-hidden position-relative"
+                    >
+                      <img
+                        src="assets/images/Rectangle 7.png"
+                        class="img-fluid w-100 h-100 object-fit-cover"
+                      />
+                      <div class="overlay-text">Canvas flag</div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div
+                      class="category-slide rounded overflow-hidden position-relative"
+                    >
+                      <img
+                        src="assets/images/Rectangle 85.png"
+                        class="img-fluid w-100 h-100 object-fit-cover"
+                      />
+                      <div class="overlay-text">Poster</div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div
+                      class="category-slide rounded overflow-hidden position-relative"
+                    >
+                      <img
+                        src="assets/images/Rectangle 87.png"
+                        class="img-fluid w-100 h-100 object-fit-cover"
+                      />
+                      <div class="overlay-text">Tranh canvas</div>
+                    </div>
+                  </div>
 
-                <div class="swiper-slide">
-                  <img src="assets/images/Rectangle 89.png" alt="Blanket" class="img-fluid rounded mb-2" />
-                  <div class="text-with-img">Blanket</div>
+                  <div class="swiper-slide">
+                    <div
+                      class="category-slide rounded overflow-hidden position-relative"
+                    >
+                      <img
+                        src="assets/images/Rectangle 89.png"
+                        class="img-fluid w-100 h-100 object-fit-cover"
+                      />
+                      <div class="overlay-text">Blanket</div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div
+                      class="category-slide rounded overflow-hidden position-relative"
+                    >
+                      <img
+                        src="assets/images/Rectangle 91.png"
+                        class="img-fluid w-100 h-100 object-fit-cover"
+                      />
+                      <div class="overlay-text">Stuffed Animal</div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div
+                      class="category-slide rounded overflow-hidden position-relative"
+                    >
+                      <img
+                        src="assets/images/Rectangle 93.png"
+                        class="img-fluid w-100 h-100 object-fit-cover"
+                      />
+                      <div class="overlay-text">Stuffed Animal</div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div
+                      class="category-slide rounded overflow-hidden position-relative"
+                    >
+                      <img
+                        src="assets/images/Rectangle 85.png"
+                        class="img-fluid w-100 h-100 object-fit-cover"
+                      />
+                      <div class="overlay-text">Stuffed Animal</div>
+                    </div>
+                  </div>
                 </div>
-                <div class="swiper-slide">
-                  <img src="assets/images/Rectangle 91.png" alt="Stuffed Animal" class="img-fluid rounded mb-2" />
-                  <div class="text-with-img">Stuffed Animal</div>
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/images/Rectangle 93.png" alt="Stuffed Animal" class="img-fluid rounded mb-2" />
-                  <div class="text-with-img">Stuffed Animal</div>
-                </div>
+              </div>
+
+              <div class="swiper-button-prev category-nav">
+                <i class="bi bi-chevron-left"></i>
+              </div>
+              <div class="swiper-button-next category-nav">
+                <i class="bi bi-chevron-right"></i>
               </div>
             </div>
           </div>
@@ -97,60 +159,222 @@
         <section class="py-5">
           <div class="container">
             <div class="d-flex justify-content-between align-items-center mb-4">
-              <h2 style="margin: 0;" class="text-color text-uppercase fw-bold">Hot Trend</h2>
-              <a href="#" class="btn btn-outline-custom d-flex">Discover all 
-                <i class="bi bi-chevron-right ms-2"></i></a>
+              <h2 class="text-color text-uppercase fw-bold m-0">Hot Trend</h2>
+              <a href="#" class="btn btn-outline-custom d-flex align-items-center">
+                Discover all <i class="bi bi-chevron-right ms-2"></i>
+              </a>
             </div>
-            <div class="row">
-              <!-- Phần bên trái chiếm 25% -->
+
+            <div class="row g-3 align-items-stretch">
+              <!-- Cột ảnh bên trái -->
               <div class="col-12 col-md-3">
-                <!-- Bạn có thể đặt nội dung hoặc hình ảnh đặc biệt ở đây -->
-                <div class="card card-custom h-100">
-                  <img src="assets/images/Rectangle 13.png" class="card-img-top card-img-fixed" alt="Product" />
+                <div style="height: 450px;" class="card card-custom align-items-stretch">
+                  <img
+                    src="assets/images/Rectangle 13.png"
+                    class="card-img-top card-img-fixed"
+                    alt="Product"
+                  />
                 </div>
               </div>
 
-              <!-- Phần bên phải chiếm 75% -->
+              <!-- Cột sản phẩm bên phải -->
               <div class="col-12 col-md-9">
-                <div class="row g-3">
-                  <!-- Product Cards -->
-                  <div class="col-6 col-md-4 col-lg-3">
-                    <div class="card card-custom h-100 shadow-sm">
-                      <img src="assets/images/Rectangle 15.png" class="card-img-top" alt="Product" />
-                      <div class="card-body text-start">
-                        <p class="card-text small text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet</p>
+                <div class="row g-3 h-100 align-items-stretch">
+                  <!-- Product Card -->
+                  <div class="col-6 col-md-4 col-lg-3 d-flex">
+                    <div class="card card-custom w-100 shadow-sm h-100 d-flex flex-column">
+                      <img
+                        src="assets/images/Rectangle 15.png"
+                        class="card-img-top"
+                        alt="Product"
+                      />
+                      <div class="card-body text-start d-flex flex-column flex-grow-1">
+                        <p class="card-text small text-muted flex-grow-1">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet
+                        </p>
                         <h6 class="fw-bold">$29.99</h6>
-                        <a href="#" class="btn btn-outline-custom btn-sm">Make it Yours <i class="bi bi-chevron-right ms-2"></i></a>
+                        <a href="#" class="btn btn-outline-custom btn-sm mt-2">
+                          Make it Yours <i class="bi bi-chevron-right ms-2"></i>
+                        </a>
                       </div>
                     </div>
                   </div>
-                  <div class="col-6 col-md-4 col-lg-3">
-                    <div class="card card-custom h-100 shadow-sm">
-                      <img src="assets/images/Rectangle 15.png" class="card-img-top" alt="Product" />
-                      <div class="card-body text-start">
-                        <p class="card-text small text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet</p>
+
+                  <div class="col-6 col-md-4 col-lg-3 d-flex">
+                    <div class="card card-custom w-100 shadow-sm h-100 d-flex flex-column">
+                      <img
+                        src="assets/images/Rectangle 15.png"
+                        class="card-img-top"
+                        alt="Product"
+                      />
+                      <div class="card-body text-start d-flex flex-column flex-grow-1">
+                        <p class="card-text small text-muted flex-grow-1">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet
+                        </p>
                         <h6 class="fw-bold">$29.99</h6>
-                        <a href="#" class="btn btn-outline-custom btn-sm">Make it Yours <i class="bi bi-chevron-right ms-2"></i></a>
+                        <a href="#" class="btn btn-outline-custom btn-sm mt-2">
+                          Make it Yours <i class="bi bi-chevron-right ms-2"></i>
+                        </a>
                       </div>
                     </div>
                   </div>
-                  <div class="col-6 col-md-4 col-lg-3">
-                    <div class="card card-custom h-100 shadow-sm">
-                      <img src="assets/images/Rectangle 15.png" class="card-img-top" alt="Product" />
-                      <div class="card-body text-start">
-                        <p class="card-text small text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet</p>
+
+                  <div class="col-6 col-md-4 col-lg-3 d-flex">
+                    <div class="card card-custom w-100 shadow-sm h-100 d-flex flex-column">
+                      <img
+                        src="assets/images/Rectangle 15.png"
+                        class="card-img-top"
+                        alt="Product"
+                      />
+                      <div class="card-body text-start d-flex flex-column flex-grow-1">
+                        <p class="card-text small text-muted flex-grow-1">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet
+                        </p>
                         <h6 class="fw-bold">$29.99</h6>
-                        <a href="#" class="btn btn-outline-custom btn-sm">Make it Yours <i class="bi bi-chevron-right ms-2"></i></a>
+                        <a href="#" class="btn btn-outline-custom btn-sm mt-2">
+                          Make it Yours <i class="bi bi-chevron-right ms-2"></i>
+                        </a>
                       </div>
                     </div>
                   </div>
-                  <div class="col-6 col-md-4 col-lg-3">
-                    <div class="card card-custom h-100 shadow-sm">
-                      <img src="assets/images/Rectangle 15.png" class="card-img-top" alt="Product" />
-                      <div class="card-body text-start">
-                        <p class="card-text small text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet</p>
+
+                  <div class="col-6 col-md-4 col-lg-3 d-flex">
+                    <div class="card card-custom w-100 shadow-sm h-100 d-flex flex-column">
+                      <img
+                        src="assets/images/Rectangle 15.png"
+                        class="card-img-top"
+                        alt="Product"
+                      />
+                      <div class="card-body text-start d-flex flex-column flex-grow-1">
+                        <p class="card-text small text-muted flex-grow-1">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet
+                        </p>
                         <h6 class="fw-bold">$29.99</h6>
-                        <a href="#" class="btn btn-outline-custom btn-sm">Make it Yours <i class="bi bi-chevron-right ms-2"></i></a>
+                        <a href="#" class="btn btn-outline-custom btn-sm mt-2">
+                          Make it Yours <i class="bi bi-chevron-right ms-2"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="py-5 bg-light" id="testimonials">
+          <div class="container">
+            <div class="row align-items-center">
+              <!-- Trustpilot info -->
+              <div class="col-md-4 mb-4 mb-md-0 text-center text-md-start">
+                <h2 class="fw-bold text-danger">HAPPY CUSTOMERS</h2>
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Trustpilot_Logo.png/320px-Trustpilot_Logo.png"
+                  alt="Trustpilot logo"
+                  style="max-width: 160px"
+                  class="my-2"
+                />
+                <div class="trustpilot-stars">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+              </div>
+
+              <!-- Swiper testimonials -->
+              <div class="col-md-8 position-relative">
+                <div class="testimonial-navigation">
+                  <div class="btn-nav testimonial-prev">
+                    <i class="bi bi-chevron-left"></i>
+                  </div>
+                  <div class="btn-nav testimonial-next">
+                    <i class="bi bi-chevron-right"></i>
+                  </div>
+                </div>
+
+                <div class="swiper testimonial-swiper">
+                  <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                      <div class="testimonial-card">
+                        <div class="name">Mr. Tom Cruise</div>
+                        <div class="location">from San Francisco</div>
+                        <div class="stars my-2">
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                        </div>
+                        <div class="text">
+                          "Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit. Duis aute irure dolor in reprehenderit in
+                          voluptate velit esse cillum dolore eu fugiat nulla
+                          pariatur."
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                      <div class="testimonial-card">
+                        <div class="name">Ms. Emma Watson</div>
+                        <div class="location">from New York</div>
+                        <div class="stars my-2">
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                        </div>
+                        <div class="text">
+                          "Amazing experience! Fast delivery and quality
+                          products. Highly recommend this shop to everyone!"
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                      <div class="testimonial-card">
+                        <div class="name">Mr. Tom Cruise</div>
+                        <div class="location">from San Francisco</div>
+                        <div class="stars my-2">
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                        </div>
+                        <div class="text">
+                          "Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit. Duis aute irure dolor in reprehenderit in
+                          voluptate velit esse cillum dolore eu fugiat nulla
+                          pariatur."
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                      <div class="testimonial-card">
+                        <div class="name">Ms. Emma Watson</div>
+                        <div class="location">from New York</div>
+                        <div class="stars my-2">
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                        </div>
+                        <div class="text">
+                          "Amazing experience! Fast delivery and quality
+                          products. Highly recommend this shop to everyone!"
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -159,8 +383,6 @@
             </div>
           </div>
         </section>
-
-
       </main>
 
       <!-- Footer -->
@@ -168,25 +390,35 @@
     </div>
 
     <script>
-      const swiper = new Swiper('.category-swiper', {
+      const swiper = new Swiper(".category-swiper", {
         loop: true,
-        speed: 5000,
-        autoplay: {
-          delay: 0,
-          disableOnInteraction: false,
-        },
-        slidesPerView: 5.5,
+        speed: 600,
         spaceBetween: 16,
-        freeMode: true,
+        freeMode: false,
         freeModeMomentum: false,
+        slidesPerGroup: 1,
         breakpoints: {
-          768: {
-            slidesPerView: 4,
-          },
-          992: {
-            slidesPerView: 5.5,
-          }
-        }
+          0: { slidesPerView: 2.5 },
+          768: { slidesPerView: 3.5 },
+          992: { slidesPerView: 5.5 },
+        },
+        navigation: {
+          nextEl: ".swiper-button-prev",
+          prevEl: ".swiper-button-next",
+        },
+      });
+
+      const testimonialSwiper = new Swiper(".testimonial-swiper", {
+        loop: true,
+        spaceBetween: 20,
+        navigation: {
+          nextEl: ".testimonial-next",
+          prevEl: ".testimonial-prev",
+        },
+        breakpoints: {
+          0: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
+        },
       });
     </script>
 
