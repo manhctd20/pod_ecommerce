@@ -1,0 +1,43 @@
+@import url('variables.css');
+
+header .promo-bar {
+  background-color: var(--primary);
+  padding: 0.5rem 0;
+}
+
+header .logo {
+  background-color: var(--primary);
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+}
+
+header .search-input.form-control {
+  border: 2px solid var(--primary) !important;
+  border-radius: 999px;
+  padding-right: 3rem; /* space for button */
+}
+
+header .search-input::placeholder {
+  color: #bbb;
+}
+
+header .search-btn {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  color: var(--primary);
+  font-size: 1.2rem;
+}
+
+/* Nav link style */
+header .nav-link {
+  color: var(--primary);
+  font-weight: 600;
+}
+header .nav-link:hover {
+  color: var(--secondary);
+}
