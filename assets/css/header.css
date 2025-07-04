@@ -24,6 +24,12 @@ header .country-info {
   white-space: nowrap;
 }
 
+.custom-modal .modal-header,
+.custom-modal .modal-footer {
+  border-bottom: none !important;
+  border-top: none !important;
+}
+
 /* Main header */
 .main-header {
   height: 125px;

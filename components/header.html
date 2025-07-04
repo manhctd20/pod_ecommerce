@@ -7,11 +7,56 @@
     </div>
 
     <!-- Country info right -->
-    <div class="position-absolute top-50 end-0 translate-middle-y d-flex align-items-center gap-2 pe-3 country-info">
-      <img src="https://cdn.shopify.com/static/images/flags/us.svg" width="20" alt="US Flag" />
-      <span>United States</span>
+    <div class="position-absolute top-50 end-0 translate-middle-y">
+       <button
+          class="btn btn-link p-0 text-white text-decoration-none  d-flex align-items-center gap-2 pe-3 country-info"
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#shipping"
+        >
+          <img src="https://cdn.shopify.com/static/images/flags/us.svg" width="20" alt="US Flag" />
+          <span>United States</span>
+        </button>
     </div>
   </div>
+
+  <div
+      class="modal fade custom-modal"
+      id="shipping"
+      tabindex="-1"
+      aria-labelledby="shippingModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title w-100 text-center" id="shippingModalLabel">
+              Update Your Preferences
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <select class="form-select">
+              <option selected>Chọn một mục</option>
+              <option value="1">Lựa chọn 1</option>
+              <option value="2">Lựa chọn 2</option>
+              <option value="3">Lựa chọn 3</option>
+            </select>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary-custom w-100">
+              Save changes
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
   <!-- Main Header -->
   <div class="main-header container">

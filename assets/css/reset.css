@@ -45,3 +45,15 @@ a:hover {
   color: var(--primary);
 }
 
+.form-select {
+  cursor: pointer;
+}
+
+.form-select:focus { 
+  box-shadow: none !important;
+  transition: var(--transition-fast);
+}
+
+.btn-close:focus {
+  box-shadow: none !important;
+}
