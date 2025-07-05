@@ -215,7 +215,7 @@
 }
 
 .custom-form-control-focus .form-control::placeholder {
-  color: #8F8F8F;
+  color: #8f8f8f;
 }
 
 .custom-form-control-focus .form-control:focus {
@@ -228,4 +228,111 @@
 
 .footer-style h6 {
   font-size: 18px !important;
+}
+
+/** Product **/
+
+.btn-pink {
+  background-color: var(--text-color);
+  color: white;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.btn-pink:hover {
+  background-color: var(--text-color);
+}
+
+.custom-select-wrapper {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 999px;
+  padding: 6px 10px 6px 16px;
+  background-color: white;
+  font-size: 14px;
+  position: relative;
+  white-space: nowrap;
+}
+
+.custom-select-wrapper:hover {
+  border: 1px solid var(--text-color);
+}
+
+.custom-select-wrapper select {
+  font-weight: normal !important;
+}
+
+.container .sort-by {
+  margin-left: 21px;
+}
+
+.custom-select label {
+  margin-bottom: 0;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.custom-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 0;
+  padding: 6px 30px 6px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* .dropdown-icon {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: white;
+  font-size: 12px;
+} */
+
+.pagination {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.pagination li {
+  display: inline-block;
+}
+
+.page-btn {
+  display: inline-block;
+  padding: 6px 12px;
+  min-width: 32px;
+  text-align: center;
+  color: #f48c8c;
+  background-color: transparent;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.page-btn.active {
+  background-color: #f48c8c;
+  color: white;
+}
+
+.page-btn.disabled {
+  color: #fbcacac2;
+  pointer-events: none;
+}
+
+.page-btn:hover:not(.active):not(.disabled) {
+  background-color: #fcd5d5;
 }

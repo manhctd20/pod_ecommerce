@@ -1,5 +1,5 @@
 /* reset.css */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 *,
 *::before,
@@ -9,7 +9,8 @@
   padding: 0;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -28,7 +29,10 @@ svg {
   max-width: 100%;
 }
 
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
   outline: none;
 }
@@ -49,9 +53,10 @@ a:hover {
   cursor: pointer;
 }
 
-.form-select:focus { 
+.form-select:focus {
   box-shadow: none !important;
   transition: var(--transition-fast);
+  border-color: var(--text-color) !important;
 }
 
 .btn-close:focus {

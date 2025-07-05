@@ -1,0 +1,80 @@
+<script>
+  const products = Array.from({ length: 30 }, (_, i) => ({
+    id: i + 1,
+    name: `Product ${i + 1}`,
+    price: 29.99,
+    img: "assets/images/Rectangle 15.png",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+  }));
+
+  const itemsPerPage = 12;
+  const productContainer = document.getElementById("product-container");
+  const pagination = document.getElementById("pagination");
+
+  // 👉 Lấy số trang từ URL
+  function getPageFromUrl() {
+    const match = window.location.pathname.match(/page-(\d+)/);
+    return match ? parseInt(match[1], 10) : 1;
+  }
+
+  // 👉 Cập nhật URL khi chuyển trang (không reload)
+  function updateUrl(page) {
+    const currentPath = window.location.pathname.split("/page-")[0];
+    const newUrl = `${currentPath}/page-${page}`;
+    history.pushState(null, "", newUrl);
+  }
+
+  function renderProducts(page) {
+    const start = (page - 1) * itemsPerPage;
+    const end = start + itemsPerPage;
+    const items = products.slice(start, end);
+
+    productContainer.innerHTML = items
+      .map(
+        (item) => `
+      <div class="col-6 col-md-4 col-lg-3 d-flex">
+        <div class="card card-custom w-100 shadow-sm h-100 d-flex flex-column">
+          <img src="${item.img}" class="card-img-top" alt="${item.name}" />
+          <div class="card-body text-start d-flex flex-column flex-grow-1">
+            <p class="card-text small text-muted flex-grow-1">${item.desc}</p>
+            <h6 class="fw-bold">$${item.price.toFixed(2)}</h6>
+            <a href="#" class="btn btn-outline-custom btn-sm mt-2">
+              Make it Yours <i class="bi bi-chevron-right ms-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>`
+      )
+      .join("");
+  }
+
+  function renderPagination(currentPage) {
+    const totalPages = Math.ceil(products.length / itemsPerPage);
+    pagination.innerHTML = "";
+
+    for (let i = 1; i <= totalPages; i++) {
+      pagination.innerHTML += `
+        <li class="page-item ${i === currentPage ? "active" : ""}">
+          <a class="page-link" href="/page-${i}" onclick="goToPage(${i}); return false;">${i}</a>
+        </li>`;
+    }
+  }
+
+  function goToPage(page) {
+    renderProducts(page);
+    renderPagination(page);
+    updateUrl(page);
+  }
+
+  // 👉 Khởi tạo ban đầu theo URL
+  const initialPage = getPageFromUrl();
+  renderPagination(initialPage);
+  renderProducts(initialPage);
+
+  // 👉 Hỗ trợ back/forward
+  window.addEventListener("popstate", () => {
+    const currentPage = getPageFromUrl();
+    renderProducts(currentPage);
+    renderPagination(currentPage);
+  });
+</script>
