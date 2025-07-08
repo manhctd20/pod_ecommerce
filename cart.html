@@ -38,40 +38,180 @@
 
       <!-- Main Content -->
       <main class="flex-fill">
-        <section
-          class="py-5"
-          style="
-            background-image: url('assets/images/Rectangle 199.png');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-          "
-        >
-          <div
-            class="container d-flex justify-content-center align-items-center"
-            style="min-height: 405px"
-          >
-            <div class="text-center">
-              <h2 class="fw-bold mb-4">Thank You for Your Order</h2>
-              <div class="mb-4 d-flex justify-content-center align-items-center">
-                <img
-                  src="assets/images/Checkout-success.svg"
-                  alt="Checkout-success"
-                  class="img-fluid"
-                  width="100"
-                  height="100"
-                />
+        <section class="py-5 cart-section">
+          <div class="container">
+            <div class="row g-4 align-items-start">
+              <!-- Cart Item -->
+              <div class="col-lg-7 cart-item">
+                <div class="d-flex bg-white gap-3 cart-card">
+                  <!-- Image -->
+                  <div class="flex-shrink-0 cart-image">
+                    <img
+                      src="assets/images/Rectangle 60.png"
+                      alt="Product"
+                      class="img-fluid rounded"
+                      style="width: 150px; height: auto"
+                    />
+                  </div>
+
+                  <!-- Details -->
+                  <div class="flex-grow-1 cart-details">
+                    <div class="d-flex justify-content-between cart-title">
+                      <h5 class="fw-semibold">
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry
+                      </h5>
+                      <button class="btn-close cart-remove"></button>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <div class="vertical-rounded-bar"></div>
+                      <ul class="list-unstyled mb-2 cart-meta">
+                        <li>
+                          <span class="fw-semibold">Product type:</span> Photo
+                          Frame A
+                        </li>
+                        <li>
+                          <span class="fw-semibold">Material:</span> Wooden
+                        </li>
+                        <li>
+                          <span class="fw-semibold">Color frame:</span> Yellow
+                        </li>
+                      </ul>
+                    </div>
+                    <p
+                      class="text-color-second fw-semibold mb-4 cart-delivery d-flex align-items-center gap-2"
+                    >
+                      <img
+                        src="assets/images/shipping-car-icon.svg"
+                        width="21"
+                        height="21"
+                      />
+                      Est. delivery by Jun 30 (Standard Shipping)
+                    </p>
+
+                    <!-- Quantity and Price -->
+                    <div
+                      class="d-flex align-items-center justify-content-between mt-2 cart-footer"
+                    >
+                      <div
+                        class="input-group cart-quantity"
+                        style="width: 120px"
+                      >
+                        <button class="btn btn-outline-secondary">
+                          <i class="bi bi-dash-lg"></i>
+                        </button>
+                        <input
+                          type="text"
+                          class="form-control text-center"
+                          value="1"
+                          readonly
+                        />
+                        <button class="btn btn-outline-secondary">
+                          <i class="bi bi-plus-lg"></i>
+                        </button>
+                      </div>
+                      <div class="cart-price">
+                        <div>
+                          <span
+                            style="color: #9d9b9b"
+                            class="text-decoration-line-through"
+                            >$34.95</span
+                          >
+                        </div>
+                        <div class="fw-semibold fs-5 text-dark">$29.99 USD</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <p
-                class="mb-0"
-                style="max-width: 600px; margin: 0 auto; font-size: 20px; text-align: left;"
-              >
-                We’ve received your order and sent a confirmation email to
-                <strong>your.email@example.com</strong>. This includes your
-                order details, estimated delivery dates, and tracking
-                information (once available). If you have any questions, we’re
-                here to help!
-              </p>
+
+              <!-- Checkout Summary -->
+              <div class="col-lg-5 cart-summary">
+                <div class="bg-white summary-card">
+                  <div
+                    class="d-flex justify-content-between mb-2 summary-subtotal"
+                  >
+                    <span class="fw-bold"
+                      >Subtotal
+                      <span style="color: #9d9b9b" class="fw-light"
+                        >(1 item)</span
+                      ></span
+                    >
+                    <strong>$29.99 USD</strong>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between mb-3 summary-shipping"
+                  >
+                    <span class="fw-bold"
+                      >Shipping
+                      <span style="color: #9d9b9b" class="fw-light"
+                        >(Standard Shipping)</span
+                      ></span
+                    >
+                    <strong>$6.99 USD</strong>
+                  </div>
+                  <hr />
+                  <div
+                    class="d-flex justify-content-between mb-4 summary-total"
+                  >
+                    <strong>Total</strong>
+                    <strong class="fs-5">$36.98 USD</strong>
+                  </div>
+
+                  <!-- Checkout Button -->
+                  <button
+                    style="background-color: #4bb232"
+                    class="checkout-btn btn w-100 fw-semibold mb-4 summary-checkout"
+                  >
+                    <a class="d-flex align-items-center justify-content-center gap-2"  href="checkout.html">
+                      <img
+                        src="assets/images/fi-sr-lock.svg"
+                        width="21"
+                        height="21"
+                      />
+                      <span class="text-white">SECURE CHECKOUT</span>
+                    </a>
+                  </button>
+                  <div
+                    style="color: #4bb232"
+                    class="fw-semibold d-flex align-items-center justify-content-center gap-2 text-center mb-3 summary-note"
+                  >
+                    <img
+                      src="assets/images/check-security.svg"
+                      width="30"
+                      height="30"
+                    />
+                    Secure Checkout with Buyer Protection
+                  </div>
+                  <hr />
+                  <!-- Payment Methods -->
+                  <h6 class="fw-bold mb-2 summary-payment-title">
+                    Payment Methods
+                  </h6>
+                  <div class="d-flex flex-wrap gap-2 summary-payment-methods">
+                    <img src="assets/images/payments/Paypal.svg" height="38" />
+                    <img
+                      src="assets/images/payments/ApplePay.svg"
+                      height="38"
+                    />
+                    <img src="assets/images/payments/Visa.svg" height="38" />
+                    <img
+                      src="assets/images/payments/Mastercard.svg"
+                      height="38"
+                    />
+                    <img src="assets/images/payments/Amex.svg" height="38" />
+                    <img
+                      src="assets/images/payments/Discover.svg"
+                      height="38"
+                    />
+                    <img src="assets/images/payments/JCB.svg" height="38" />
+                    <img
+                      src="assets/images/payments/UnionPay.svg"
+                      height="38"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>

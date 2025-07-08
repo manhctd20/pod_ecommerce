@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Product | TadaGift</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="assets/css/reset.css" />
+
+    <!-- Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <style>
+      .custom-tab .nav-link {
+        border: none;
+        border-radius: 999px;
+        padding: 6px 16px;
+        color: #333;
+        background-color: #fff;
+        font-weight: 500;
+        transition: all 0.2s;
+      }
+
+      .custom-tab .nav-link.active {
+        background-color: #FF939D;
+        color: #fff;
+      }
+
+      .custom-tab .nav-link.active:hover {
+        background-color: #ffeef0;
+        color: #444444;
+      }
+
+      .custom-tab .nav-link:hover {
+        background-color: #ffeef0;
+      }
+
+      .tab-content img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+
+      .tab-content .col img {
+        border: 1px solid transparent;
+        border-radius: 20px;
+      }
+
+      .tab-content .col div {
+        font-size: 0.875rem;
+      }
+
+      .color-option {
+        cursor: pointer;
+        border: 1px solid transparent;
+        transition: border 0.2s ease;
+        border-radius: 10px;
+      }
+
+      .color-option.active {
+        border: 1px solid #FF939D !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper d-flex flex-column min-vh-100">
+      <!-- Header -->
+      <header id="header"></header>
+
+      <!-- Main Content -->
+      <main class="flex-fill">
+
+        <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+            <!-- Left: Product Image + Gallery -->
+            <div class="col-lg-6">
+                <div class="bg-white rounded p-3 shadow-sm">
+                <img src="assets/images/product-main.jpg" class="img-fluid rounded mb-3 w-100" alt="Main Product Image">
+                <div class="d-flex gap-2 overflow-auto">
+                    <img src="assets/images/thumb1.jpg" class="img-thumbnail" style="width: 70px; height: 70px; object-fit: cover;">
+                    <img src="assets/images/thumb2.jpg" class="img-thumbnail" style="width: 70px; height: 70px; object-fit: cover;">
+                    <img src="assets/images/thumb3.jpg" class="img-thumbnail" style="width: 70px; height: 70px; object-fit: cover;">
+                    <img src="assets/images/thumb4.jpg" class="img-thumbnail" style="width: 70px; height: 70px; object-fit: cover;">
+                </div>
+                </div>
+            </div>
+
+            <!-- Right: Product Info -->
+            <div class="col-lg-6">
+                <h5 class="fw-semibold mb-1">Lorem Ipsum is simply dummy text of the dummy text</h5>
+                <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="text-warning">★★★★★</span>
+                <span class="small">(Sold 99+)</span>
+                </div>
+                <div class="d-flex align-items-center gap-2 mb-2">
+                <h4 class="text-danger m-0">$29.99 USD</h4>
+                <del class="text-muted">$34.95 USD</del>
+                </div>
+
+                <!-- Countdown -->
+                <div class="mb-2 text-danger small">HURRY UP! OFFER ENDS IN:</div>
+                <div id="countdown" class="d-flex gap-2 mb-2">
+                <div class="bg-light px-3 py-2 rounded text-center fw-bold" id="hours">00</div>
+                <div class="bg-light px-3 py-2 rounded text-center fw-bold" id="minutes">00</div>
+                <div class="bg-light px-3 py-2 rounded text-center fw-bold" id="seconds">00</div>
+                </div>
+
+
+                <!-- Delivery -->
+                <p
+                    class="text-color-second mb-4 cart-delivery d-flex align-items-center gap-2"
+                >
+                    <img
+                        src="assets/images/shipping-car-icon.svg"
+                        width="21"
+                        height="21"
+                    />
+                      Est. delivery by Jun 30 (Standard Shipping)
+                </p>
+
+                <!-- Select product -->
+                <h6 class="fw-bold">Select product</h6>
+                <div class="d-flex gap-2 mb-3" id="colorOptions">
+                <div
+                    class="color-option border"
+                    data-value="color1"
+                >  
+                    <img src="assets/images/product-1.png" width="50" height="50" />
+                </div>
+                <div
+                    class="color-option border"
+                    data-value="color2"
+                >
+                <img src="assets/images/product-2.png" width="50" height="50" />
+                </div>
+                </div>
+                <input type="hidden" name="selected_color" id="selectedColor" />
+
+                <!-- Design Collection -->
+                <h6 class="fw-bold">Pick your design</h6>
+                <!-- Tabs -->
+                <ul class="nav custom-tab mb-3" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#collection1" type="button" role="tab">Collection 1</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#collection2" type="button" role="tab">Collection 2</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#collection3" type="button" role="tab">Collection 3</button>
+                </li>
+                </ul>
+
+                <!-- Tabs Content -->
+                <div class="tab-content">
+                <div class="tab-pane fade show active" id="collection1" role="tabpanel">
+                    <div class="row row-cols-3 row-cols-md-5 g-3 text-center">
+                        <div class="col">
+                            <img src="assets/images/Rectangle 41.png" class="img-fluid" />
+                            <div class="small mt-1">Mermaid</div>
+                        </div>
+                        <div class="col">
+                            <img src="assets/images/Rectangle 41 (1).png" class="img-fluid" />
+                            <div class="small mt-1">Spring</div>
+                        </div>
+                        <div class="col">
+                            <img src="assets/images/Rectangle 41 (2).png" class="img-fluid" />
+                            <div class="small mt-1">Summer</div>
+                        </div>
+                        <div class="col">
+                            <img src="assets/images/Rectangle 41 (3).png" class="img-fluid" />
+                            <div class="small mt-1">Winter</div>
+                        </div>
+                        <div class="col">
+                            <img src="assets/images/Rectangle 41 (4).png" class="img-fluid" />
+                            <div class="small mt-1">Autumn</div>
+                        </div>
+                        <div class="col">
+                            <img src="assets/images/Rectangle 41.png" class="img-fluid" />
+                            <div class="small mt-1">Mermaid</div>
+                        </div>
+                        <div class="col">
+                            <img src="assets/images/Rectangle 41 (1).png" class="img-fluid" />
+                            <div class="small mt-1">Spring</div>
+                        </div>
+                        <div class="col">
+                            <img src="assets/images/Rectangle 41 (2).png" class="img-fluid" />
+                            <div class="small mt-1">Summer</div>
+                        </div>
+                        <div class="col">
+                            <img src="assets/images/Rectangle 41 (3).png" class="img-fluid" />
+                            <div class="small mt-1">Winter</div>
+                        </div>
+                        <div class="col">
+                            <img src="assets/images/Rectangle 41 (4).png" class="img-fluid" />
+                            <div class="small mt-1">Autumn</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="collection2" role="tabpanel">
+                    <div class="row row-cols-3 row-cols-md-5 g-3 text-center">
+                        <div class="col">
+                            <img src="assets/images/Rectangle 41.png" class="img-fluid" />
+                            <div class="small mt-1">Mermaid</div>
+                        </div>
+                        <div class="col">
+                            <img src="assets/images/Rectangle 41 (1).png" class="img-fluid" />
+                            <div class="small mt-1">Spring</div>
+                        </div>
+                        <div class="col">
+                            <img src="assets/images/Rectangle 41 (2).png" class="img-fluid" />
+                            <div class="small mt-1">Summer</div>
+                        </div>
+                        <div class="col">
+                            <img src="assets/images/Rectangle 41 (3).png" class="img-fluid" />
+                            <div class="small mt-1">Winter</div>
+                        </div>
+                        <div class="col">
+                            <img src="assets/images/Rectangle 41 (4).png" class="img-fluid" />
+                            <div class="small mt-1">Autumn</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="collection3" role="tabpanel">
+                    <div class="row row-cols-3 row-cols-md-5 g-3 text-center">
+                        <div class="col">
+                            <img src="assets/images/Rectangle 41.png" class="img-fluid" />
+                            <div class="small mt-1">Mermaid</div>
+                        </div>
+                        <div class="col">
+                            <img src="assets/images/Rectangle 41 (1).png" class="img-fluid" />
+                            <div class="small mt-1">Spring</div>
+                        </div>
+                        <div class="col">
+                            <img src="assets/images/Rectangle 41 (2).png" class="img-fluid" />
+                            <div class="small mt-1">Summer</div>
+                        </div>
+                        <div class="col">
+                            <img src="assets/images/Rectangle 41 (3).png" class="img-fluid" />
+                            <div class="small mt-1">Winter</div>
+                        </div>
+                        <div class="col">
+                            <img src="assets/images/Rectangle 41 (4).png" class="img-fluid" />
+                            <div class="small mt-1">Autumn</div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+                <hr/>
+                <!-- Customize Text -->
+                <h6 class="fw-bold">Customize your text</h6>
+                <div class="mb-3">
+                <label class="form-label small">Baby name</label>
+                <input type="text" class="form-control" placeholder="Example: Emma">
+                </div>
+                <div class="mb-4">
+                <label class="form-label small">Enter your wish</label>
+                <input type="text" class="form-control" placeholder="">
+                </div>
+
+                <!-- <button class="btn btn-success w-100 fw-bold py-2">ADD TO CART</button> -->
+            </div>
+            </div>
+        </div>
+        </section>
+
+        <section class="py-5">
+          <div class="container">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <h3 class="text-color text-capitalize fw-bold m-0">
+                Explore more designs
+              </h3>
+            </div>
+
+            <div class="row g-4 align-items-stretch h-100">
+              <!-- Card -->
+              <div class="col-6 col-md-4 col-lg-3 d-flex">
+                <div
+                  class="card card-custom w-100 shadow-sm h-100 d-flex flex-column"
+                >
+                  <img
+                    src="assets/images/Rectangle 15.png"
+                    class="card-img-top"
+                    alt="Product"
+                  />
+                  <div
+                    class="card-body text-start d-flex flex-column flex-grow-1"
+                  >
+                    <p class="card-text small text-muted flex-grow-1">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Lorem ipsum dolor sit amet
+                    </p>
+                    <h6 class="fw-bold">$29.99</h6>
+                    <a href="#" class="btn btn-outline-custom btn-sm mt-2">
+                      Make it Yours <i class="bi bi-chevron-right ms-2"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- Card -->
+              <div class="col-6 col-md-4 col-lg-3 d-flex">
+                <div
+                  class="card card-custom w-100 shadow-sm h-100 d-flex flex-column"
+                >
+                  <img
+                    src="assets/images/Rectangle 15.png"
+                    class="card-img-top"
+                    alt="Product"
+                  />
+                  <div
+                    class="card-body text-start d-flex flex-column flex-grow-1"
+                  >
+                    <p class="card-text small text-muted flex-grow-1">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Lorem ipsum dolor sit amet
+                    </p>
+                    <h6 class="fw-bold">$29.99</h6>
+                    <a href="#" class="btn btn-outline-custom btn-sm mt-2">
+                      Make it Yours <i class="bi bi-chevron-right ms-2"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- Card -->
+              <div class="col-6 col-md-4 col-lg-3 d-flex">
+                <div
+                  class="card card-custom w-100 shadow-sm h-100 d-flex flex-column"
+                >
+                  <img
+                    src="assets/images/Rectangle 15.png"
+                    class="card-img-top"
+                    alt="Product"
+                  />
+                  <div
+                    class="card-body text-start d-flex flex-column flex-grow-1"
+                  >
+                    <p class="card-text small text-muted flex-grow-1">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Lorem ipsum dolor sit amet
+                    </p>
+                    <h6 class="fw-bold">$29.99</h6>
+                    <a href="#" class="btn btn-outline-custom btn-sm mt-2">
+                      Make it Yours <i class="bi bi-chevron-right ms-2"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- Card -->
+              <div class="col-6 col-md-4 col-lg-3 d-flex">
+                <div
+                  class="card card-custom w-100 shadow-sm h-100 d-flex flex-column"
+                >
+                  <img
+                    src="assets/images/Rectangle 15.png"
+                    class="card-img-top"
+                    alt="Product"
+                  />
+                  <div
+                    class="card-body text-start d-flex flex-column flex-grow-1"
+                  >
+                    <p class="card-text small text-muted flex-grow-1">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Lorem ipsum dolor sit amet
+                    </p>
+                    <h6 class="fw-bold">$29.99</h6>
+                    <a href="#" class="btn btn-outline-custom btn-sm mt-2">
+                      Make it Yours <i class="bi bi-chevron-right ms-2"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="py-5">
+          <div class="container">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <h3 class="text-color text-capitalize fw-bold m-0">
+                Recently viewed
+              </h3>
+            </div>
+
+            <div class="row g-4 align-items-stretch h-100">
+              <!-- Card -->
+              <div class="col-6 col-md-4 col-lg-3 d-flex">
+                <div
+                  class="card card-custom w-100 shadow-sm h-100 d-flex flex-column"
+                >
+                  <img
+                    src="assets/images/Rectangle 15.png"
+                    class="card-img-top"
+                    alt="Product"
+                  />
+                  <div
+                    class="card-body text-start d-flex flex-column flex-grow-1"
+                  >
+                    <p class="card-text small text-muted flex-grow-1">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Lorem ipsum dolor sit amet
+                    </p>
+                    <h6 class="fw-bold">$29.99</h6>
+                    <a href="#" class="btn btn-outline-custom btn-sm mt-2">
+                      Make it Yours <i class="bi bi-chevron-right ms-2"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- Card -->
+              <div class="col-6 col-md-4 col-lg-3 d-flex">
+                <div
+                  class="card card-custom w-100 shadow-sm h-100 d-flex flex-column"
+                >
+                  <img
+                    src="assets/images/Rectangle 15.png"
+                    class="card-img-top"
+                    alt="Product"
+                  />
+                  <div
+                    class="card-body text-start d-flex flex-column flex-grow-1"
+                  >
+                    <p class="card-text small text-muted flex-grow-1">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Lorem ipsum dolor sit amet
+                    </p>
+                    <h6 class="fw-bold">$29.99</h6>
+                    <a href="#" class="btn btn-outline-custom btn-sm mt-2">
+                      Make it Yours <i class="bi bi-chevron-right ms-2"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- Card -->
+              <div class="col-6 col-md-4 col-lg-3 d-flex">
+                <div
+                  class="card card-custom w-100 shadow-sm h-100 d-flex flex-column"
+                >
+                  <img
+                    src="assets/images/Rectangle 15.png"
+                    class="card-img-top"
+                    alt="Product"
+                  />
+                  <div
+                    class="card-body text-start d-flex flex-column flex-grow-1"
+                  >
+                    <p class="card-text small text-muted flex-grow-1">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Lorem ipsum dolor sit amet
+                    </p>
+                    <h6 class="fw-bold">$29.99</h6>
+                    <a href="#" class="btn btn-outline-custom btn-sm mt-2">
+                      Make it Yours <i class="bi bi-chevron-right ms-2"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- Card -->
+              <div class="col-6 col-md-4 col-lg-3 d-flex">
+                <div
+                  class="card card-custom w-100 shadow-sm h-100 d-flex flex-column"
+                >
+                  <img
+                    src="assets/images/Rectangle 15.png"
+                    class="card-img-top"
+                    alt="Product"
+                  />
+                  <div
+                    class="card-body text-start d-flex flex-column flex-grow-1"
+                  >
+                    <p class="card-text small text-muted flex-grow-1">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Lorem ipsum dolor sit amet
+                    </p>
+                    <h6 class="fw-bold">$29.99</h6>
+                    <a href="#" class="btn btn-outline-custom btn-sm mt-2">
+                      Make it Yours <i class="bi bi-chevron-right ms-2"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Certificate Section -->
+        <section class="py-4 certificate" style="background-color: #eef1e0">
+          <div class="container">
+            <div class="row g-3 align-items-stretch">
+              <div class="col-12 col-lg-4 mb-4 mb-lg-0">
+                <h2 class="fw-bold text-dark mb-3">
+                  WHY YOU CAN<br />TRUST US
+                </h2>
+                <p class="text-secondary small mb-0">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt Lorem ipsum dolor sit amet,
+                  consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                  Lorem
+                </p>
+              </div>
+              <div class="col-12 col-lg-4 col-md-6">
+                <div class="p-4 bg-white rounded-4 shadow-sm h-100">
+                  <div class="d-flex align-items-center gap-2 mb-3">
+                    <img
+                      src="assets/images/cert-icon.svg"
+                      width="48"
+                      height="72"
+                      alt="icon"
+                    />
+                    <h6 class="fw-bold m-0 ms-1">
+                      Premium <br />Print Quality
+                    </h6>
+                  </div>
+                  <p class="text-secondary small m-0">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt Lorem
+                  </p>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4 col-md-6">
+                <div class="p-4 bg-white rounded-4 shadow-sm h-100">
+                  <div class="d-flex align-items-center gap-2 mb-3">
+                    <img
+                      src="assets/images/global-icon.svg"
+                      width="70"
+                      height="62"
+                      alt="icon"
+                    />
+                    <h6 class="fw-bold m-0 ms-1">
+                      Secure Global <br />Shipping
+                    </h6>
+                  </div>
+                  <p class="text-secondary small m-0">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt Lorem
+                  </p>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4 col-md-6">
+                <div class="p-4 bg-white rounded-4 shadow-sm h-100">
+                  <div class="d-flex align-items-center gap-2 mb-3">
+                    <img
+                      src="assets/images/paypal-icon.svg"
+                      width="78"
+                      height="61"
+                      alt="icon"
+                    />
+                    <h6 class="fw-bold m-0 ms-1">Trusted <br />Payment</h6>
+                  </div>
+                  <p class="text-secondary small m-0">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt Lorem
+                  </p>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4 col-md-6">
+                <div class="p-4 bg-white rounded-4 shadow-sm h-100">
+                  <div class="d-flex align-items-center gap-2 mb-3">
+                    <img
+                      src="assets/images/headset-icon.svg"
+                      width="68"
+                      height="68"
+                      alt="icon"
+                    />
+                    <h6 class="fw-bold m-0 ms-1">
+                      24/7 Friendly <br />Support
+                    </h6>
+                  </div>
+                  <p class="text-secondary small m-0">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt Lorem
+                  </p>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4 col-md-6">
+                <div class="p-4 bg-white rounded-4 shadow-sm h-100">
+                  <div class="d-flex align-items-center gap-2 mb-3">
+                    <img
+                      src="assets/images/heart-icon.svg"
+                      width="60"
+                      height="60"
+                      alt="icon"
+                    />
+                    <h6 class="fw-bold m-0 ms-1">Trustpilot <br />Reviews</h6>
+                  </div>
+                  <p class="text-secondary small m-0">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt Lorem
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Subscribe Section -->
+        <section class="py-5">
+          <div class="container">
+            <div
+              class="position-relative sub-section text-white p-5 d-flex flex-column justify-content-center align-items-center text-center"
+              style="
+                background-image: url('assets/images/Rectangle 79.png');
+                background-size: cover;
+                background-position: center;
+                border-radius: 15px;
+                height: 235px;
+              "
+            >
+              <div style="z-index: 2">
+                <h4 class="fw-bold mb-2 text-white">
+                  Get 10% Off Your First Order
+                </h4>
+                <p class="mb-4 text-white small">
+                  Subscribe to our newsletter and receive a 10% discount code
+                  instantly!
+                </p>
+
+                <form
+                  class="d-flex flex-column flex-md-row custom-form-control-focus align-items-center gap-2 w-100 justify-content-center"
+                >
+                  <input
+                    type="email"
+                    class="form-control rounded-pill px-4 py-2"
+                    placeholder="your.email@gmail.com"
+                    required
+                    style="width: 428px; height: 55px"
+                  />
+                  <button
+                    type="submit"
+                    class="btn btn-pink rounded-pill px-4 py-2"
+                    style="width: 245px; height: 55px"
+                  >
+                    Claim My Discount
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer id="footer" class="mt-auto"></footer>
+    </div>
+
+    <!-- Custom Script -->
+    <script src="assets/js/main.js"></script>
+    <script>
+        const colorOptions = document.querySelectorAll(".color-option");
+        const selectedColorInput = document.getElementById("selectedColor");
+
+        colorOptions.forEach((option) => {
+            option.addEventListener("click", () => {
+            colorOptions.forEach((el) => el.classList.remove("active"));
+            option.classList.add("active");
+            selectedColorInput.value = option.dataset.value;
+            // console.log(option.dataset.value);
+            });
+        });
+
+        const countdownEnd = new Date("2025-07-09T23:59:59").getTime();
+
+        const hoursEl = document.getElementById("hours");
+        const minutesEl = document.getElementById("minutes");
+        const secondsEl = document.getElementById("seconds");
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = countdownEnd - now;
+
+            if (distance < 0) {
+            clearInterval(countdownInterval);
+            document.getElementById("countdown").innerHTML = "<div class='text-danger'>Offer Ended!</div>";
+            return;
+            }
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            hoursEl.innerText = String(hours).padStart(2, "0");
+            minutesEl.innerText = String(minutes).padStart(2, "0");
+            secondsEl.innerText = String(seconds).padStart(2, "0");
+        }
+
+        const countdownInterval = setInterval(updateCountdown, 1000);
+        updateCountdown(); 
+    </script>
+  </body>
+</html>
