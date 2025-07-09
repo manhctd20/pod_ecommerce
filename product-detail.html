@@ -32,27 +32,24 @@
     <link rel="stylesheet" href="assets/css/styles.css" />
     <style>
       .custom-tab .nav-link {
-        border: none;
+        border: 1px solid #d7d7d7;
         border-radius: 999px;
         padding: 6px 16px;
-        color: #333;
+        color: #444444;
         background-color: #fff;
         font-weight: 500;
         transition: all 0.2s;
       }
 
       .custom-tab .nav-link.active {
-        background-color: #FF939D;
+        background-color: #ff939d;
         color: #fff;
+        border: 1px solid #ff939d !important;
       }
 
-      .custom-tab .nav-link.active:hover {
-        background-color: #ffeef0;
-        color: #444444;
-      }
-
-      .custom-tab .nav-link:hover {
-        background-color: #ffeef0;
+      .custom-tab .nav-link:not(.active):hover {
+        color: #ff939d;
+        border: 1px solid #ff939d;
       }
 
       .tab-content img {
@@ -72,14 +69,89 @@
 
       .color-option {
         cursor: pointer;
-        border: 1px solid transparent;
         transition: border 0.2s ease;
         border-radius: 10px;
       }
 
       .color-option.active {
-        border: 1px solid #FF939D !important;
+        border: 1px solid #ff939d !important;
       }
+
+      #countdown div {
+        width: 40px;
+        border-radius: 5px;
+      }
+      .count-time {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+      }
+      .count-time span {
+        font-size: 13px;
+      }
+      .collection-thumb.active {
+        border: 2px solid #ff939d !important;
+      }
+
+      /* Navigation buttons */
+      .swiper-gallery-wrapper {
+        position: relative;
+      }
+
+      .swiper-gallery-wrapper:hover .gallery-nav {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .gallery-nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: white;
+        color: var(--text-color);
+        border: 1px solid var(--text-color);
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s ease;
+        z-index: 2;
+      }
+
+      .swiper-gallery-wrapper .gallery-nav:hover {
+        background-color: var(--text-color);
+        color: white;
+      }
+
+      .swiper-button-prev.gallery-nav {
+        left: -20px;
+      }
+      .swiper-button-next.gallery-nav {
+        right: -20px;
+      }
+
+      .artStyle-nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 36px;
+        height: 36px;
+        cursor: pointer;
+        transition: 0.3s ease;
+        z-index: 2;
+      }
+      .swiperArtStyle-prev.artStyle-nav {
+        left: -35px;
+      }
+      .swiperArtStyle-next.artStyle-nav {
+        right: -35px;
+      }
+
     </style>
   </head>
   <body>
@@ -89,203 +161,464 @@
 
       <!-- Main Content -->
       <main class="flex-fill">
-
         <section class="py-5">
-        <div class="container">
+          <div class="container text-color-second">
             <div class="row g-4">
-            <!-- Left: Product Image + Gallery -->
-            <div class="col-lg-6">
-                <div class="bg-white rounded p-3 shadow-sm">
-                <img src="assets/images/product-main.jpg" class="img-fluid rounded mb-3 w-100" alt="Main Product Image">
-                <div class="d-flex gap-2 overflow-auto">
-                    <img src="assets/images/thumb1.jpg" class="img-thumbnail" style="width: 70px; height: 70px; object-fit: cover;">
-                    <img src="assets/images/thumb2.jpg" class="img-thumbnail" style="width: 70px; height: 70px; object-fit: cover;">
-                    <img src="assets/images/thumb3.jpg" class="img-thumbnail" style="width: 70px; height: 70px; object-fit: cover;">
-                    <img src="assets/images/thumb4.jpg" class="img-thumbnail" style="width: 70px; height: 70px; object-fit: cover;">
+              <!-- Left -->
+              <div class="col-lg-7">
+                <div class="bg-white p-3">
+                  <img
+                    id="mainImage"
+                    src="assets/images/main-img.png"
+                    class="img-fluid mb-3 w-100"
+                    alt="Main Product Image"
+                  />
+                  <div class="position-relative swiper-gallery-wrapper">
+                    <div class="swiper swiper-gallery">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <img
+                            src="assets/images/Rectangle 130.png"
+                            class="img-gallery"
+                            style="object-fit: cover"
+                          />
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            src="assets/images/Rectangle 133.png"
+                            class="img-gallery"
+                            style="object-fit: cover"
+                          />
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            src="assets/images/Rectangle 134.png"
+                            class="img-gallery"
+                            style="object-fit: cover"
+                          />
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            src="assets/images/Rectangle 135.png"
+                            class="img-gallery"
+                            style="object-fit: cover"
+                          />
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            src="assets/images/Rectangle 136.png"
+                            class="img-gallery"
+                            style="object-fit: cover"
+                          />
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            src="assets/images/Rectangle 133.png"
+                            class="img-gallery"
+                            style="object-fit: cover"
+                          />
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            src="assets/images/Rectangle 134.png"
+                            class="img-gallery"
+                            style="object-fit: cover"
+                          />
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            src="assets/images/Rectangle 135.png"
+                            class="img-gallery"
+                            style="object-fit: cover"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-button-prev gallery-prev gallery-nav">
+                      <i class="bi bi-chevron-left"></i>
+                    </div>
+                    <div class="swiper-button-next gallery-next gallery-nav">
+                      <i class="bi bi-chevron-right"></i>
+                    </div>
+                  </div>
                 </div>
-                </div>
-            </div>
 
-            <!-- Right: Product Info -->
-            <div class="col-lg-6">
-                <h5 class="fw-semibold mb-1">Lorem Ipsum is simply dummy text of the dummy text</h5>
+                <hr />
+
+                <!-- Tabs -->
+                <ul class="nav custom-tab mb-3 gap-3" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link active"
+                      data-bs-toggle="tab"
+                      data-bs-target="#description"
+                      type="button"
+                      role="tab"
+                    >
+                      Product Description
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link"
+                      data-bs-toggle="tab"
+                      data-bs-target="#policy"
+                      type="button"
+                      role="tab"
+                    >
+                      Shipping & Returns
+                    </button>
+                  </li>
+                </ul>
+
+                <div class="tab-policy-content"></div>
+              </div>
+
+              <!-- Right -->
+              <div class="col-lg-5">
+                <h5 class="fw-semibold mb-1">
+                  Lorem Ipsum is simply dummy text of the dummy text
+                </h5>
                 <div class="d-flex align-items-center gap-2 mb-2">
-                <span class="text-warning">★★★★★</span>
-                <span class="small">(Sold 99+)</span>
+                  <span class="text-warning">★★★★★</span>
+                  <span class="small">(Sold 99+)</span>
                 </div>
-                <div class="d-flex align-items-center gap-2 mb-2">
-                <h4 class="text-danger m-0">$29.99 USD</h4>
-                <del class="text-muted">$34.95 USD</del>
+                <div class="d-flex align-items-center gap-4 mb-2">
+                  <h4 class="fw-semibold m-0">$29.99 USD</h4>
+                  <del style="color: #9d9b9b" class="">$34.95 USD</del>
                 </div>
 
                 <!-- Countdown -->
-                <div class="mb-2 text-danger small">HURRY UP! OFFER ENDS IN:</div>
-                <div id="countdown" class="d-flex gap-2 mb-2">
-                <div class="bg-light px-3 py-2 rounded text-center fw-bold" id="hours">00</div>
-                <div class="bg-light px-3 py-2 rounded text-center fw-bold" id="minutes">00</div>
-                <div class="bg-light px-3 py-2 rounded text-center fw-bold" id="seconds">00</div>
+                <div class="mb-2 fw-semibold small">
+                  HURRY UP! OFFER ENDS IN:
                 </div>
-
+                <div id="countdown" class="d-flex gap-3 mb-2">
+                  <div class="count-time">
+                    <div
+                      class="bg-secondary-custom px-2 py-3 text-center fw-bold"
+                      id="hours"
+                    >
+                      00
+                    </div>
+                    <span class="small">Hours</span>
+                  </div>
+                  <div class="count-time">
+                    <div
+                      class="bg-secondary-custom px-2 py-3 text-center fw-bold"
+                      id="minutes"
+                    >
+                      00
+                    </div>
+                    <span class="small">Min</span>
+                  </div>
+                  <div class="count-time">
+                    <div
+                      class="bg-secondary-custom px-2 py-3 text-center fw-bold"
+                      id="seconds"
+                    >
+                      00
+                    </div>
+                    <span class="small">Sec</span>
+                  </div>
+                </div>
 
                 <!-- Delivery -->
                 <p
-                    class="text-color-second mb-4 cart-delivery d-flex align-items-center gap-2"
+                  class="text-color-second mb-4 d-flex align-items-center gap-2"
                 >
-                    <img
-                        src="assets/images/shipping-car-icon.svg"
-                        width="21"
-                        height="21"
-                    />
-                      Est. delivery by Jun 30 (Standard Shipping)
+                  <img
+                    src="assets/images/shipping-car-icon.svg"
+                    width="21"
+                    height="21"
+                  />
+                  Est. delivery by Jun 30 (Standard Shipping)
                 </p>
 
                 <!-- Select product -->
                 <h6 class="fw-bold">Select product</h6>
                 <div class="d-flex gap-2 mb-3" id="colorOptions">
-                <div
-                    class="color-option border"
-                    data-value="color1"
-                >  
-                    <img src="assets/images/product-1.png" width="50" height="50" />
-                </div>
-                <div
-                    class="color-option border"
-                    data-value="color2"
-                >
-                <img src="assets/images/product-2.png" width="50" height="50" />
-                </div>
+                  <div class="color-option border" data-value="color1">
+                    <img
+                      src="assets/images/product-1.png"
+                      width="50"
+                      height="50"
+                    />
+                  </div>
+                  <div class="color-option border" data-value="color2">
+                    <img
+                      src="assets/images/product-2.png"
+                      width="50"
+                      height="50"
+                    />
+                  </div>
                 </div>
                 <input type="hidden" name="selected_color" id="selectedColor" />
 
                 <!-- Design Collection -->
                 <h6 class="fw-bold">Pick your design</h6>
                 <!-- Tabs -->
-                <ul class="nav custom-tab mb-3" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#collection1" type="button" role="tab">Collection 1</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#collection2" type="button" role="tab">Collection 2</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#collection3" type="button" role="tab">Collection 3</button>
-                </li>
+                <ul class="nav custom-tab mb-3 gap-3" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link active"
+                      data-bs-toggle="tab"
+                      data-bs-target="#collection1"
+                      type="button"
+                      role="tab"
+                    >
+                      Collection 1
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link"
+                      data-bs-toggle="tab"
+                      data-bs-target="#collection2"
+                      type="button"
+                      role="tab"
+                    >
+                      Collection 2
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link"
+                      data-bs-toggle="tab"
+                      data-bs-target="#collection3"
+                      type="button"
+                      role="tab"
+                    >
+                      Collection 3
+                    </button>
+                  </li>
                 </ul>
 
                 <!-- Tabs Content -->
                 <div class="tab-content">
-                <div class="tab-pane fade show active" id="collection1" role="tabpanel">
+                  <div
+                    class="tab-pane fade show active"
+                    id="collection1"
+                    role="tabpanel"
+                  >
                     <div class="row row-cols-3 row-cols-md-5 g-3 text-center">
-                        <div class="col">
-                            <img src="assets/images/Rectangle 41.png" class="img-fluid" />
-                            <div class="small mt-1">Mermaid</div>
-                        </div>
-                        <div class="col">
-                            <img src="assets/images/Rectangle 41 (1).png" class="img-fluid" />
-                            <div class="small mt-1">Spring</div>
-                        </div>
-                        <div class="col">
-                            <img src="assets/images/Rectangle 41 (2).png" class="img-fluid" />
-                            <div class="small mt-1">Summer</div>
-                        </div>
-                        <div class="col">
-                            <img src="assets/images/Rectangle 41 (3).png" class="img-fluid" />
-                            <div class="small mt-1">Winter</div>
-                        </div>
-                        <div class="col">
-                            <img src="assets/images/Rectangle 41 (4).png" class="img-fluid" />
-                            <div class="small mt-1">Autumn</div>
-                        </div>
-                        <div class="col">
-                            <img src="assets/images/Rectangle 41.png" class="img-fluid" />
-                            <div class="small mt-1">Mermaid</div>
-                        </div>
-                        <div class="col">
-                            <img src="assets/images/Rectangle 41 (1).png" class="img-fluid" />
-                            <div class="small mt-1">Spring</div>
-                        </div>
-                        <div class="col">
-                            <img src="assets/images/Rectangle 41 (2).png" class="img-fluid" />
-                            <div class="small mt-1">Summer</div>
-                        </div>
-                        <div class="col">
-                            <img src="assets/images/Rectangle 41 (3).png" class="img-fluid" />
-                            <div class="small mt-1">Winter</div>
-                        </div>
-                        <div class="col">
-                            <img src="assets/images/Rectangle 41 (4).png" class="img-fluid" />
-                            <div class="small mt-1">Autumn</div>
-                        </div>
+                      <div class="col">
+                        <img
+                          src="assets/images/main-img.png"
+                          class="img-fluid collection-thumb"
+                          data-large="assets/images/main-img.png"
+                        />
+                        <div class="small mt-1">Mermaid</div>
+                      </div>
+                      <div class="col">
+                        <img
+                          src="assets/images/Rectangle 41.png"
+                          class="img-fluid collection-thumb"
+                          data-large="assets/images/Rectangle 41.png"
+                        />
+                        <div class="small mt-1">Spring</div>
+                      </div>
+                      <div class="col">
+                        <img
+                          src="assets/images/Rectangle 41 (2).png"
+                          class="img-fluid collection-thumb"
+                          data-large="assets/images/Rectangle 41 (2).png"
+                        />
+                        <div class="small mt-1">Summer</div>
+                      </div>
+                      <div class="col">
+                        <img
+                          src="assets/images/Rectangle 41 (3).png"
+                          class="img-fluid collection-thumb"
+                          data-large="assets/images/Rectangle 41 (3).png"
+                        />
+                        <div class="small mt-1">Winter</div>
+                      </div>
+                      <div class="col">
+                        <img
+                          src="assets/images/Rectangle 41 (4).png"
+                          class="img-fluid collection-thumb"
+                          data-large="assets/images/Rectangle 41 (4).png"
+                        />
+                        <div class="small mt-1">Autumn</div>
+                      </div>
+
+                      <div class="col">
+                        <img
+                          src="assets/images/Rectangle 41 (1).png"
+                          class="img-fluid collection-thumb"
+                          data-large="assets/images/Rectangle 41 (1).png"
+                        />
+                        <div class="small mt-1">Mermaid</div>
+                      </div>
+                      <div class="col">
+                        <img
+                          src="assets/images/Rectangle 41.png"
+                          class="img-fluid collection-thumb"
+                          data-large="assets/images/Rectangle 41.png"
+                        />
+                        <div class="small mt-1">Spring</div>
+                      </div>
+                      <div class="col">
+                        <img
+                          src="assets/images/Rectangle 41 (2).png"
+                          class="img-fluid collection-thumb"
+                          data-large="assets/images/Rectangle 41 (2).png"
+                        />
+                        <div class="small mt-1">Summer</div>
+                      </div>
+                      <div class="col">
+                        <img
+                          src="assets/images/Rectangle 41 (3).png"
+                          class="img-fluid collection-thumb"
+                          data-large="assets/images/Rectangle 41 (3).png"
+                        />
+                        <div class="small mt-1">Winter</div>
+                      </div>
+                      <div class="col">
+                        <img
+                          src="assets/images/Rectangle 41 (4).png"
+                          class="img-fluid collection-thumb"
+                          data-large="assets/images/Rectangle 41 (4).png"
+                        />
+                        <div class="small mt-1">Autumn</div>
+                      </div>
                     </div>
+                  </div>
+
+                  <div class="tab-pane fade" id="collection2" role="tabpanel">
+                    <div class="row row-cols-3 row-cols-md-5 g-3 text-center">
+                      <div class="col">
+                        <img
+                          src="assets/images/Rectangle 41 (1).png"
+                          class="img-fluid collection-thumb"
+                          data-large="assets/images/main-img.png"
+                        />
+                        <div class="small mt-1">Mermaid</div>
+                      </div>
+                      <div class="col">
+                        <img
+                          src="assets/images/Rectangle 41.png"
+                          class="img-fluid collection-thumb"
+                          data-large="assets/images/Rectangle 41.png"
+                        />
+                        <div class="small mt-1">Spring</div>
+                      </div>
+                      <div class="col">
+                        <img
+                          src="assets/images/Rectangle 41 (2).png"
+                          class="img-fluid collection-thumb"
+                          data-large="assets/images/Rectangle 41 (2).png"
+                        />
+                        <div class="small mt-1">Summer</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="tab-pane fade" id="collection3" role="tabpanel">
+                    <div class="row row-cols-3 row-cols-md-5 g-3 text-center">
+                      <div class="col">
+                        <img
+                          src="assets/images/Rectangle 41 (3).png"
+                          class="img-fluid collection-thumb"
+                          data-large="assets/images/Rectangle 41 (3).png"
+                        />
+                        <div class="small mt-1">Winter</div>
+                      </div>
+                      <div class="col">
+                        <img
+                          src="assets/images/Rectangle 41 (4).png"
+                          class="img-fluid collection-thumb"
+                          data-large="assets/images/Rectangle 41 (4).png"
+                        />
+                        <div class="small mt-1">Autumn</div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
-                <div class="tab-pane fade" id="collection2" role="tabpanel">
-                    <div class="row row-cols-3 row-cols-md-5 g-3 text-center">
-                        <div class="col">
-                            <img src="assets/images/Rectangle 41.png" class="img-fluid" />
-                            <div class="small mt-1">Mermaid</div>
-                        </div>
-                        <div class="col">
-                            <img src="assets/images/Rectangle 41 (1).png" class="img-fluid" />
-                            <div class="small mt-1">Spring</div>
-                        </div>
-                        <div class="col">
-                            <img src="assets/images/Rectangle 41 (2).png" class="img-fluid" />
-                            <div class="small mt-1">Summer</div>
-                        </div>
-                        <div class="col">
-                            <img src="assets/images/Rectangle 41 (3).png" class="img-fluid" />
-                            <div class="small mt-1">Winter</div>
-                        </div>
-                        <div class="col">
-                            <img src="assets/images/Rectangle 41 (4).png" class="img-fluid" />
-                            <div class="small mt-1">Autumn</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tab-pane fade" id="collection3" role="tabpanel">
-                    <div class="row row-cols-3 row-cols-md-5 g-3 text-center">
-                        <div class="col">
-                            <img src="assets/images/Rectangle 41.png" class="img-fluid" />
-                            <div class="small mt-1">Mermaid</div>
-                        </div>
-                        <div class="col">
-                            <img src="assets/images/Rectangle 41 (1).png" class="img-fluid" />
-                            <div class="small mt-1">Spring</div>
-                        </div>
-                        <div class="col">
-                            <img src="assets/images/Rectangle 41 (2).png" class="img-fluid" />
-                            <div class="small mt-1">Summer</div>
-                        </div>
-                        <div class="col">
-                            <img src="assets/images/Rectangle 41 (3).png" class="img-fluid" />
-                            <div class="small mt-1">Winter</div>
-                        </div>
-                        <div class="col">
-                            <img src="assets/images/Rectangle 41 (4).png" class="img-fluid" />
-                            <div class="small mt-1">Autumn</div>
-                        </div>
-                    </div>
-                </div>
-                </div>
-
-                <hr/>
+                <hr />
                 <!-- Customize Text -->
                 <h6 class="fw-bold">Customize your text</h6>
                 <div class="mb-3">
-                <label class="form-label small">Baby name</label>
-                <input type="text" class="form-control" placeholder="Example: Emma">
+                  <label class="form-label small">Baby name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Example: Emma"
+                  />
                 </div>
                 <div class="mb-4">
-                <label class="form-label small">Enter your wish</label>
-                <input type="text" class="form-control" placeholder="">
+                  <label class="form-label small">Enter your wish</label>
+                  <input type="text" class="form-control" placeholder="" />
                 </div>
-
-                <!-- <button class="btn btn-success w-100 fw-bold py-2">ADD TO CART</button> -->
+                <hr />
+                <div class="w-100 d-flex justify-content-center py-2">
+                  <button class="d-flex align-items-center gap-2 btn btn-primary-custom fw-bold py-2">
+                    <i class="bi bi-image" style="font-size: 20px;"></i> Upload your image
+                  </button>
+                </div>
+                
+                <h6 class="fw-bold">Select art style</h6>
+                <div class="position-relative swiper-artStyle-wrapper">
+                  <div class="swiper swiper-artStyle">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <img
+                            src="assets/images/fi-rr-ban.svg"
+                            class="img-gallery border p-3"
+                            style="object-fit: cover;border-radius:10px;"
+                            width="92"
+                            height="92"
+                          />
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            src="assets/images/art-style-1.png"
+                            class="img-gallery"
+                            style="object-fit: cover"
+                          />
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            src="assets/images/art-style-2.png"
+                            class="img-gallery"
+                            style="object-fit: cover"
+                          />
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            src="assets/images/art-style-3.png"
+                            class="img-gallery"
+                            style="object-fit: cover"
+                          />
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            src="assets/images/art-style-1.png"
+                            class="img-gallery"
+                            style="object-fit: cover"
+                          />
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            src="assets/images/art-style-2.png"
+                            class="img-gallery"
+                            style="object-fit: cover"
+                          />
+                        </div>
+                      </div>
+                  </div>
+                  <div class="swiper-button-next swiperArtStyle-prev artStyle-nav">
+                    <img src="assets/images/fi-rr-angle-small-left.svg" height="38" />
+                  </div>
+                  <div class="swiper-button-next swiperArtStyle-next artStyle-nav">
+                    <img src="assets/images/fi-rr-angle-small-right.svg" height="38" />
+                  </div>
+                </div>
+                <hr />
+              </div>
             </div>
-            </div>
-        </div>
+          </div>
         </section>
 
         <section class="py-5">
@@ -679,44 +1012,123 @@
     <!-- Custom Script -->
     <script src="assets/js/main.js"></script>
     <script>
-        const colorOptions = document.querySelectorAll(".color-option");
-        const selectedColorInput = document.getElementById("selectedColor");
+      const colorOptions = document.querySelectorAll(".color-option");
+      const selectedColorInput = document.getElementById("selectedColor");
 
-        colorOptions.forEach((option) => {
-            option.addEventListener("click", () => {
-            colorOptions.forEach((el) => el.classList.remove("active"));
-            option.classList.add("active");
-            selectedColorInput.value = option.dataset.value;
-            // console.log(option.dataset.value);
-            });
+      colorOptions.forEach((option) => {
+        option.addEventListener("click", () => {
+          colorOptions.forEach((el) => el.classList.remove("active"));
+          option.classList.add("active");
+          selectedColorInput.value = option.dataset.value;
+          // console.log(option.dataset.value);
         });
+      });
 
-        const countdownEnd = new Date("2025-07-09T23:59:59").getTime();
+      const countdownEnd = new Date("2025-07-10T09:15:59").getTime();
 
-        const hoursEl = document.getElementById("hours");
-        const minutesEl = document.getElementById("minutes");
-        const secondsEl = document.getElementById("seconds");
+      const hoursEl = document.getElementById("hours");
+      const minutesEl = document.getElementById("minutes");
+      const secondsEl = document.getElementById("seconds");
 
-        function updateCountdown() {
-            const now = new Date().getTime();
-            const distance = countdownEnd - now;
+      function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = countdownEnd - now;
 
-            if (distance < 0) {
-            clearInterval(countdownInterval);
-            document.getElementById("countdown").innerHTML = "<div class='text-danger'>Offer Ended!</div>";
-            return;
-            }
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            hoursEl.innerText = String(hours).padStart(2, "0");
-            minutesEl.innerText = String(minutes).padStart(2, "0");
-            secondsEl.innerText = String(seconds).padStart(2, "0");
+        if (distance < 0) {
+          clearInterval(countdownInterval);
+          document.getElementById("countdown").innerHTML =
+            "<div style='background-color: #ff5b6b; border-radius:20px; text-align:center;padding: 2px 20px;color: #fff'><span>Offer Ended!</span></div>";
+          return;
         }
+        const totalHours = Math.floor(distance / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        const countdownInterval = setInterval(updateCountdown, 1000);
-        updateCountdown(); 
+        hoursEl.innerText = String(totalHours).padStart(2, "0");
+        minutesEl.innerText = String(minutes).padStart(2, "0");
+        secondsEl.innerText = String(seconds).padStart(2, "0");
+      }
+
+      const countdownInterval = setInterval(updateCountdown, 1000);
+      updateCountdown();
+
+      const swiper = new Swiper(".swiper-gallery", {
+        speed: 600,
+        freeMode: false,
+        freeModeMomentum: false,
+        spaceBetween: 10,
+        slidesPerGroup: 1,
+        initialSlide: 0,
+        breakpoints: {
+          0: { slidesPerView: 3 },
+          768: { slidesPerView: 4 },
+          992: { slidesPerView: 5 },
+        },
+        navigation: {
+          nextEl: ".gallery-next",
+          prevEl: ".gallery-prev",
+        },
+      });
+
+      const swiperArtStyle = new Swiper(".swiper-artStyle", {
+        speed: 600,
+        freeMode: false,
+        freeModeMomentum: false,
+        spaceBetween: 8,
+        slidesPerGroup: 1,
+        initialSlide: 0,
+        breakpoints: {
+          0: { slidesPerView: 3 },
+          768: { slidesPerView: 4 },
+          992: { slidesPerView: 5 },
+        },
+        navigation: {
+          nextEl: ".swiperArtStyle-next",
+          prevEl: ".swiperArtStyle-prev",
+        },
+      });
+
+      const mainImage = document.getElementById("mainImage");
+
+      function setActiveImage(thumb) {
+        const newSrc = thumb.getAttribute("data-large");
+        mainImage.setAttribute("src", newSrc);
+
+        document
+          .querySelectorAll(".collection-thumb")
+          .forEach((t) => t.classList.remove("active"));
+
+        thumb.classList.add("active");
+      }
+
+      function bindClickEvents() {
+        document.querySelectorAll(".collection-thumb").forEach((thumb) => {
+          thumb.addEventListener("click", () => setActiveImage(thumb));
+        });
+      }
+
+      const tabButtons = document.querySelectorAll(
+        'button[data-bs-toggle="tab"]'
+      );
+      tabButtons.forEach((btn) => {
+        btn.addEventListener("shown.bs.tab", function (e) {
+          const targetTabId = e.target.getAttribute("data-bs-target");
+          const activeThumb = document
+            .querySelector(targetTabId)
+            .querySelector(".collection-thumb");
+
+          if (activeThumb) setActiveImage(activeThumb);
+        });
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        bindClickEvents();
+
+        const firstThumb = document.querySelector(
+          ".tab-pane.active .collection-thumb"
+        );
+        if (firstThumb) setActiveImage(firstThumb);
+      });
     </script>
   </body>
 </html>

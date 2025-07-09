@@ -8,20 +8,36 @@
 header .promo-bar {
   height: 45px;
   background-color: var(--primary);
-  position: relative;
   overflow: hidden;
+  position: relative;
+  width: 100%;
 }
 
 header .promo-message {
   font-size: 15px;
   font-weight: bold;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   white-space: nowrap;
+  max-width: 60%;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 header .country-info {
   font-size: 0.875rem;
   gap: 6px;
   white-space: nowrap;
+}
+
+.promo-bar .country-info-wrapper {
+  position: absolute;
+  left: 75%;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .custom-modal .modal-header,
