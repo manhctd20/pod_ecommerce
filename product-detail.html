@@ -33,7 +33,7 @@
     <style>
       .custom-tab .nav-link {
         border: 1px solid #d7d7d7;
-        border-radius: 999px;
+        border-radius: 30px;
         padding: 6px 16px;
         color: #444444;
         background-color: #fff;
@@ -52,32 +52,23 @@
         border: 1px solid #ff939d;
       }
 
-      .tab-content img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-      }
-
       .tab-content .col img {
         border: 1px solid transparent;
         border-radius: 20px;
+        cursor: pointer;
       }
 
-      .tab-content .col div {
-        font-size: 0.875rem;
-      }
-
-      .color-option {
+      .product-option {
         cursor: pointer;
         transition: border 0.2s ease;
         border-radius: 10px;
       }
 
-      .color-option.active {
+      .product-option.active {
         border: 1px solid #ff939d !important;
       }
 
-      #countdown div {
+      #countdown .count-time div {
         width: 40px;
         border-radius: 5px;
       }
@@ -146,12 +137,17 @@
         z-index: 2;
       }
       .swiperArtStyle-prev.artStyle-nav {
-        left: -35px;
+        left: -25px;
       }
       .swiperArtStyle-next.artStyle-nav {
-        right: -35px;
+        right: -25px;
       }
 
+      .tab-policy-content {
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 17px 20px;
+      }
     </style>
   </head>
   <body>
@@ -161,17 +157,17 @@
 
       <!-- Main Content -->
       <main class="flex-fill">
-        <section class="py-5">
+        <section class="py-4">
           <div class="container text-color-second">
             <div class="row g-4">
               <!-- Left -->
               <div class="col-lg-7">
-                <div class="bg-white p-3">
+                <div class="bg-white">
                   <img
                     id="mainImage"
                     src="assets/images/main-img.png"
-                    class="img-fluid mb-3 w-100"
-                    alt="Main Product Image"
+                    class="img-fluid mb-3 w-100 radius-15"
+                    alt="Product Image"
                   />
                   <div class="position-relative swiper-gallery-wrapper">
                     <div class="swiper swiper-gallery">
@@ -179,56 +175,56 @@
                         <div class="swiper-slide">
                           <img
                             src="assets/images/Rectangle 130.png"
-                            class="img-gallery"
+                            class="img-gallery radius-15"
                             style="object-fit: cover"
                           />
                         </div>
                         <div class="swiper-slide">
                           <img
                             src="assets/images/Rectangle 133.png"
-                            class="img-gallery"
+                            class="img-gallery radius-15"
                             style="object-fit: cover"
                           />
                         </div>
                         <div class="swiper-slide">
                           <img
                             src="assets/images/Rectangle 134.png"
-                            class="img-gallery"
+                            class="img-gallery radius-15"
                             style="object-fit: cover"
                           />
                         </div>
                         <div class="swiper-slide">
                           <img
                             src="assets/images/Rectangle 135.png"
-                            class="img-gallery"
+                            class="img-gallery radius-15"
                             style="object-fit: cover"
                           />
                         </div>
                         <div class="swiper-slide">
                           <img
                             src="assets/images/Rectangle 136.png"
-                            class="img-gallery"
+                            class="img-gallery radius-15"
                             style="object-fit: cover"
                           />
                         </div>
                         <div class="swiper-slide">
                           <img
                             src="assets/images/Rectangle 133.png"
-                            class="img-gallery"
+                            class="img-gallery radius-15"
                             style="object-fit: cover"
                           />
                         </div>
                         <div class="swiper-slide">
                           <img
                             src="assets/images/Rectangle 134.png"
-                            class="img-gallery"
+                            class="img-gallery radius-15"
                             style="object-fit: cover"
                           />
                         </div>
                         <div class="swiper-slide">
                           <img
                             src="assets/images/Rectangle 135.png"
-                            class="img-gallery"
+                            class="img-gallery radius-15"
                             style="object-fit: cover"
                           />
                         </div>
@@ -271,7 +267,75 @@
                   </li>
                 </ul>
 
-                <div class="tab-policy-content"></div>
+                <div class="tab-content tab-policy-content"> 
+                  <div class="tab-pane fade show active" id="description" role="tabpanel">
+                    <div>
+                      <div>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet tortor vitae eros
+                          porttitor tincidunt. Integer tempor tristique purus, quis ornare ante sodales at. Maecenas ac odio
+                          cursus, condimentum ex non, auctor magna. Morbi turpis nunc, placerat vitae nulla vel, ultricies
+                          sagittis mi. Suspendisse potenti. Vestibulum non sem id sem rhoncus imperdiet non sit amet dui.
+                          Integer a cursus mi. Donec vel enim id nibh elementum ultricies. Donec vehicula arcu at ipsum
+                          sagittis pellentesque. Nulla venenatis mi eget lacus condimentum feugiat. Proin porttitor at sapien
+                          sit amet vulputate. Morbi felis mi, viverra quis ultricies eu, blandit nec massa.
+                        </p>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet tortor vitae eros
+                          porttitor tincidunt. Integer tempor tristique purus, quis ornare ante sodales at. Maecenas ac odio
+                          cursus, condimentum ex non, auctor magna. Morbi turpis nunc, placerat vitae nulla vel, ultricies
+                          sagittis mi. Suspendisse potenti. Vestibulum non sem id sem rhoncus imperdiet non sit amet dui.
+                          Integer a cursus mi. Donec vel enim id nibh elementum ultricies. Donec vehicula arcu at ipsum
+                          sagittis pellentesque. Nulla venenatis mi eget lacus condimentum feugiat. Proin porttitor at sapien
+                          sit amet vulputate. Morbi felis mi, viverra quis ultricies eu, blandit nec massa.
+                        </p>
+                      </div>
+                      <div class="d-flex justify-content-center mb-4">
+                        <img
+                          src="assets/images/Rectangle 55.png"
+                          alt="Image"
+                          width="400"
+                          height="400"
+                        />
+                      </div>
+                      <div>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet tortor vitae eros
+                          porttitor tincidunt. Integer tempor tristique purus, quis ornare ante sodales at. Maecenas ac odio
+                          cursus, condimentum ex non, auctor magna. Morbi turpis nunc, placerat vitae nulla vel, ultricies
+                          sagittis mi. Suspendisse potenti. Vestibulum non sem id sem rhoncus imperdiet non sit amet dui.
+                          Integer a cursus mi. Donec vel enim id nibh elementum ultricies. Donec vehicula arcu at ipsum
+                          sagittis pellentesque. Nulla venenatis mi eget lacus condimentum feugiat. Proin porttitor at sapien
+                          sit amet vulputate. Morbi felis mi, viverra quis ultricies eu, blandit nec massa.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="tab-pane fade" id="policy" role="tabpanel">
+                    <div>
+                      <div>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet tortor vitae eros
+                          porttitor tincidunt. Integer tempor tristique purus, quis ornare ante sodales at. Maecenas ac odio
+                          cursus, condimentum ex non, auctor magna. Morbi turpis nunc, placerat vitae nulla vel, ultricies
+                          sagittis mi. Suspendisse potenti. Vestibulum non sem id sem rhoncus imperdiet non sit amet dui.
+                          Integer a cursus mi. Donec vel enim id nibh elementum ultricies. Donec vehicula arcu at ipsum
+                          sagittis pellentesque. Nulla venenatis mi eget lacus condimentum feugiat. Proin porttitor at sapien
+                          sit amet vulputate. Morbi felis mi, viverra quis ultricies eu, blandit nec massa.
+                        </p>
+                      </div>
+                      <div class="d-flex justify-content-center mb-4">
+                        <img
+                          src="assets/images/Rectangle 55.png"
+                          alt="Image"
+                          width="400"
+                          height="400"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
 
               <!-- Right -->
@@ -280,8 +344,14 @@
                   Lorem Ipsum is simply dummy text of the dummy text
                 </h5>
                 <div class="d-flex align-items-center gap-2 mb-2">
-                  <span class="text-warning">★★★★★</span>
-                  <span class="small">(Sold 99+)</span>
+                  <div class="d-flex gap-1">
+                    <img src="assets/images/star-icon.svg" height="22" />
+                    <img src="assets/images/star-icon.svg" height="22" />
+                    <img src="assets/images/star-icon.svg" height="22" />
+                    <img src="assets/images/star-icon.svg" height="22" />
+                    <img src="assets/images/star-icon.svg" height="22" />
+                  </div>
+                  <span class="fw-semibold small">(Sold 99+)</span>
                 </div>
                 <div class="d-flex align-items-center gap-4 mb-2">
                   <h4 class="fw-semibold m-0">$29.99 USD</h4>
@@ -337,14 +407,14 @@
                 <!-- Select product -->
                 <h6 class="fw-bold">Select product</h6>
                 <div class="d-flex gap-2 mb-3" id="colorOptions">
-                  <div class="color-option border" data-value="color1">
+                  <div class="product-option border" data-value="color1">
                     <img
                       src="assets/images/product-1.png"
                       width="50"
                       height="50"
                     />
                   </div>
-                  <div class="color-option border" data-value="color2">
+                  <div class="product-option border" data-value="color2">
                     <img
                       src="assets/images/product-2.png"
                       width="50"
@@ -404,7 +474,7 @@
                       <div class="col">
                         <img
                           src="assets/images/main-img.png"
-                          class="img-fluid collection-thumb"
+                          class="img-fluid collection-thumb radius-15"
                           data-large="assets/images/main-img.png"
                         />
                         <div class="small mt-1">Mermaid</div>
@@ -412,7 +482,7 @@
                       <div class="col">
                         <img
                           src="assets/images/Rectangle 41.png"
-                          class="img-fluid collection-thumb"
+                          class="img-fluid collection-thumb radius-15"
                           data-large="assets/images/Rectangle 41.png"
                         />
                         <div class="small mt-1">Spring</div>
@@ -420,7 +490,7 @@
                       <div class="col">
                         <img
                           src="assets/images/Rectangle 41 (2).png"
-                          class="img-fluid collection-thumb"
+                          class="img-fluid collection-thumb radius-15"
                           data-large="assets/images/Rectangle 41 (2).png"
                         />
                         <div class="small mt-1">Summer</div>
@@ -428,7 +498,7 @@
                       <div class="col">
                         <img
                           src="assets/images/Rectangle 41 (3).png"
-                          class="img-fluid collection-thumb"
+                          class="img-fluid collection-thumb radius-15"
                           data-large="assets/images/Rectangle 41 (3).png"
                         />
                         <div class="small mt-1">Winter</div>
@@ -436,7 +506,7 @@
                       <div class="col">
                         <img
                           src="assets/images/Rectangle 41 (4).png"
-                          class="img-fluid collection-thumb"
+                          class="img-fluid collection-thumb radius-15"
                           data-large="assets/images/Rectangle 41 (4).png"
                         />
                         <div class="small mt-1">Autumn</div>
@@ -445,7 +515,7 @@
                       <div class="col">
                         <img
                           src="assets/images/Rectangle 41 (1).png"
-                          class="img-fluid collection-thumb"
+                          class="img-fluid collection-thumb radius-15"
                           data-large="assets/images/Rectangle 41 (1).png"
                         />
                         <div class="small mt-1">Mermaid</div>
@@ -453,7 +523,7 @@
                       <div class="col">
                         <img
                           src="assets/images/Rectangle 41.png"
-                          class="img-fluid collection-thumb"
+                          class="img-fluid collection-thumb radius-15"
                           data-large="assets/images/Rectangle 41.png"
                         />
                         <div class="small mt-1">Spring</div>
@@ -461,7 +531,7 @@
                       <div class="col">
                         <img
                           src="assets/images/Rectangle 41 (2).png"
-                          class="img-fluid collection-thumb"
+                          class="img-fluid collection-thumb radius-15"
                           data-large="assets/images/Rectangle 41 (2).png"
                         />
                         <div class="small mt-1">Summer</div>
@@ -469,7 +539,7 @@
                       <div class="col">
                         <img
                           src="assets/images/Rectangle 41 (3).png"
-                          class="img-fluid collection-thumb"
+                          class="img-fluid collection-thumb radius-15"
                           data-large="assets/images/Rectangle 41 (3).png"
                         />
                         <div class="small mt-1">Winter</div>
@@ -477,7 +547,7 @@
                       <div class="col">
                         <img
                           src="assets/images/Rectangle 41 (4).png"
-                          class="img-fluid collection-thumb"
+                          class="img-fluid collection-thumb radius-15"
                           data-large="assets/images/Rectangle 41 (4).png"
                         />
                         <div class="small mt-1">Autumn</div>
@@ -490,7 +560,7 @@
                       <div class="col">
                         <img
                           src="assets/images/Rectangle 41 (1).png"
-                          class="img-fluid collection-thumb"
+                          class="img-fluid collection-thumb radius-15"
                           data-large="assets/images/main-img.png"
                         />
                         <div class="small mt-1">Mermaid</div>
@@ -498,7 +568,7 @@
                       <div class="col">
                         <img
                           src="assets/images/Rectangle 41.png"
-                          class="img-fluid collection-thumb"
+                          class="img-fluid collection-thumb radius-15"
                           data-large="assets/images/Rectangle 41.png"
                         />
                         <div class="small mt-1">Spring</div>
@@ -506,7 +576,7 @@
                       <div class="col">
                         <img
                           src="assets/images/Rectangle 41 (2).png"
-                          class="img-fluid collection-thumb"
+                          class="img-fluid collection-thumb radius-15"
                           data-large="assets/images/Rectangle 41 (2).png"
                         />
                         <div class="small mt-1">Summer</div>
@@ -519,7 +589,7 @@
                       <div class="col">
                         <img
                           src="assets/images/Rectangle 41 (3).png"
-                          class="img-fluid collection-thumb"
+                          class="img-fluid collection-thumb radius-15"
                           data-large="assets/images/Rectangle 41 (3).png"
                         />
                         <div class="small mt-1">Winter</div>
@@ -527,7 +597,7 @@
                       <div class="col">
                         <img
                           src="assets/images/Rectangle 41 (4).png"
-                          class="img-fluid collection-thumb"
+                          class="img-fluid collection-thumb radius-15"
                           data-large="assets/images/Rectangle 41 (4).png"
                         />
                         <div class="small mt-1">Autumn</div>
@@ -540,88 +610,214 @@
                 <!-- Customize Text -->
                 <h6 class="fw-bold">Customize your text</h6>
                 <div class="mb-3">
-                  <label class="form-label small">Baby name</label>
+                  <label class="form-label fw-semibold">Baby name</label>
                   <input
                     type="text"
-                    class="form-control"
+                    class="form-control custom-form "
                     placeholder="Example: Emma"
                   />
                 </div>
                 <div class="mb-4">
-                  <label class="form-label small">Enter your wish</label>
-                  <input type="text" class="form-control" placeholder="" />
+                  <label class="form-label fw-semibold">Enter your wish</label>
+                  <input type="text" class="form-control custom-form " placeholder="Lorem ipsum is simply" />
                 </div>
                 <hr />
                 <div class="w-100 d-flex justify-content-center py-2">
-                  <button class="d-flex align-items-center gap-2 btn btn-primary-custom fw-bold py-2">
-                    <i class="bi bi-image" style="font-size: 20px;"></i> Upload your image
+                  <button
+                    class="d-flex align-items-center gap-2 btn btn-primary-custom fw-normal py-2 px-3"
+                    onclick="document.getElementById('fileInput').click();"
+                  >
+                    <i class="bi bi-image" style="font-size: 20px;"></i> Upload
+                    your image
                   </button>
+                  <input
+                    type="file"
+                    id="fileInput"
+                    accept="image/*"
+                    style="display: none"
+                    onchange="handleFileUpload(event)"
+                  />
                 </div>
-                
+
                 <h6 class="fw-bold">Select art style</h6>
                 <div class="position-relative swiper-artStyle-wrapper">
                   <div class="swiper swiper-artStyle">
-                      <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                          <img
-                            src="assets/images/fi-rr-ban.svg"
-                            class="img-gallery border p-3"
-                            style="object-fit: cover;border-radius:10px;"
-                            width="92"
-                            height="92"
-                          />
-                        </div>
-                        <div class="swiper-slide">
-                          <img
-                            src="assets/images/art-style-1.png"
-                            class="img-gallery"
-                            style="object-fit: cover"
-                          />
-                        </div>
-                        <div class="swiper-slide">
-                          <img
-                            src="assets/images/art-style-2.png"
-                            class="img-gallery"
-                            style="object-fit: cover"
-                          />
-                        </div>
-                        <div class="swiper-slide">
-                          <img
-                            src="assets/images/art-style-3.png"
-                            class="img-gallery"
-                            style="object-fit: cover"
-                          />
-                        </div>
-                        <div class="swiper-slide">
-                          <img
-                            src="assets/images/art-style-1.png"
-                            class="img-gallery"
-                            style="object-fit: cover"
-                          />
-                        </div>
-                        <div class="swiper-slide">
-                          <img
-                            src="assets/images/art-style-2.png"
-                            class="img-gallery"
-                            style="object-fit: cover"
-                          />
-                        </div>
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img
+                          src="assets/images/fi-rr-ban.svg"
+                          class="img-gallery radius-20 border p-3"
+                          style="object-fit: contain; border-radius: 10px; width: 100%; height: auto; max-width: 92px;"
+                          alt="Gallery"
+                        />
                       </div>
+                      <div class="swiper-slide">
+                        <img
+                          src="assets/images/art-style-1.png"
+                          class="img-gallery radius-20"
+                          style="object-fit: cover"
+                          alt="Gallery"
+                        />
+                      </div>
+                      <div class="swiper-slide">
+                        <img
+                          src="assets/images/art-style-2.png"
+                          class="img-gallery radius-20"
+                          alt="Gallery"
+                          style="object-fit: cover"
+                        />
+                      </div>
+                      <div class="swiper-slide">
+                        <img
+                          src="assets/images/art-style-3.png"
+                          class="img-gallery radius-20"
+                          alt="Gallery"
+                          style="object-fit: cover"
+                        />
+                      </div>
+                      <div class="swiper-slide">
+                        <img
+                          src="assets/images/art-style-1.png"
+                          class="img-gallery radius-20"
+                          alt="Gallery"
+                          style="object-fit: cover"
+                        />
+                      </div>
+                      <div class="swiper-slide">
+                        <img
+                          src="assets/images/art-style-2.png"
+                          class="img-gallery radius-20"
+                          alt="Gallery"
+                          style="object-fit: cover"
+                        />
+                      </div>
+                    </div>
                   </div>
-                  <div class="swiper-button-next swiperArtStyle-prev artStyle-nav">
-                    <img src="assets/images/fi-rr-angle-small-left.svg" height="38" />
+                  <div
+                    class="swiper-button-next swiperArtStyle-prev artStyle-nav"
+                  >
+                    <img
+                      src="assets/images/fi-rr-angle-small-left.svg"
+                      height="38"
+                    />
                   </div>
-                  <div class="swiper-button-next swiperArtStyle-next artStyle-nav">
-                    <img src="assets/images/fi-rr-angle-small-right.svg" height="38" />
+                  <div
+                    class="swiper-button-next swiperArtStyle-next artStyle-nav"
+                  >
+                    <img
+                      src="assets/images/fi-rr-angle-small-right.svg"
+                      height="38"
+                    />
                   </div>
                 </div>
                 <hr />
+
+                <div>
+                  <div class="d-flex align-items-center gap-3 mb-3">
+                    <label class="fw-semibold">Quantity</label>
+                    <div class="input-group qty-custom" style="width: 120px">
+                      <button class="btn btn-outline-secondary" type="button" style="border-color: #D9D9D9">
+                        <i class="bi bi-dash-lg"></i>
+                      </button>
+                      <input
+                        type="text"
+                        class="form-control text-center"
+                        value="1"
+                        style=" pointer-events: none;"
+                      />
+                      <button class="btn btn-outline-secondary" type="button" style="border-color: #D9D9D9">
+                        <i class="bi bi-plus-lg"></i>
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Action Buttons -->
+                  <div class="row g-3 mb-3">
+                    <div class="col-6">
+                      <a href="checkout.html">
+                        <button class="btn btn-primary-custom fw-bold w-100 py-2">
+                          CHECK OUT
+                        </button>
+                      </a>
+                    </div>
+                    <div class="col-6">
+                      <button class="btn btn-primary-custom fw-bold w-100 py-2">
+                        ADD TO CART
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- PayPal Button -->
+                  <div class="text-center mb-3">
+                    <button
+                      class="btn w-100 py-2 rounded-pill fw-bold"
+                      style="background-color: #FFC43A;"
+                    >
+                      Pay with 
+                      <span class="fst-italic"><span style="color: #253b80">Pay</span><span style="color: #179bd7">Pal</span></span>
+                    </button>
+                  </div>
+
+                  <!-- Secure Checkout -->
+                  <div class="secure-checkout-box mt-5 mb-4 position-relative">
+                    <div class="secure-checkout-label text-center fw-semibold text-size-20">
+                      100% Secure Checkout
+                    </div>
+
+                    <div class="d-flex justify-content-center flex-wrap gap-2">
+                      <img class="border radius-8" src="assets/images/payments/Paypal.svg" height="39" />
+                      <img class="border radius-8" src="assets/images/payments/ApplePay.svg" height="39" />
+                      <img class="border radius-8" src="assets/images/payments/Visa.svg" height="39" />
+                      <img class="border radius-8" src="assets/images/payments/Mastercard.svg" height="39" />
+                      <img class="border radius-8" src="assets/images/payments/AMEX.svg" height="39" />
+                      <img class="border radius-8" src="assets/images/payments/Discover.svg" height="39" />
+                      <img class="border radius-8" src="assets/images/payments/JCB.svg" height="39" />
+                      <img class="border radius-8" src="assets/images/payments/UnionPay.svg" height="39" />
+                    </div>
+                  </div>
+                  <!-- Icons -->
+                  <div class="icon-wrapper">
+                    <div class="row g-4 align-items-center">
+                      <!-- Cột trái -->
+                      <div class="col-md-6 d-flex flex-column justify-content-center gap-4 text-center text-md-start">
+                        <div class="d-flex align-items-center gap-3">
+                          <div class="icon-social" class="text-center">
+                            <img src="assets/images/cert-icon.svg" width="48" height="72" alt="Quality" />
+                          </div>
+                          <span class="fw-bold text-size-20">Premium Print Quality</span>
+                        </div>
+                        <div class="d-flex align-items-center gap-3">
+                          <div class="icon-social" class="text-center">
+                            <img src="assets/images/headset-icon.svg" width="56" height="56" alt="Support" />
+                          </div>
+                          <span class="fw-bold text-size-20">24/7 Friendly Support</span>
+                        </div>
+                      </div>
+  
+                      <!-- Cột phải -->
+                      <div class="col-md-6 d-flex flex-column justify-content-center gap-4 text-center text-md-start">
+                        <div class="d-flex align-items-center gap-3">
+                          <div class="icon-social" class="text-center">
+                            <img src="assets/images/global-icon.svg" width="60" height="54" alt="Shipping" />
+                          </div>
+                          <span class="fw-bold text-size-20">Secure Global Shipping</span>
+                        </div>
+                        <div class="d-flex align-items-center gap-3">
+                          <div class="icon-social" class="text-center">
+                            <img src="assets/images/heart-icon.svg" width="52" height="52" alt="Trust" />
+                          </div>
+                          <span class="fw-bold text-size-20">Trustpilot Reviews</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        <section class="py-5">
+        <section class="py-4">
           <div class="container">
             <div class="d-flex justify-content-between align-items-center mb-4">
               <h3 class="text-color text-capitalize fw-bold m-0">
@@ -633,7 +829,7 @@
               <!-- Card -->
               <div class="col-6 col-md-4 col-lg-3 d-flex">
                 <div
-                  class="card card-custom w-100 shadow-sm h-100 d-flex flex-column"
+                  class="card card-custom w-100 shadow-custom h-100 d-flex flex-column"
                 >
                   <img
                     src="assets/images/Rectangle 15.png"
@@ -641,15 +837,15 @@
                     alt="Product"
                   />
                   <div
-                    class="card-body text-start d-flex flex-column flex-grow-1"
+                    class="card-body text-start px-4 d-flex flex-column flex-grow-1"
                   >
-                    <p class="card-text small text-muted flex-grow-1">
+                    <p class="card-text text-color-second fw-medium flex-grow-1">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Lorem ipsum dolor sit amet
                     </p>
                     <h6 class="fw-bold">$29.99</h6>
-                    <a href="#" class="btn btn-outline-custom btn-sm mt-2">
-                      Make it Yours <i class="bi bi-chevron-right ms-2"></i>
+                    <a href="#" class="btn btn-primary-custom mt-3 mb-2">
+                      Make it Yours 
                     </a>
                   </div>
                 </div>
@@ -657,7 +853,7 @@
               <!-- Card -->
               <div class="col-6 col-md-4 col-lg-3 d-flex">
                 <div
-                  class="card card-custom w-100 shadow-sm h-100 d-flex flex-column"
+                  class="card card-custom w-100 shadow-custom h-100 d-flex flex-column"
                 >
                   <img
                     src="assets/images/Rectangle 15.png"
@@ -665,15 +861,15 @@
                     alt="Product"
                   />
                   <div
-                    class="card-body text-start d-flex flex-column flex-grow-1"
+                    class="card-body text-start px-4 d-flex flex-column flex-grow-1"
                   >
-                    <p class="card-text small text-muted flex-grow-1">
+                    <p class="card-text text-color-second fw-medium flex-grow-1">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Lorem ipsum dolor sit amet
                     </p>
                     <h6 class="fw-bold">$29.99</h6>
-                    <a href="#" class="btn btn-outline-custom btn-sm mt-2">
-                      Make it Yours <i class="bi bi-chevron-right ms-2"></i>
+                    <a href="#" class="btn btn-primary-custom mt-3 mb-2">
+                      Make it Yours 
                     </a>
                   </div>
                 </div>
@@ -681,7 +877,7 @@
               <!-- Card -->
               <div class="col-6 col-md-4 col-lg-3 d-flex">
                 <div
-                  class="card card-custom w-100 shadow-sm h-100 d-flex flex-column"
+                  class="card card-custom w-100 shadow-custom h-100 d-flex flex-column"
                 >
                   <img
                     src="assets/images/Rectangle 15.png"
@@ -689,15 +885,15 @@
                     alt="Product"
                   />
                   <div
-                    class="card-body text-start d-flex flex-column flex-grow-1"
+                    class="card-body text-start px-4 d-flex flex-column flex-grow-1"
                   >
-                    <p class="card-text small text-muted flex-grow-1">
+                    <p class="card-text text-color-second fw-medium flex-grow-1">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Lorem ipsum dolor sit amet
                     </p>
                     <h6 class="fw-bold">$29.99</h6>
-                    <a href="#" class="btn btn-outline-custom btn-sm mt-2">
-                      Make it Yours <i class="bi bi-chevron-right ms-2"></i>
+                    <a href="#" class="btn btn-primary-custom mt-3 mb-2">
+                      Make it Yours 
                     </a>
                   </div>
                 </div>
@@ -705,7 +901,7 @@
               <!-- Card -->
               <div class="col-6 col-md-4 col-lg-3 d-flex">
                 <div
-                  class="card card-custom w-100 shadow-sm h-100 d-flex flex-column"
+                  class="card card-custom w-100 shadow-custom h-100 d-flex flex-column"
                 >
                   <img
                     src="assets/images/Rectangle 15.png"
@@ -713,15 +909,15 @@
                     alt="Product"
                   />
                   <div
-                    class="card-body text-start d-flex flex-column flex-grow-1"
+                    class="card-body text-start px-4 d-flex flex-column flex-grow-1"
                   >
-                    <p class="card-text small text-muted flex-grow-1">
+                    <p class="card-text text-color-second fw-medium flex-grow-1">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Lorem ipsum dolor sit amet
                     </p>
                     <h6 class="fw-bold">$29.99</h6>
-                    <a href="#" class="btn btn-outline-custom btn-sm mt-2">
-                      Make it Yours <i class="bi bi-chevron-right ms-2"></i>
+                    <a href="#" class="btn btn-primary-custom mt-3 mb-2">
+                      Make it Yours 
                     </a>
                   </div>
                 </div>
@@ -730,7 +926,7 @@
           </div>
         </section>
 
-        <section class="py-5">
+        <section class="py-4">
           <div class="container">
             <div class="d-flex justify-content-between align-items-center mb-4">
               <h3 class="text-color text-capitalize fw-bold m-0">
@@ -742,7 +938,7 @@
               <!-- Card -->
               <div class="col-6 col-md-4 col-lg-3 d-flex">
                 <div
-                  class="card card-custom w-100 shadow-sm h-100 d-flex flex-column"
+                  class="card card-custom w-100 shadow-custom h-100 d-flex flex-column"
                 >
                   <img
                     src="assets/images/Rectangle 15.png"
@@ -750,15 +946,15 @@
                     alt="Product"
                   />
                   <div
-                    class="card-body text-start d-flex flex-column flex-grow-1"
+                    class="card-body text-start px-4 d-flex flex-column flex-grow-1"
                   >
-                    <p class="card-text small text-muted flex-grow-1">
+                    <p class="card-text text-color-second fw-medium flex-grow-1">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Lorem ipsum dolor sit amet
                     </p>
                     <h6 class="fw-bold">$29.99</h6>
-                    <a href="#" class="btn btn-outline-custom btn-sm mt-2">
-                      Make it Yours <i class="bi bi-chevron-right ms-2"></i>
+                    <a href="#" class="btn btn-primary-custom mt-3 mb-2">
+                      Make it Yours 
                     </a>
                   </div>
                 </div>
@@ -766,7 +962,7 @@
               <!-- Card -->
               <div class="col-6 col-md-4 col-lg-3 d-flex">
                 <div
-                  class="card card-custom w-100 shadow-sm h-100 d-flex flex-column"
+                  class="card card-custom w-100 shadow-custom h-100 d-flex flex-column"
                 >
                   <img
                     src="assets/images/Rectangle 15.png"
@@ -774,15 +970,15 @@
                     alt="Product"
                   />
                   <div
-                    class="card-body text-start d-flex flex-column flex-grow-1"
+                    class="card-body text-start px-4 d-flex flex-column flex-grow-1"
                   >
-                    <p class="card-text small text-muted flex-grow-1">
+                    <p class="card-text text-color-second fw-medium flex-grow-1">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Lorem ipsum dolor sit amet
                     </p>
                     <h6 class="fw-bold">$29.99</h6>
-                    <a href="#" class="btn btn-outline-custom btn-sm mt-2">
-                      Make it Yours <i class="bi bi-chevron-right ms-2"></i>
+                    <a href="#" class="btn btn-primary-custom mt-3 mb-2">
+                      Make it Yours 
                     </a>
                   </div>
                 </div>
@@ -790,7 +986,7 @@
               <!-- Card -->
               <div class="col-6 col-md-4 col-lg-3 d-flex">
                 <div
-                  class="card card-custom w-100 shadow-sm h-100 d-flex flex-column"
+                  class="card card-custom w-100 shadow-custom h-100 d-flex flex-column"
                 >
                   <img
                     src="assets/images/Rectangle 15.png"
@@ -798,15 +994,15 @@
                     alt="Product"
                   />
                   <div
-                    class="card-body text-start d-flex flex-column flex-grow-1"
+                    class="card-body text-start px-4 d-flex flex-column flex-grow-1"
                   >
-                    <p class="card-text small text-muted flex-grow-1">
+                    <p class="card-text text-color-second fw-medium flex-grow-1">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Lorem ipsum dolor sit amet
                     </p>
                     <h6 class="fw-bold">$29.99</h6>
-                    <a href="#" class="btn btn-outline-custom btn-sm mt-2">
-                      Make it Yours <i class="bi bi-chevron-right ms-2"></i>
+                    <a href="#" class="btn btn-primary-custom mt-3 mb-2">
+                      Make it Yours 
                     </a>
                   </div>
                 </div>
@@ -814,7 +1010,7 @@
               <!-- Card -->
               <div class="col-6 col-md-4 col-lg-3 d-flex">
                 <div
-                  class="card card-custom w-100 shadow-sm h-100 d-flex flex-column"
+                  class="card card-custom w-100 shadow-custom h-100 d-flex flex-column"
                 >
                   <img
                     src="assets/images/Rectangle 15.png"
@@ -822,15 +1018,15 @@
                     alt="Product"
                   />
                   <div
-                    class="card-body text-start d-flex flex-column flex-grow-1"
+                    class="card-body text-start px-4 d-flex flex-column flex-grow-1"
                   >
-                    <p class="card-text small text-muted flex-grow-1">
+                    <p class="card-text text-color-second fw-medium flex-grow-1">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Lorem ipsum dolor sit amet
                     </p>
                     <h6 class="fw-bold">$29.99</h6>
-                    <a href="#" class="btn btn-outline-custom btn-sm mt-2">
-                      Make it Yours <i class="bi bi-chevron-right ms-2"></i>
+                    <a href="#" class="btn btn-primary-custom mt-3 mb-2">
+                      Make it Yours 
                     </a>
                   </div>
                 </div>
@@ -840,7 +1036,7 @@
         </section>
 
         <!-- Certificate Section -->
-        <section class="py-4 certificate" style="background-color: #eef1e0">
+        <section class="mt-4 py-5 certificate" style="background-color: #eef1e0">
           <div class="container">
             <div class="row g-3 align-items-stretch">
               <div class="col-12 col-lg-4 mb-4 mb-lg-0">
@@ -855,7 +1051,7 @@
                 </p>
               </div>
               <div class="col-12 col-lg-4 col-md-6">
-                <div class="p-4 bg-white rounded-4 shadow-sm h-100">
+                <div class="p-4 bg-white rounded-4 shadow-custom h-100">
                   <div class="d-flex align-items-center gap-2 mb-3">
                     <img
                       src="assets/images/cert-icon.svg"
@@ -876,7 +1072,7 @@
                 </div>
               </div>
               <div class="col-12 col-lg-4 col-md-6">
-                <div class="p-4 bg-white rounded-4 shadow-sm h-100">
+                <div class="p-4 bg-white rounded-4 shadow-custom h-100">
                   <div class="d-flex align-items-center gap-2 mb-3">
                     <img
                       src="assets/images/global-icon.svg"
@@ -897,7 +1093,7 @@
                 </div>
               </div>
               <div class="col-12 col-lg-4 col-md-6">
-                <div class="p-4 bg-white rounded-4 shadow-sm h-100">
+                <div class="p-4 bg-white rounded-4 shadow-custom h-100">
                   <div class="d-flex align-items-center gap-2 mb-3">
                     <img
                       src="assets/images/paypal-icon.svg"
@@ -916,7 +1112,7 @@
                 </div>
               </div>
               <div class="col-12 col-lg-4 col-md-6">
-                <div class="p-4 bg-white rounded-4 shadow-sm h-100">
+                <div class="p-4 bg-white rounded-4 shadow-custom h-100">
                   <div class="d-flex align-items-center gap-2 mb-3">
                     <img
                       src="assets/images/headset-icon.svg"
@@ -937,7 +1133,7 @@
                 </div>
               </div>
               <div class="col-12 col-lg-4 col-md-6">
-                <div class="p-4 bg-white rounded-4 shadow-sm h-100">
+                <div class="p-4 bg-white rounded-4 shadow-custom h-100">
                   <div class="d-flex align-items-center gap-2 mb-3">
                     <img
                       src="assets/images/heart-icon.svg"
@@ -986,14 +1182,14 @@
                 >
                   <input
                     type="email"
-                    class="form-control rounded-pill px-4 py-2"
+                    class="form-control custom-form rounded-pill px-4 py-2"
                     placeholder="your.email@gmail.com"
                     required
                     style="width: 428px; height: 55px"
                   />
                   <button
                     type="submit"
-                    class="btn btn-pink rounded-pill px-4 py-2"
+                    class="btn btn-primary-custom px-4 py-2"
                     style="width: 245px; height: 55px"
                   >
                     Claim My Discount
@@ -1012,7 +1208,7 @@
     <!-- Custom Script -->
     <script src="assets/js/main.js"></script>
     <script>
-      const colorOptions = document.querySelectorAll(".color-option");
+      const colorOptions = document.querySelectorAll(".product-option");
       const selectedColorInput = document.getElementById("selectedColor");
 
       colorOptions.forEach((option) => {
@@ -1024,7 +1220,7 @@
         });
       });
 
-      const countdownEnd = new Date("2025-07-10T09:15:59").getTime();
+      const countdownEnd = new Date("2025-07-11T09:15:59").getTime();
 
       const hoursEl = document.getElementById("hours");
       const minutesEl = document.getElementById("minutes");
@@ -1053,6 +1249,7 @@
       updateCountdown();
 
       const swiper = new Swiper(".swiper-gallery", {
+        loop: true,
         speed: 600,
         freeMode: false,
         freeModeMomentum: false,
@@ -1060,7 +1257,7 @@
         slidesPerGroup: 1,
         initialSlide: 0,
         breakpoints: {
-          0: { slidesPerView: 3 },
+          0: { slidesPerView: 3.5 },
           768: { slidesPerView: 4 },
           992: { slidesPerView: 5 },
         },
@@ -1078,7 +1275,7 @@
         slidesPerGroup: 1,
         initialSlide: 0,
         breakpoints: {
-          0: { slidesPerView: 3 },
+          0: { slidesPerView: 4 },
           768: { slidesPerView: 4 },
           992: { slidesPerView: 5 },
         },
@@ -1129,6 +1326,13 @@
         );
         if (firstThumb) setActiveImage(firstThumb);
       });
+
+      function handleFileUpload(event) {
+        const file = event.target.files[0];
+        if (file) {
+          console.log("File selected:", file.name);
+        }
+      }
     </script>
   </body>
 </html>

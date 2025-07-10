@@ -62,3 +62,18 @@ a:hover {
 .btn-close:focus {
   box-shadow: none !important;
 }
+
+.custom-form {
+  border-radius: 10px !important;
+}
+
+.custom-form::placeholder {
+  color: #BDBDBD !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+}
+
+.custom-form:focus {
+  box-shadow: none !important;
+  border: 1px solid var(--text-color) !important;
+}

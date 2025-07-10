@@ -1,0 +1,62 @@
+@import url("variables.css");
+
+/* Checkout */
+
+@media (max-width: 991.98px) {
+  .checkout-container {
+    padding: 1.5rem;
+  }
+
+  .checkout-form-control input,
+  .checkout-form-control select,
+  .checkout-form-control button {
+    font-size: 15px;
+  }
+
+  .summary-subtotal,
+  .summary-shipping {
+    font-size: 14px;
+  }
+
+  .text-fs-15 {
+    font-size: 14px !important;
+  }
+
+  .checkout-container .btn-paynow {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .checkout-container {
+    padding: 1rem;
+  }
+
+  .checkout-container img {
+    width: 120px !important;
+    height: 120px !important;
+  }
+
+  .checkout-form-control h6 {
+    font-size: 15px;
+  }
+
+  .btn-paynow {
+    font-size: 15px;
+    padding: 10px 0;
+  }
+
+  .btn-primary-custom {
+    font-size: 15px;
+  }
+
+  .checkout-form-control input {
+    /* padding: 10px 14px; */
+  }
+
+  .checkout-meta li {
+    font-size: 13px;
+  }
+}
+
+/* End-Checkout */

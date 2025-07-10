@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Product | TadaGift</title>
+    <title>Checkout | TadaGift</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Reset CSS -->
@@ -42,9 +42,9 @@
 
       <!-- Main Content -->
       <main class="flex-fill">
-        <section class="py-5">
+        <section class="py-4">
           <div class="container">
-            <div class="row g-4">
+            <div class="row g-4 flex-column-reverse flex-lg-row">
               <!-- Form Section -->
               <div class="col-lg-6">
                 <div class="bg-white p-4 checkout-container">
@@ -58,101 +58,64 @@
                         border-radius: 34px;
                       "
                     >
-                      Pay with <span style="color: #253b80">Pay</span
-                      ><span style="color: #179bd7">Pal</span>
+                      Pay with 
+                      <span class="fst-italic"><span style="color: #253b80">Pay</span><span style="color: #179bd7">Pal</span></span>
                     </button>
                   </div>
                   <hr />
-                  <!-- Contact Info -->
                   <form class="checkout-form-control">
                     <h6 class="fw-bold">Contact Info</h6>
-                    <input
-                      type="email"
-                      class="form-control mb-3"
-                      placeholder="Email"
-                    />
+                    <div class="row g-3 mb-4">
+                      <div class="col-12">
+                        <input type="email" class="form-control custom-form" placeholder="Email" />
+                      </div>
+                    </div>
 
-                    <!-- Shipping Address -->
                     <h6 class="fw-bold">Shipping Address</h6>
-                    <input
-                      type="text"
-                      class="form-control mb-3"
-                      placeholder="Country"
-                    />
-                    <input
-                      type="text"
-                      class="form-control mb-3"
-                      placeholder="Full name"
-                    />
-                    <input
-                      type="text"
-                      class="form-control mb-3"
-                      placeholder="Address"
-                    />
-                    <input
-                      type="text"
-                      class="form-control mb-3"
-                      placeholder="Apartment, suite, unit, etc. (optional)"
-                    />
-
-                    <div class="row g-2 mb-3">
-                      <div class="col-md-4">
-                        <input
-                          type="text"
-                          class="form-control"
-                          placeholder="City"
-                        />
+                    <div class="row g-3 mb-4">
+                      <div class="col-md-6">
+                        <input type="text" class="form-control custom-form" placeholder="Country" />
+                      </div>
+                      <div class="col-md-6">
+                        <input type="text" class="form-control custom-form" placeholder="Full name" />
+                      </div>
+                      <div class="col-12">
+                        <input type="text" class="form-control custom-form" placeholder="Address" />
+                      </div>
+                      <div class="col-12">
+                        <input type="text" class="form-control custom-form" placeholder="Apartment, suite, unit, etc. (optional)" />
                       </div>
                       <div class="col-md-4">
-                        <input
-                          type="text"
-                          class="form-control"
-                          placeholder="State"
-                        />
+                        <input type="text" class="form-control custom-form" placeholder="City" />
                       </div>
                       <div class="col-md-4">
-                        <input
-                          type="text"
-                          class="form-control"
-                          placeholder="ZIP Code"
-                        />
+                        <input type="text" class="form-control custom-form" placeholder="State" />
+                      </div>
+                      <div class="col-md-4">
+                        <input type="text" class="form-control custom-form" placeholder="ZIP Code" />
+                      </div>
+                      <div class="col-12">
+                        <input type="text" class="form-control custom-form" placeholder="Phone" />
                       </div>
                     </div>
-                    <input
-                      type="text"
-                      class="form-control mb-4"
-                      placeholder="Phone"
-                    />
 
-                    <!-- Payment Info -->
                     <h6 class="fw-bold">Payment Info</h6>
-                    <input
-                      type="text"
-                      class="form-control mb-3"
-                      placeholder="Card number"
-                    />
-                    <div class="row g-2 mb-3">
-                      <div class="col-md-6">
-                        <input
-                          type="text"
-                          class="form-control"
-                          placeholder="Expiration date (MM/YY)"
-                        />
+                    <div class="row g-3 mb-4">
+                      <div class="col-12">
+                        <input type="text" class="form-control custom-form" placeholder="Card number" />
                       </div>
                       <div class="col-md-6">
-                        <input
-                          type="text"
-                          class="form-control"
-                          placeholder="CVC Code"
-                        />
+                        <input type="text" class="form-control custom-form" placeholder="Expiration date (MM/YY)" />
+                      </div>
+                      <div class="col-md-6">
+                        <input type="text" class="form-control custom-form" placeholder="CVC Code" />
+                      </div>
+                      <div class="col-12">
+                        <input type="text" class="form-control custom-form" placeholder="Name on card" />
                       </div>
                     </div>
-                    <input
-                      type="text"
-                      class="form-control mb-4"
-                      placeholder="Name on card"
-                    />
                   </form>
+
 
                   <!-- Pay Now -->
                   <a href="checkout-success.html">
@@ -180,55 +143,42 @@
                         Lorem Ipsum is simply dummy text of the printing and
                         typesetting industry
                       </p>
-                      <div class="d-flex align-items-end">
-                        <div class="d-flex align-items-center">
+                      <div class="row g-2">
+                        <div class="col-12 col-sm-8">
                           <ul class="list-unstyled m-0 checkout-meta">
-                            <li>
-                              <span class="fw-semibold">Product type:</span>
-                              Photo Frame A
-                            </li>
-                            <li>
-                              <span class="fw-semibold">Material:</span> Wooden
-                            </li>
-                            <li>
-                              <span class="fw-semibold">Color frame:</span>
-                              Yellow
-                            </li>
+                            <li><span class="fw-semibold">Product type:</span> Photo Frame A</li>
+                            <li><span class="fw-semibold">Material:</span> Wooden</li>
+                            <li><span class="fw-semibold">Color frame:</span> Yellow</li>
                           </ul>
                         </div>
-                        <div
-                          class="ms-auto small d-flex gap-2 justify-content-end"
-                        >
-                          <span style="color: #9d9b9b" class="fw-semibold"
-                            >1 pcs</span
-                          >
-                          <span style="color: #9d9b9b" class="fw-semibold"
-                            >x</span
-                          >
-                          <div class="fw-bold">$29.99 USD</div>
+                        <div class="col-12 col-sm-4 d-flex justify-content-end align-items-end">
+                          <div class="d-flex gap-2 small">
+                            <span style="color: #9d9b9b" class="fw-semibold">1 pcs</span>
+                            <span style="color: #9d9b9b" class="fw-semibold">x</span>
+                            <div class="fw-bold">$29.99 USD</div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
 
                   <!-- Discount -->
-                  <div class="mb-3">
-                    <form
-                      class="checkout-form-control d-flex align-items-center justify-content-between gap-3"
-                    >
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="Discount code"
-                      />
-                      <button
-                        class="btn btn-light text-white"
-                        style="background-color: #f47c90"
-                      >
-                        APPLY
-                      </button>
-                    </form>
-                  </div>
+                  <form class="checkout-form-control mb-4">
+                    <div class="row g-3 align-items-center">
+                      <div class="col-lg-9 col-sm-8">
+                        <input
+                          type="text"
+                          class="form-control custom-form"
+                          placeholder="Discount code"
+                        />
+                      </div>
+                      <div class="col-lg-3 col-sm-4">
+                        <button class="btn btn-primary-custom w-100 fw-medium">
+                          APPLY
+                        </button>
+                      </div>
+                    </div>
+                  </form>
 
                   <!-- Subtotal -->
                   <div

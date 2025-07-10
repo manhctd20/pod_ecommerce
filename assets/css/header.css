@@ -92,10 +92,6 @@ header .btn:focus-visible {
   box-shadow: none !important;
 }
 
-.custom-form-control-focus .form-control:focus {
-  box-shadow: none;
-}
-
 /* Nav */
 header .nav-link {
   color: var(--primary);

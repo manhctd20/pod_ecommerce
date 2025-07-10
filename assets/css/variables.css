@@ -1,9 +1,9 @@
 :root {
   --font-base: "Montserrat", sans-serif;
-  
+
   --primary: #ff5b6b;
   --secondary: #f59547;
-  --text-color: #FF939D;
+  --text-color: #ff939d;
   --text-color-second: #444444;
 
   --radius: 75px;
@@ -61,15 +61,21 @@
 }
 
 .btn-primary-custom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #fff;
   background-color: var(--text-color);
   border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
   transition: var(--transition-fast);
 }
 
 .btn-primary-custom:hover {
   color: var(--text-color);
   border: 1px solid var(--text-color);
+  background-color: #fff;
 }
 
 .text-fs-15 {
@@ -122,4 +128,28 @@
   -webkit-line-clamp: 9;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+.radius-8 {
+  border-radius: 8px !important;
+}
+
+.radius-15 {
+  border-radius: 15px !important;
+}
+
+.radius-20 {
+  border-radius: 20px !important;
+}
+
+.text-size-20 {
+  font-size: 20px !important;
+}
+
+.btn-height {
+  height: 50px !important;
+}
+
+.shadow-custom {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }

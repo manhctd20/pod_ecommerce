@@ -1,6 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("variables.css");
 @import url("header.css");
+@import url("responsive.css");
+
+.footer-links li a {
+  /* display: block; */
+  text-transform: capitalize;
+  transition: all 0.4s ease;
+  padding-left: 0;
+}
+
+.footer-links li a:hover {
+  padding-left: 8px;
+  color: #444444;
+}
 
 .trustpilot-stars i {
   color: #00b67a;
@@ -110,7 +123,8 @@
 
 .swiper-button-prev:after,
 .swiper-button-next:after {
-  content: "";
+  display: none !important;
+  content: none !important;
 }
 
 .swiper-button-next,
@@ -211,7 +225,7 @@
 }
 
 .custom-form-control-focus .form-control {
-  border: 1px solid var(--primary) !important;
+  border: 1px solid var(--text-color) !important;
 }
 
 .custom-form-control-focus .form-control::placeholder {
@@ -408,21 +422,6 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.checkout-form-control .form-control {
-  border-radius: 10px;
-}
-
-.checkout-form-control .form-control::placeholder {
-  color: #9D9B9B;
-  font-size: 15px;
-  font-weight: 500;
-}
-
-.checkout-form-control .form-control:focus {
-  box-shadow: none;
-  border: 1px solid var(--text-color);
-}
-
 .checkout-form-control button {
   border-radius: 10px;
 }
@@ -444,4 +443,56 @@
   color: #9d9b9b;
 }
 
+.icon-social {
+  min-width: 60px;
+  display: flex;
+  justify-content: center;
+}
 
+.icon-wrapper {
+  position: relative;
+}
+
+.icon-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  bottom: 5px;
+  left: 49%;
+  width: 1px;
+  background-color: #D7D7D7;
+}
+
+.secure-checkout-box {
+  border: 1px solid #d7d7d7;
+  border-radius: 20px;
+  padding-top: 32px;
+  padding-bottom: 25px;
+  background-color: #fff;
+}
+
+.secure-checkout-label {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  padding: 0 12px;
+}
+
+.qty-custom .btn {
+  border-radius: 12px;
+}
+
+.qty-custom .btn:hover {
+  background-color: var(--text-color) !important;
+}
+
+
+
+
+/* Checkout */
+
+
+
+/* End-Checkout */
