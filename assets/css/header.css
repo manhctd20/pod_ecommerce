@@ -78,27 +78,49 @@ header .search-input::placeholder {
   color: #bbb;
 }
 
-header .btn {
+header .btn-search {
   border: none !important;
   outline: none !important;
   box-shadow: none !important;
 }
 
-header .btn:focus,
-header .btn:active,
-header .btn:focus-visible {
+header .btn-search:focus,
+header .btn-search:active,
+header .btn-search:focus-visible {
   border: none !important;
   outline: none !important;
   box-shadow: none !important;
 }
 
-/* Nav */
-header .nav-link {
+/* Nav Menu */
+header .menu-item {
+  position: relative;
   color: var(--primary);
   font-weight: 600;
+  display: inline-block;
+  padding: 8px 12px;
+  z-index: 1;
+  transition: 0.3s;
 }
-header .nav-link:hover {
-  color: var(--secondary);
+
+header .menu-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #ff5b6b;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  z-index: -1;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+header .menu-item:hover::before {
+  opacity: 1;
+}
+
+header .menu-item:hover {
+  color: #fff;
 }
 
 .text-color {

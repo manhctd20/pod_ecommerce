@@ -45,9 +45,9 @@ a {
 a {
   transition: 0.2s ease;
 }
-a:hover {
+/* a:hover {
   color: var(--primary);
-}
+} */
 
 .form-select {
   cursor: pointer;

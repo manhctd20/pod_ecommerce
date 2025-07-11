@@ -4,7 +4,6 @@
 @import url("responsive.css");
 
 .footer-links li a {
-  /* display: block; */
   text-transform: capitalize;
   transition: all 0.4s ease;
   padding-left: 0;
@@ -30,24 +29,20 @@
 }
 
 .testimonial-card .name {
-  font-weight: 600;
-  font-size: 1rem;
+  font-weight: 700;
+  font-size: 20px;
 }
 
 .testimonial-card .location {
-  font-size: 0.9rem;
-  color: #777;
-}
-
-.testimonial-card .stars i {
-  color: #fbc02d;
-  font-size: 1.2rem;
+  font-size: 14px;
+  color: #565656;
+  font-style: italic;
 }
 
 .testimonial-card .text {
   font-style: italic;
-  font-size: 0.95rem;
-  color: #555;
+  font-size: 15px;
+  color: #444444;
 }
 
 .testimonial-swiper .swiper-slide {
