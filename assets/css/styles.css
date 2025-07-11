@@ -96,6 +96,12 @@
   flex-direction: column;
 }
 
+.btn-discover {
+  font-size: 20px;
+  height: 50px;
+  padding: 13px 30px;
+}
+
 .section-product {
   font-size: 35px;
 }
@@ -229,6 +235,7 @@
 
 .custom-form-control-focus .form-control:focus {
   box-shadow: none;
+  border: 2px solid var(--text-color) !important;
 }
 
 .certificate h6 {

@@ -46,7 +46,7 @@
                 Photo Frame
               </h2>
             </div>
-            <div class="row g-4 align-items-stretch">
+            <div class="row g-4 align-items-stretch non-pointer">
               <div class="col-12 col-lg-6 col-md-6">
                 <img
                   src="assets/images/photo-frame-1.png"
@@ -346,13 +346,16 @@
         <div class="col-6 col-md-4 col-lg-3 d-flex">
           <div class="card card-custom w-100 shadow-custom h-100 d-flex flex-column">
             <img src="${item.img}" class="card-img-top" alt="${item.name}" />
+            
             <div class="card-body text-start d-flex flex-column flex-grow-1">
-              <p class="card-text small text-muted flex-grow-1">${item.desc}</p>
+              <p class="card-text text-color-second text-truncate-4 fw-medium flex-grow-1">${item.desc}</p>
               <h6 class="fw-bold">$${item.price.toFixed(2)}</h6>
-              <a href="#" class="btn btn-outline-custom btn-sm mt-2">
-                Make it Yours <i class="bi bi-chevron-right ms-2"></i>
+              <a href="product-detail.html" class="btn btn-outline-custom btn-h-45 mt-2">
+                Make it Yours
+                <i class="bi bi-chevron-right ms-2"></i>
               </a>
             </div>
+
           </div>
         </div>`
           )
