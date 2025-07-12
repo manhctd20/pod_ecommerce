@@ -148,6 +148,69 @@
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         padding: 17px 20px;
       }
+
+      .cart-popup {
+        border: 1px solid #FF5B6B;
+        border-radius: 20px;
+        padding: 12px;
+        background-color: #fff;
+        text-align: center;
+      }
+
+      .cart-popup .icon-check {
+        width: 67px;
+        height: 67px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+
+      .cart-popup .icon-check i {
+        color: white;
+        font-size: 32px;
+      }
+
+      .cart-popup h5 {
+        color: #188654;
+        font-weight: 600;
+      }
+
+      .cart-popup p {
+        color: #999999;
+        font-size: 14px;
+        margin-bottom: 30px;
+      }
+
+      .cart-popup .btn {
+        min-width: 160px;
+        padding: 14px 20px;
+        font-weight: 600;
+        border-radius: 8px;
+      }
+
+      .btn-gray {
+        background-color: #E6E6E6;
+        color: #444444;
+      }
+
+      .btn-gray:hover {
+        border: 1px solid #E6E6E6;
+        color: #444444;
+      }
+
+      .btn-viewCart {
+        background-color: #FF5B6B;
+        color: #FFFFFF;
+      }
+      .btn-viewCart:hover {
+        border: 1px solid #FF5B6B;
+        color: #FF5B6B;
+      }
+      .custom-modal-width {
+        max-width: 580px;
+      }
     </style>
   </head>
   <body>
@@ -741,12 +804,28 @@
                       </a>
                     </div>
                     <div class="col-6">
-                      <button class="btn btn-primary-custom btn-h-50 fw-bold w-100 py-2">
+                      <button id="addToCartBtn" class="btn btn-primary-custom btn-h-50 fw-bold w-100 py-2" data-bs-toggle="modal" data-bs-target="#cartModal">
                         ADD TO CART
                       </button>
                     </div>
                   </div>
-
+                  <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered custom-modal-width">
+                        <div class="modal-content cart-popup">
+                          <div class="modal-body">
+                            <div class="icon-check non-pointer" style="background-image: url('assets/images/Ellipse 6.svg'); background-size: contain; background-repeat: no-repeat;">
+                              <img src="assets/images/atc-success-icon.svg" height="55" width="55" style="background-color: #fff; border-radius: 50%; border: 1px solid #6ED289;" />
+                            </div>
+                            <h5>Product has been added in your cart successfully</h5>
+                            <p class="fw-light">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the</p>
+                            <div class="d-flex justify-content-center gap-3">
+                              <a href="product.html"><button class="btn btn-gray" data-bs-dismiss="modal">Continue Shopping</button></a>
+                              <a href="cart.html" class="btn btn-viewCart">View Cart & Checkout</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
                   <!-- PayPal Button -->
                   <div class="text-center mb-3">
                     <button
@@ -769,7 +848,7 @@
                       <img class="border radius-8" src="assets/images/payments/ApplePay.svg" height="39" />
                       <img class="border radius-8" src="assets/images/payments/Visa.svg" height="39" />
                       <img class="border radius-8" src="assets/images/payments/master-card.svg" height="39" />
-                      <img class="border radius-8" src="assets/images/payments/amex.svg" height="39" />
+                      <img class="border radius-8" src="assets/images/payments/amex-icon.svg" height="39" />
                       <img class="border radius-8" src="assets/images/payments/Discover.svg" height="39" />
                       <img class="border radius-8" src="assets/images/payments/JCB.svg" height="39" />
                       <img class="border radius-8" src="assets/images/payments/UnionPay.svg" height="39" />
@@ -1333,6 +1412,16 @@
           console.log("File selected:", file.name);
         }
       }
+
+      document.addEventListener("click", function (e) {
+        if (e.target && e.target.id === "addToCartBtn") {
+          const cartCountEl = document.getElementById("cart-count");
+          if (cartCountEl) {
+            let count = parseInt(cartCountEl.innerText.trim());
+            cartCountEl.innerText = count + 1;
+          }
+        }
+      });
     </script>
   </body>
 </html>
