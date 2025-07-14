@@ -39,16 +39,43 @@
       <!-- Main Content -->
       <main class="flex-fill">
         <!-- Hero Banner Section -->
-        <section class="pt-5 pb-4">
-          <div class="container">
-            <img
-              src="assets/images/banner.png"
-              alt="Hero Banner"
-              class="img-fluid rounded"
-            />
-          </div>
-        </section>
+        <section class="py-4">
+        <div class="container">
+          <!-- PC: Just image -->
+          <img
+            src="assets/images/banner.png"
+            alt="Hero Banner"
+            class="img-fluid rounded d-none d-md-block"
+          />
 
+          <!-- Mobile: Banner with overlay -->
+          <div class="promo-mobile-banner position-relative d-block d-md-none rounded overflow-hidden">
+            <img
+              src="assets/images/Rectangle 204.png"
+              alt="Hero Banner"
+              class="w-100"
+              height="150"
+            />
+
+            <!-- Overlay nội dung -->
+            <div
+              class="overlay-content position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-start text-white px-3"
+            >
+              <h4 class="text-overlay mb-1">BUY MORE</h4>
+              <h4 class="text-overlay mb-4">SAVE MORE</h4>
+
+              <a
+                href="#"
+                class="btn btn-upto d-flex align-items-center gap-2 px-3 py-2 rounded-pill"
+              >
+                <img src="assets/images/bag-add-icon.svg" width="16" />
+                Up to 20%
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
         <!-- Product Categories Section -->
         <section class="py-4">
           <div class="container text-center">
@@ -1131,7 +1158,7 @@
         freeModeMomentum: false,
         slidesPerGroup: 1,
         breakpoints: {
-          0: { slidesPerView: 2.5 },
+          0: { slidesPerView: 3.5 },
           768: { slidesPerView: 3.5 },
           992: { slidesPerView: 5.5 },
         },

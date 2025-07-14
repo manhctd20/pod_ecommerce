@@ -1415,11 +1415,11 @@
 
       document.addEventListener("click", function (e) {
         if (e.target && e.target.id === "addToCartBtn") {
-          const cartCountEl = document.getElementById("cart-count");
-          if (cartCountEl) {
-            let count = parseInt(cartCountEl.innerText.trim());
-            cartCountEl.innerText = count + 1;
-          }
+          const cartCountEls = document.querySelectorAll(".cart-count");
+          cartCountEls.forEach((el) => {
+            let count = parseInt(el.innerText.trim());
+            el.innerText = count + 1;
+          });
         }
       });
     </script>

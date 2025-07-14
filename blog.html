@@ -262,32 +262,32 @@
             .map(
             (item) => `
             <div class="col-12 col-md-6 col-lg-4 d-flex">
-                <div class="card blog-card w-100 border-0 rounded-4 overflow-hidden">
-                <img
-                    src="${item.img}"
-                    class="card-img-top"
-                    alt="${item.name}"
-                    style="height: 200px; object-fit: cover;"
-                />
-                <div class="card-body d-flex flex-column text-justify">
-                    <!-- Tiêu đề -->
-                    <a class='text-color-second' href='blog-detail.html'>
-                      <h6 class="fw-bold mb-2 text-truncate-2" style="font-size: 16px">
-                      ${item.name}
+                <a href='blog-detail.html'>
+                  <div class="card blog-card w-100 border-0 rounded-4 overflow-hidden">
+                  <img
+                      src="${item.img}"
+                      class="card-img-top"
+                      alt="${item.name}"
+                      style="height: 200px; object-fit: cover;"
+                  />
+                  <div class="card-body d-flex flex-column text-justify">
+                      <!-- Tiêu đề -->
+                      <h6 class="fw-bold mb-2 text-truncate-2 text-color-second" style="font-size: 16px">
+                        ${item.name}
                       </h6>
-                    </a>
-
-                    <!-- Metadata -->
-                    <div class="small text-muted d-flex align-items-center gap-3 mb-2">
-                    <span><i class="bi bi-clock me-1"></i> 1 hour ago</span>
-                    <span><i class="bi bi-eye me-1"></i> 523</span>
-                    </div>
-
-                    <!-- Nội dung -->
-                    <p class="small text-secondary text-truncate-4 flex-grow-1" style="font-size: 14px; line-height: 1.5;">
-                    ${item.desc}
-                    </p>
-                </div>
+  
+                      <!-- Metadata -->
+                      <div class="small text-muted d-flex align-items-center gap-3 mb-2">
+                      <span><i class="bi bi-clock me-1"></i> 1 hour ago</span>
+                      <span><i class="bi bi-eye me-1"></i> 523</span>
+                      </div>
+  
+                      <!-- Nội dung -->
+                      <p class="small text-secondary text-truncate-4 flex-grow-1" style="font-size: 14px; line-height: 1.5;">
+                      ${item.desc}
+                      </p>
+                  </div>
+                </a>
                 </div>
             </div>
             `
