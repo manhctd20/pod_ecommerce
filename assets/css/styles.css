@@ -239,6 +239,10 @@
   background-color: #f76c9f;
 }
 
+.sub-section .sub-form {
+  max-width: 50%;
+}
+
 .custom-form-control-focus .form-control {
   border: 1px solid var(--text-color) !important;
 }
