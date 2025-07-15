@@ -25,7 +25,7 @@
   padding: 20px;
   background-color: #fff;
   height: 100%;
-  box-shadow: 0 0px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .testimonial-card .name {
@@ -38,7 +38,9 @@
   color: #565656;
   font-style: italic;
 }
-
+.testimonial-card .stars-icon > img {
+  height: 22px;
+}
 .testimonial-card .text {
   font-style: italic;
   font-size: 15px;
@@ -48,7 +50,7 @@
 .testimonial-swiper .swiper-slide {
   height: auto;
 }
-
+.news-navigation,
 .testimonial-navigation {
   position: absolute;
   top: -40px;
@@ -56,7 +58,7 @@
   display: flex;
   gap: 10px;
 }
-
+.news-navigation .btn-nav,
 .testimonial-navigation .btn-nav {
   width: 30px;
   height: 30px;
@@ -69,11 +71,15 @@
   cursor: pointer;
   transition: 0.3s;
 }
-
+.news-navigation .btn-nav:hover,
 .testimonial-navigation .btn-nav:hover {
   background-color: white;
   color: var(--text-color);
   border: 1px solid var(--text-color);
+}
+
+.trustpilot-logo h3 {
+  font-size: 35px;
 }
 
 .card-custom {
@@ -199,6 +205,14 @@
   right: -20px;
 }
 
+.sub-section {
+  background-image: url("../images/Rectangle 79.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  height: 235px;
+}
+
 .sub-section::after,
 .buy-more::after {
   content: "";
@@ -301,16 +315,6 @@
   cursor: pointer;
 }
 
-/* .dropdown-icon {
-  position: absolute;
-  top: 50%;
-  right: 16px;
-  transform: translateY(-50%);
-  pointer-events: none;
-  color: white;
-  font-size: 12px;
-} */
-
 .pagination {
   list-style: none;
   padding-left: 0;
@@ -353,10 +357,8 @@
   background-color: #fcd5d5;
 }
 
-
 /** Cart **/
 .cart-section {
-
 }
 
 .cart-card {
@@ -364,7 +366,6 @@
 }
 
 .cart-card:hover {
-
 }
 
 .cart-title h5 {
@@ -379,7 +380,8 @@
   font-size: 25px;
 }
 
-.cart-card, .summary-card {
+.cart-card,
+.summary-card {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
   border-radius: 20px;
@@ -390,7 +392,6 @@
 }
 
 .summary-payment-methods img {
-
 }
 
 .cart-meta {
@@ -429,13 +430,13 @@
 }
 
 .btn-paynow {
-  background-color: #4BB232;
+  background-color: #4bb232;
   border-radius: 10px;
 }
 
 .btn-paynow:hover {
-  color: #4BB232 !important;
-  border: 1px solid #4BB232;
+  color: #4bb232 !important;
+  border: 1px solid #4bb232;
 }
 
 .checkout-meta {
@@ -462,7 +463,7 @@
   bottom: 5px;
   left: 49%;
   width: 1px;
-  background-color: #D7D7D7;
+  background-color: #d7d7d7;
 }
 
 .secure-checkout-box {
@@ -490,11 +491,21 @@
   background-color: var(--text-color) !important;
 }
 
+.collection-section {
+  background-image: url("../images/Rectangle 95.png");
+}
 
+.certificate-swiper .swiper-wrapper {
+  display: flex;
+  align-items: stretch;
+}
 
+.certificate-swiper .swiper-slide {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
 
 /* Checkout */
-
-
 
 /* End-Checkout */

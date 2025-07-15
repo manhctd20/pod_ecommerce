@@ -19,10 +19,6 @@
   color: var(--primary) !important;
 }
 
-.text-secondary-custom {
-  color: var(--secondary) !important;
-}
-
 .text-color-second {
   color: var(--text-color-second) !important;
 }
@@ -188,5 +184,5 @@
 }
 
 .shadow-custom {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }

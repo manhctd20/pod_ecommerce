@@ -17,10 +17,124 @@
   color: var(--text-color);
   background-color: #fff;
   font-size: 13px;
+  font-weight: 500;
 }
 
+/* Dưới 576px (xs - mobile nhỏ) */
+@media (max-width: 575.98px) {
+  .card-custom .card-body {
+    padding: 10px !important;
+  }
+  .xs-text-truncate-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .section-product {
+    font-size: 20px !important;
+  }
+  .overlay-text {
+    padding: 5px 0 !important;
+    font-size: 14px !important;
+  }
+  .category-slide::after {
+    border-radius: 0 0 10px 10px !important;
+    height: 20px !important;
+  }
+  .best-selling h2,
+  .hot-trend h2 {
+    font-size: 20px !important;
+  }
+  .btn-h-45 {
+    height: 40px !important;
+  }
+  .collection-section {
+    background-image: url('../images/collection-section.png') !important;
+  }
+  .btn-discover {
+    font-size: 16px !important;
+    height: 40px !important;
+  }
+  .testimonial-card { 
+    padding: 10px !important;
+  }
+  .testimonial-card .name {
+    font-size: 15px !important;
+    font-weight: 600 !important;
+  }
+  .testimonial-card .location,
+  .testimonial-card .text {
+    font-size: 10px !important;
+  }
+  .testimonial-card .stars-icon>img {
+    height: 17px !important;
+  }
+  /* .testimonial-swiper .swiper-slide {
+    margin-right: 15px !important;
+  } */
+  .trustpilot-logo h3 {
+    font-size: 20px !important;
+    text-align: left !important;
+  }
+  .trustpilot-section .trustpilot-logo img{
+    max-width: 127px !important;
+  }
+  .trustpilot-section .testimonial-navigation {
+    top: -45px !important;
+    right: 15px !important;
+  }
+  .news-navigation .btn-nav,
+  .trustpilot-section .testimonial-navigation .btn-nav {
+    width: 24px !important;
+    height: 24px !important;
+  }
+  .news-navigation {
+    top: -40px !important;
+    right: 15px !important;
+  }
 
-@media (max-width: 400px) {
+  .certificate {
+    margin: 10px 0 !important;
+  }
+  .sub-section {
+    background-image: url("../images/banner-sub-mobile.png") !important;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    height: 200px !important;
+  }
+  .sub-section .sub-form {
+    max-width: 269px !important;
+  }
+  .sub-section .sub-form>input, 
+  .sub-section .sub-form>button {
+    height: 40px !important;
+  }
+}
+
+/* Từ 576px trở lên (sm) */
+@media (min-width: 576px) {
+
+}
+
+/* Từ 768px trở lên (md - tablet) */
+@media (min-width: 768px) {
+
+}
+
+/* Từ 992px trở lên (lg - laptop) */
+@media (min-width: 992px) {
+
+}
+
+/* Từ 1200px trở lên (xl) */
+@media (min-width: 1200px) {
+
+}
+
+/* Từ 1400px trở lên (xxl) */
+@media (min-width: 1400px) {
 
 }
 
