@@ -23,7 +23,16 @@
 /* Dưới 576px (xs - mobile nhỏ) */
 @media (max-width: 575.98px) {
   .card-custom .card-body {
-    padding: 10px !important;
+    padding: 9px !important;
+  }
+  .card-custom .card-body p {
+    margin-bottom: 2px !important;
+  }
+  .card-custom .card-body .text-sale {
+    font-size: 10px !important;
+  }
+  .card-custom .card-body h6 {
+    margin-bottom: 0px !important;
   }
   .xs-text-truncate-2 {
     display: -webkit-box;
@@ -51,6 +60,9 @@
   }
   .collection-section {
     background-image: url('../images/collection-section.png') !important;
+  }
+  .collection-section .collection-title {
+    font-size: 20px !important;
   }
   .btn-discover {
     font-size: 16px !important;
@@ -99,11 +111,14 @@
   }
   .sub-section {
     background-image: url("../images/banner-sub-mobile.png") !important;
-    background-size: cover;
-    background-position: center;
-    border-radius: 15px;
     height: fit-content !important;
     padding: 12px !important;
+  }
+  .sub-section .sub-title {
+    font-size: 20px !important;
+  }
+  .sub-section .sub-desc {
+    font-size: 14px !important;
   }
   .sub-section .sub-form {
     max-width: 269px !important;
@@ -112,6 +127,29 @@
   .sub-section .sub-form>button {
     height: 40px !important;
   }
+  .footer-style .socials img{
+    
+  }
+  .footer-style .payments a img {
+    height: 30px !important;
+  }
+
+  /* Product */
+
+  .product-fomo .product-title {
+    font-size: 20px !important;
+  }
+
+  /* End Product */
+
+  /* Cart */
+  .payments .payments-icon img {
+    height: 28px !important;
+  }
+  .cart-card, .summary-card {
+    padding: 15px !important;
+  }
+  /* End Cart */
 }
 
 /* Từ 576px trở lên (sm) */

@@ -39,14 +39,14 @@
       <!-- Main Content -->
       <main class="flex-fill">
         <!-- Photo Frame Section -->
-        <section class="py-4">
-          <div class="container">
-            <div class="py-3">
-              <h2 class="text-color text-capitalize fw-bold m-0">
+        <section class="py-2 py-md-4">
+          <div class="container product-fomo">
+            <div class="pb-2 pb-md-4">
+              <span class="product-title text-color text-capitalize fw-bold m-0">
                 Photo Frame
-              </h2>
+              </span>
             </div>
-            <div class="row g-4 align-items-stretch non-pointer">
+            <div class="row g-3 g-md-4 align-items-stretch non-pointer d-none d-md-inline-flex">
               <div class="col-12 col-lg-6 col-md-6">
                 <img
                   src="assets/images/photo-frame-1.png"
@@ -62,18 +62,43 @@
                 />
               </div>
             </div>
+            <!-- Mobile Banner -->
+            <div
+              class="promo-mobile-banner position-relative d-block d-md-none rounded overflow-hidden"
+            >
+              <img
+                src="assets/images/hot-trend.png"
+                alt="Hot trend"
+                class="w-100"
+                height="150"
+              />
+
+              <!-- Overlay nội dung -->
+              <div
+                class="overlay-content position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-start text-white px-3"
+              >
+                <h4 class="text-overlay mb-1">BUY MORE</h4>
+                <h4 class="text-overlay mb-4">SAVE MORE</h4>
+
+                <a
+                  href="#"
+                  class="btn btn-upto d-flex align-items-center gap-2 px-3 py-2 rounded-pill"
+                >
+                  <img src="assets/images/bag-add-icon.svg" width="16" />
+                  Up to 20%
+                </a>
+              </div>
+            </div>
           </div>
         </section>
         <!-- Filter Section -->
-        <section class="py-4">
+        <section class="py-2 py-md-4">
           <div class="container">
-            <div class="d-flex flex-wrap gap-3">
-              <!-- Age -->
+            <div class="d-flex flex-wrap gap-3 position-relative">
+            <!-- Age -->
               <div class="custom-select-wrapper position-relative">
                 <label class="fw-semibold me-1">Age:</label>
-                <select
-                  class="custom-select border-0 bg-transparent w-auto form-select"
-                >
+                <select class="custom-select border-0 bg-transparent w-auto form-select">
                   <option selected>1 year old</option>
                   <option>2 years old</option>
                 </select>
@@ -82,9 +107,7 @@
               <!-- Gender -->
               <div class="custom-select-wrapper position-relative">
                 <label class="fw-semibold me-1">Gender:</label>
-                <select
-                  class="custom-select border-0 bg-transparent w-auto form-select"
-                >
+                <select class="custom-select border-0 bg-transparent w-auto form-select">
                   <option selected>For Boys</option>
                   <option>For Girls</option>
                 </select>
@@ -93,9 +116,7 @@
               <!-- Occasions -->
               <div class="custom-select-wrapper position-relative">
                 <label class="fw-semibold me-1">Occasions:</label>
-                <select
-                  class="custom-select border-0 bg-transparent w-auto form-select"
-                >
+                <select class="custom-select border-0 bg-transparent w-auto form-select">
                   <option selected>1st Birthday</option>
                   <option>Baby Shower</option>
                 </select>
@@ -104,9 +125,7 @@
               <!-- Art Style -->
               <div class="custom-select-wrapper position-relative">
                 <label class="fw-semibold me-1">Art style:</label>
-                <select
-                  class="custom-select border-0 bg-transparent w-auto form-select"
-                >
+                <select class="custom-select border-0 bg-transparent w-auto form-select">
                   <option selected>Water color</option>
                   <option>Cartoon</option>
                 </select>
@@ -114,27 +133,31 @@
 
               <!-- Button -->
               <button class="btn btn-pink px-4">Find My Gift</button>
-
               <!-- Sort By -->
-              <div class="custom-select-wrapper position-relative sort-by">
+              <div class="custom-select-wrapper position-relative sort-by ms-xl-auto">
                 <label class="fw-semibold me-1">Sort by:</label>
-                <select
-                  class="custom-select border-0 bg-transparent w-auto form-select"
-                >
+                <select class="custom-select border-0 bg-transparent w-auto form-select">
                   <option selected>Best selling</option>
                   <option>Newest</option>
                 </select>
               </div>
+
+            <!-- Mobile Filter Button -->
+            <div class="filter-button-mobile d-md-none position-absolute end-0 top-50 translate-middle-y">
+              <button id="toggleFilter" class="btn bg-white rounded-circle shadow-custom p-2">
+                <img src="assets/images/filter-icon.svg" alt="Filter" width="24" height="24" />
+              </button>
             </div>
+          </div>
           </div>
         </section>
         
         <!-- Product Section -->
-        <section class="py-4">
+        <section class="py-2 py-md-4">
           <div class="container">
             <div
               id="product-container"
-              class="row g-4 h-100 align-items-stretch"
+              class="row g-3 g-md-4 h-100 align-items-stretch"
             >
               <!-- Sản phẩm -->
             </div>
@@ -150,169 +173,11 @@
         </section>
 
         <!-- Certificate Section -->
-        <section class="py-4 certificate" style="background-color: #eef1e0">
-          <div class="container">
-            <div class="row g-3 align-items-stretch">
-              <div class="col-12 col-lg-4 mb-4 mb-lg-0">
-                <h2 class="fw-bold text-dark mb-3">
-                  WHY YOU CAN<br />TRUST US
-                </h2>
-                <p class="text-secondary small mb-0">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt Lorem ipsum dolor sit amet,
-                  consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                  Lorem
-                </p>
-              </div>
-              <div class="col-12 col-lg-4 col-md-6">
-                <div class="p-4 bg-white rounded-4 shadow-custom h-100">
-                  <div class="d-flex align-items-center gap-2 mb-3">
-                    <img
-                      src="assets/images/cert-icon.svg"
-                      width="48"
-                      height="72"
-                      alt="icon"
-                    />
-                    <h6 class="fw-bold m-0 ms-1">
-                      Premium <br />Print Quality
-                    </h6>
-                  </div>
-                  <p class="text-secondary small m-0">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt Lorem
-                  </p>
-                </div>
-              </div>
-              <div class="col-12 col-lg-4 col-md-6">
-                <div class="p-4 bg-white rounded-4 shadow-custom h-100">
-                  <div class="d-flex align-items-center gap-2 mb-3">
-                    <img
-                      src="assets/images/global-icon.svg"
-                      width="70"
-                      height="62"
-                      alt="icon"
-                    />
-                    <h6 class="fw-bold m-0 ms-1">
-                      Secure Global <br />Shipping
-                    </h6>
-                  </div>
-                  <p class="text-secondary small m-0">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt Lorem
-                  </p>
-                </div>
-              </div>
-              <div class="col-12 col-lg-4 col-md-6">
-                <div class="p-4 bg-white rounded-4 shadow-custom h-100">
-                  <div class="d-flex align-items-center gap-2 mb-3">
-                    <img
-                      src="assets/images/paypal-icon.svg"
-                      width="78"
-                      height="61"
-                      alt="icon"
-                    />
-                    <h6 class="fw-bold m-0 ms-1">Trusted <br />Payment</h6>
-                  </div>
-                  <p class="text-secondary small m-0">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt Lorem
-                  </p>
-                </div>
-              </div>
-              <div class="col-12 col-lg-4 col-md-6">
-                <div class="p-4 bg-white rounded-4 shadow-custom h-100">
-                  <div class="d-flex align-items-center gap-2 mb-3">
-                    <img
-                      src="assets/images/headset-icon.svg"
-                      width="68"
-                      height="68"
-                      alt="icon"
-                    />
-                    <h6 class="fw-bold m-0 ms-1">
-                      24/7 Friendly <br />Support
-                    </h6>
-                  </div>
-                  <p class="text-secondary small m-0">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt Lorem
-                  </p>
-                </div>
-              </div>
-              <div class="col-12 col-lg-4 col-md-6">
-                <div class="p-4 bg-white rounded-4 shadow-custom h-100">
-                  <div class="d-flex align-items-center gap-2 mb-3">
-                    <img
-                      src="assets/images/heart-icon.svg"
-                      width="60"
-                      height="60"
-                      alt="icon"
-                    />
-                    <h6 class="fw-bold m-0 ms-1">Trustpilot <br />Reviews</h6>
-                  </div>
-                  <p class="text-secondary small m-0">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt Lorem
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <section id="certificate-section"></section>
 
         <!-- Subscribe Section -->
-        <section class="py-5">
-          <div class="container">
-            <div
-              class="position-relative sub-section text-white p-5 d-flex flex-column justify-content-center align-items-center text-center"
-              style="
-                background-image: url('assets/images/Rectangle 79.png');
-                background-size: cover;
-                background-position: center;
-                border-radius: 15px;
-                height: 235px;
-              "
-            >
-              <div style="z-index: 2">
-                <h4 class="fw-bold mb-2 text-white">
-                  Get 10% Off Your First Order
-                </h4>
-                <p class="mb-4 text-white small">
-                  Subscribe to our newsletter and receive a 10% discount code
-                  instantly!
-                </p>
+        <section id="subscribe-section"></section>
 
-                <form
-                  class="d-flex flex-column flex-md-row custom-form-control-focus align-items-center gap-2 w-100 justify-content-center"
-                >
-                  <input
-                    type="email"
-                    class="form-control rounded-pill px-4 py-2"
-                    placeholder="your.email@gmail.com"
-                    required
-                    style="width: 428px; height: 55px"
-                  />
-                  <button
-                    type="submit"
-                    class="btn btn-primary-custom px-4 py-2"
-                    style="width: 245px; height: 55px"
-                  >
-                    Claim My Discount
-                  </button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </section>
       </main>
 
       <!-- Footer -->
@@ -331,7 +196,7 @@
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
       }));
 
-      const itemsPerPage = 12;
+      const itemsPerPage = 20;
       const productContainer = document.getElementById("product-container");
       const pagination = document.getElementById("pagination");
 
@@ -348,7 +213,7 @@
             <img src="${item.img}" class="card-img-top" alt="${item.name}" />
             
             <div class="card-body text-start d-flex flex-column flex-grow-1">
-              <p class="card-text text-color-second text-truncate-4 fw-medium flex-grow-1">${item.desc}</p>
+              <p class="card-text text-color-second text-truncate-4 xs-text-truncate-2 fw-medium flex-grow-1">${item.desc}</p>
               <h6 class="fw-bold">$${item.price.toFixed(2)}</h6>
               <a href="product-detail.html" class="btn btn-outline-custom btn-h-45 mt-2">
                 Make it Yours

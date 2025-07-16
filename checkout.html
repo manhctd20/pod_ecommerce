@@ -34,11 +34,13 @@
   <body>
     <div class="wrapper d-flex flex-column min-vh-100">
       <!-- Header -->
-      <header>
+      <header class="d-none d-md-block">
         <div class="container d-flex justify-content-center py-4">
           <div class="fw-bold border py-2 px-5 rounded">Logo</div>
         </div>
       </header>
+
+      <header class="d-block d-md-none" id="header"></header>
 
       <!-- Main Content -->
       <main class="flex-fill">
@@ -216,5 +218,7 @@
         </section>
       </main>
     </div>
+    <!-- Custom Script -->
+    <script src="assets/js/main.js"></script>
   </body>
 </html>
