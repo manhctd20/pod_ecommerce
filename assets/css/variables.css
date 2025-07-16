@@ -2,7 +2,7 @@
   --font-base: "Montserrat", sans-serif;
 
   --primary: #ff5b6b;
-  --secondary: #f59547;
+  --secondary: #000000;
   --text-color: #ff939d;
   --text-color-second: #444444;
 
@@ -17,6 +17,10 @@
 /* Base text color */
 .text-primary-custom {
   color: var(--primary) !important;
+}
+
+.text-secondary-custom {
+  color: var(--secondary) !important;
 }
 
 .text-color-second {

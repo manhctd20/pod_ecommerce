@@ -197,10 +197,6 @@
     font-size: 14px;
   }
 
-  .text-fs-15 {
-    font-size: 14px !important;
-  }
-
   .checkout-container .btn-paynow {
     font-size: 16px;
   }
@@ -232,9 +228,11 @@
   .checkout-form-control input {
     /* padding: 10px 14px; */
   }
-
+  .order-title {
+    font-size: 13px !important;
+  }
   .checkout-meta li {
-    font-size: 13px;
+    font-size: 10px;
   }
 }
 

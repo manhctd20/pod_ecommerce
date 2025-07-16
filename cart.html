@@ -50,13 +50,13 @@
                       src="assets/images/Rectangle 60.png"
                       alt="Product"
                       class="img-fluid rounded"
-                      style="width: 150px; height: auto"
+                      style="width: 250px; height: auto"
                     />
                   </div>
 
                   <!-- Details -->
                   <div class="flex-grow-1 cart-details">
-                    <div class="d-flex justify-content-between cart-title mb-2">
+                    <div class="d-flex justify-content-between cart-title mb-3">
                       <h5 class="fw-semibold">
                         Lorem Ipsum is simply dummy text of the printing and
                         typesetting industry
@@ -91,11 +91,11 @@
 
                     <!-- Quantity and Price -->
                     <div
-                      class="d-flex align-items-center justify-content-between mt-2 cart-footer"
+                      class="d-flex align-items-center justify-content-between cart-footer"
                     >
                       <div
                         class="input-group cart-quantity qty-custom"
-                        style="width: 120px"
+                        style="width: 120px;margin-top: 15px;"
                       >
                         <button
                           class="btn btn-outline-secondary"
@@ -122,11 +122,11 @@
                         <div class="d-flex justify-content-end">
                           <span
                             style="color: #9d9b9b"
-                            class="text-decoration-line-through"
+                            class="text-decoration-line-through price-origin"
                             >$34.95</span
                           >
                         </div>
-                        <div class="fw-semibold fs-5 text-dark">$29.99 USD</div>
+                        <div class="fw-semibold text-dark price-sale">$29.99 USD</div>
                       </div>
                     </div>
                   </div>
@@ -175,11 +175,13 @@
                       class="d-flex align-items-center justify-content-center gap-2"
                       href="checkout.html"
                     >
-                      <img
-                        src="assets/images/fi-sr-lock.svg"
-                        width="21"
-                        height="21"
-                      />
+                      <div class="non-pointer">
+                        <img
+                          src="assets/images/fi-sr-lock.svg"
+                          width="21"
+                          height="21"
+                        />
+                      </div>
                       <span class="text-white">SECURE CHECKOUT</span>
                     </a>
                   </button>
@@ -187,11 +189,13 @@
                     style="color: #4bb232"
                     class="fw-semibold d-flex align-items-center justify-content-center gap-2 text-center mb-3 summary-note"
                   >
-                    <img
-                      src="assets/images/check-security.svg"
-                      width="30"
-                      height="30"
-                    />
+                    <div class="non-pointer">
+                      <img
+                        src="assets/images/check-security.svg"
+                        width="30"
+                        height="30"
+                      />
+                    </div>
                     Secure Checkout with Buyer Protection
                   </div>
                   <hr />
@@ -200,7 +204,7 @@
                     <h6 class="fw-bold mb-2 summary-payment-title">
                       Payment Methods
                     </h6>
-                    <div class="payments-icon d-flex justify-content-center flex-wrap gap-2 summary-payment-methods">
+                    <div class="payments-icon d-flex justify-content-center flex-wrap gap-2 summary-payment-methods non-pointer">
                       <img src="assets/images/payments/Paypal.svg" height="38" />
                       <img
                         src="assets/images/payments/ApplePay.svg"
@@ -253,14 +257,14 @@
                     <p class="card-text text-color-second m-0 text-truncate-4 xs-text-truncate-2 fw-medium flex-grow-1">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet
                     </p>
-                    <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center justify-content-between my-md-2">
                       <span class="fw-bold" style="font-size: 16px;">$29.99</span>
                       <span class="fw-semibold text-sale" style="color: #ff939d; font-size: 16px;">↓ Buy more, save 10%</span>
                     </div>
-                    <button id="addToCartBtn" class="btn btn-outline-custom btn-h-45 mt-2">
+                    <a href="product-detail.html" class="btn btn-outline-custom btn-h-45 mt-2">
                       Make it Yours
                       <i class="bi bi-chevron-right ms-2"></i>
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -276,14 +280,14 @@
                     <p class="card-text text-color-second m-0 text-truncate-4 xs-text-truncate-2 fw-medium flex-grow-1">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet
                     </p>
-                    <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center justify-content-between my-md-2">
                       <span class="fw-bold" style="font-size: 16px;">$29.99</span>
                       <span class="fw-semibold text-sale" style="color: #ff939d; font-size: 16px;">↓ Buy more, save 10%</span>
                     </div>
-                    <button id="addToCartBtn" class="btn btn-outline-custom btn-h-45 mt-2">
+                    <a href="product-detail.html" class="btn btn-outline-custom btn-h-45 mt-2">
                       Make it Yours
                       <i class="bi bi-chevron-right ms-2"></i>
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -299,14 +303,14 @@
                     <p class="card-text text-color-second m-0 text-truncate-4 xs-text-truncate-2 fw-medium flex-grow-1">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet
                     </p>
-                    <div class="d-flex align-items-center justify-content-between mb-md-2">
+                    <div class="d-flex align-items-center justify-content-between my-md-2">
                       <span class="fw-bold" style="font-size: 16px;">$29.99</span>
                       <span class="fw-semibold text-sale" style="color: #ff939d; font-size: 16px;">↓ Buy more, save 10%</span>
                     </div>
-                    <button id="addToCartBtn" class="btn btn-outline-custom btn-h-45 mt-2">
+                    <a href="product-detail.html" class="btn btn-outline-custom btn-h-45 mt-2">
                       Make it Yours
                       <i class="bi bi-chevron-right ms-2"></i>
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -322,14 +326,14 @@
                     <p class="card-text text-color-second m-0 text-truncate-4 xs-text-truncate-2 fw-medium flex-grow-1">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet
                     </p>
-                    <div class="d-flex align-items-center justify-content-between mb-md-2">
+                    <div class="d-flex align-items-center justify-content-between my-md-2">
                       <span class="fw-bold" style="font-size: 16px;">$29.99</span>
                       <span class="fw-semibold text-sale" style="color: #ff939d; font-size: 16px;">↓ Buy more, save 10%</span>
                     </div>
-                    <button id="addToCartBtn" class="btn btn-outline-custom btn-h-45 mt-2">
+                    <a href="product-detail.html" class="btn btn-outline-custom btn-h-45 mt-2">
                       Make it Yours
                       <i class="bi bi-chevron-right ms-2"></i>
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>

@@ -3,6 +3,11 @@
 @import url("header.css");
 @import url("responsive.css");
 
+.title-section-home {
+  font-size: 35px !important;
+  font-weight: 900;
+}
+
 .footer-links li a {
   text-transform: capitalize;
   transition: all 0.4s ease;
@@ -376,7 +381,10 @@
 }
 
 .cart-title h5 {
-  font-size: 1rem;
+  font-size: 20px;
+}
+.cart-section .price-sale {
+  font-size: 25px;
 }
 
 .cart-price span {
