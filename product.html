@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body>
-    <div class="wrapper d-flex flex-column min-vh-100">
+    <div class="wrapper min-vh-100">
       <!-- Header -->
       <header id="header"></header>
 
@@ -93,62 +93,61 @@
         </section>
         <!-- Filter Section -->
         <section class="py-2 py-md-4">
-          <div class="container">
-            <div class="d-flex flex-wrap gap-3 position-relative">
-            <!-- Age -->
-              <div class="custom-select-wrapper position-relative">
-                <label class="fw-semibold me-1">Age:</label>
-                <select class="custom-select border-0 bg-transparent w-auto form-select">
-                  <option selected>1 year old</option>
-                  <option>2 years old</option>
-                </select>
-              </div>
+          <div class="container filter-section">
+            <div
+              class="position-relative overflow-auto"
+              style="white-space: nowrap; -ms-overflow-style: none; scrollbar-width: none;"
+            >
+              <div class="d-flex gap-3" style="min-width: max-content;">
+                <!-- Age -->
+                <div class="custom-select-wrapper position-relative">
+                  <label class="fw-semibold me-1">Age:</label>
+                  <select class="custom-select border-0 bg-transparent w-auto form-select">
+                    <option selected>1 year old</option>
+                    <option>2 years old</option>
+                  </select>
+                </div>
 
-              <!-- Gender -->
-              <div class="custom-select-wrapper position-relative">
-                <label class="fw-semibold me-1">Gender:</label>
-                <select class="custom-select border-0 bg-transparent w-auto form-select">
-                  <option selected>For Boys</option>
-                  <option>For Girls</option>
-                </select>
-              </div>
+                <!-- Gender -->
+                <div class="custom-select-wrapper position-relative">
+                  <label class="fw-semibold me-1">Gender:</label>
+                  <select class="custom-select border-0 bg-transparent w-auto form-select">
+                    <option selected>For Boys</option>
+                    <option>For Girls</option>
+                  </select>
+                </div>
 
-              <!-- Occasions -->
-              <div class="custom-select-wrapper position-relative">
-                <label class="fw-semibold me-1">Occasions:</label>
-                <select class="custom-select border-0 bg-transparent w-auto form-select">
-                  <option selected>1st Birthday</option>
-                  <option>Baby Shower</option>
-                </select>
-              </div>
+                <!-- Occasions -->
+                <div class="custom-select-wrapper position-relative">
+                  <label class="fw-semibold me-1">Occasions:</label>
+                  <select class="custom-select border-0 bg-transparent w-auto form-select">
+                    <option selected>1st Birthday</option>
+                    <option>Baby Shower</option>
+                  </select>
+                </div>
 
-              <!-- Art Style -->
-              <div class="custom-select-wrapper position-relative">
-                <label class="fw-semibold me-1">Art style:</label>
-                <select class="custom-select border-0 bg-transparent w-auto form-select">
-                  <option selected>Water color</option>
-                  <option>Cartoon</option>
-                </select>
-              </div>
+                <!-- Art Style -->
+                <div class="custom-select-wrapper position-relative">
+                  <label class="fw-semibold me-1">Art style:</label>
+                  <select class="custom-select border-0 bg-transparent w-auto form-select">
+                    <option selected>Water color</option>
+                    <option>Cartoon</option>
+                  </select>
+                </div>
 
-              <!-- Button -->
-              <button class="btn btn-pink px-4">Find My Gift</button>
-              <!-- Sort By -->
-              <div class="custom-select-wrapper position-relative sort-by ms-xl-auto">
-                <label class="fw-semibold me-1">Sort by:</label>
-                <select class="custom-select border-0 bg-transparent w-auto form-select">
-                  <option selected>Best selling</option>
-                  <option>Newest</option>
-                </select>
-              </div>
+                <!-- Button -->
+                <button class="btn btn-pink px-4">Find My Gift</button>
 
-            <!-- Mobile Filter Button -->
-            <div class="filter-button-mobile d-md-none position-absolute end-0 top-50 translate-middle-y">
-              <button id="toggleFilter" class="btn bg-white rounded-circle shadow-custom p-2">
-                <img src="assets/images/filter-icon.svg" alt="Filter" width="24" height="24" />
-              </button>
+                <!-- Sort By -->
+                <div class="custom-select-wrapper position-relative sort-by ms-xl-auto">
+                  <label class="fw-semibold me-1">Sort by:</label>
+                  <select class="custom-select border-0 bg-transparent w-auto form-select">
+                    <option selected>Best selling</option>
+                    <option>Newest</option>
+                  </select>
+                </div>
+              </div>
             </div>
-          </div>
           </div>
         </section>
         

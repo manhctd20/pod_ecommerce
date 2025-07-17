@@ -148,6 +148,10 @@ header .menu-item:hover {
   font-size: 35px;
 }
 
+.title-section {
+  font-size: 25px;
+}
+
 .footer-links li a {
   text-transform: capitalize;
   transition: all 0.4s ease;
@@ -519,6 +523,101 @@ header .menu-item:hover {
   background-color: #fcd5d5;
 }
 
+/** Cart **/
+/* .cart-section {
+}
+
+.cart-card {
+  transition: box-shadow 0.3s;
+}
+
+.cart-card:hover {
+}
+
+.cart-title h5 {
+  font-size: 20px;
+}
+.cart-section .price-sale {
+  font-size: 25px;
+}
+
+.cart-price span {
+  color: #28a745;
+}
+
+.summary-card .checkout-btn span {
+  font-size: 25px;
+} */
+
+.cart-card,
+  .summary-card {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .cart-card {
+    transition: box-shadow 0.3s;
+  }
+
+  .cart-title h5 {
+    font-size: 20px;
+  }
+
+  .price-sale {
+    font-size: 25px;
+  }
+
+  .cart-price span {
+    color: #28a745;
+  }
+
+  .checkout-btn span {
+    font-size: 25px;
+  }
+
+  .cart-meta {
+    font-size: 13px;
+    color: #9d9b9b;
+  }
+
+  .cart-image img {
+    width: 100%;
+    max-width: 250px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
+
+  @media (max-width: 767.98px) {
+    .cart-card {
+      flex-direction: column;
+    }
+
+    .cart-image img {
+      max-width: 100%;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+
+    .cart-title h5 {
+      font-size: 18px;
+    }
+
+    .price-sale {
+      font-size: 22px;
+    }
+
+    .checkout-btn span {
+      font-size: 20px;
+    }
+
+    .summary-payment-methods img {
+      height: 30px;
+    }
+  }
+
+
+
 .cart-card,
 .summary-card {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -657,7 +756,9 @@ header .menu-item:hover {
 .product-fomo .product-title {
   font-size: 30px;
 }
-
+.filter-section .overflow-auto::-webkit-scrollbar {
+  display: none;
+}
 /* Checkout */
 
 /* Checkout Success */
@@ -708,3 +809,23 @@ header .menu-item:hover {
   color: #444444 !important;
 }
 
+/* Product Detail */
+.product-detail .product-name {
+  font-size: 25px;
+}
+.product-detail .stars-icon img {
+  height: 22px;
+}
+.product-detail .price-sale {
+  font-size: 30px;
+}
+.product-detail .price-origin {
+  font-size: 20px;
+}
+.product-detail .delivery-text {
+  font-size: 15px;
+}
+
+.product-detail .payments-icon img {
+  height: 39px;
+}
