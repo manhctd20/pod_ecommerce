@@ -81,8 +81,8 @@
     font-size: 20px !important;
   }
   .btn-discover {
-    font-size: 15px;
-    height: 38px;
+    font-size: 15px !important;
+    height: 38px !important;
   }
   .btn-outline-custom {
     font-size: 14px;
@@ -149,6 +149,12 @@
   .xs-text-truncate-2 {
     display: -webkit-box;
     -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .xs-text-truncate-4 {
+    display: -webkit-box;
+    -webkit-line-clamp: 4 !important;
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
@@ -295,6 +301,45 @@
   }
   .checkout-container .checkout-meta {
     font-size: 10px !important;
+  }
+
+  /* Blog Detail */
+  .breadcrumb-style ol li {
+    font-size: 13px !important;
+  }
+  .breadcrumb-style ol li a {
+    font-size: 13px !important;
+  }
+  .blog-detail h2 {
+    font-size: 16px !important;
+  }
+  .blog-detail .meta-data {
+    font-size: 13px !important;
+  }
+  .blog-detail .detail-text {
+    font-size: 13px !important;
+  }
+
+  /* Blog */
+  .blog-card{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  #blog-container .blog-card .blog-title {
+    font-size: 15px !important;
+  }
+  #blog-container .blog-card .blog-meta {
+    font-size: 13px;
+  }
+  #blog-container .blog-card .blog-desc {
+    font-size: 13px !important;
+  }
+  /* Introduce */
+  .introduce-content p {
+    font-size: 12px !important;
+  }
+
+  .introduce-content h3 {
+    font-size: 20px !important;
   }
 }
 

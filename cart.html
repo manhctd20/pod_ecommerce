@@ -39,209 +39,116 @@
       <!-- Main Content -->
       <main class="flex-fill">
         <section class="py-4 cart-section">
-          <div class="container">
-            <div class="row g-4 align-items-start">
-              <!-- Cart Item -->
-              <div class="col-lg-7 cart-item">
-                <div class="d-flex bg-white gap-3 cart-card">
-                  <!-- Image -->
-                  <div class="flex-shrink-0 cart-image">
-                    <img
-                      src="assets/images/Rectangle 60.png"
-                      alt="Product"
-                      class="img-fluid rounded"
-                      style="width: 250px; height: auto"
-                    />
-                  </div>
+  <div class="container">
+    <div class="row g-4 align-items-start">
+      <!-- Cart Item -->
+      <div class="col-lg-7 cart-item">
+        <div class="d-flex bg-white gap-3 cart-card flex-column flex-md-row">
+          <!-- Image -->
+          <div class="cart-image">
+            <img src="assets/images/Rectangle 60.png" alt="Product" class="img-fluid rounded" />
+          </div>
 
-                  <!-- Details -->
-                  <div class="flex-grow-1 cart-details">
-                    <div class="d-flex justify-content-between cart-title mb-3">
-                      <h5 class="fw-semibold">
-                        Lorem Ipsum is simply dummy text of the printing and
-                        typesetting industry
-                      </h5>
-                      <button class="btn-close cart-remove"></button>
-                    </div>
-                    <div class="d-flex align-items-center mb-2">
-                      <div class="vertical-rounded-bar"></div>
-                      <ul class="list-unstyled mb-2 cart-meta">
-                        <li>
-                          <span class="fw-semibold">Product type:</span> Photo
-                          Frame A
-                        </li>
-                        <li>
-                          <span class="fw-semibold">Material:</span> Wooden
-                        </li>
-                        <li>
-                          <span class="fw-semibold">Color frame:</span> Yellow
-                        </li>
-                      </ul>
-                    </div>
-                    <p
-                      class="text-color-second fw-semibold mb-4 cart-delivery d-flex align-items-center gap-2"
-                    >
-                      <img
-                        src="assets/images/shipping-car-icon.svg"
-                        width="21"
-                        height="21"
-                      />
-                      Est. delivery by Jun 30 <span class="d-none d-md-block">(Standard Shipping)</span>
-                    </p>
+          <!-- Details -->
+          <div class="flex-grow-1 cart-details">
+            <div class="d-flex justify-content-between cart-title mb-3">
+              <h5 class="fw-semibold">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry
+              </h5>
+              <button class="btn-close cart-remove"></button>
+            </div>
+            <div class="d-flex align-items-start mb-2">
+              <div class="vertical-rounded-bar me-2"></div>
+              <ul class="list-unstyled mb-2 cart-meta">
+                <li><span class="fw-semibold">Product type:</span> Photo Frame A</li>
+                <li><span class="fw-semibold">Material:</span> Wooden</li>
+                <li><span class="fw-semibold">Color frame:</span> Yellow</li>
+              </ul>
+            </div>
+            <p class="text-color-second fw-semibold mb-4 cart-delivery d-flex align-items-center gap-2">
+              <img src="assets/images/shipping-car-icon.svg" width="21" height="21" />
+              Est. delivery by Jun 30 <span class="d-none d-md-block">(Standard Shipping)</span>
+            </p>
 
-                    <!-- Quantity and Price -->
-                    <div
-                      class="d-flex align-items-center justify-content-between cart-footer"
-                    >
-                      <div
-                        class="input-group cart-quantity qty-custom"
-                        style="width: 120px;margin-top: 15px;"
-                      >
-                        <button
-                          class="btn btn-outline-secondary"
-                          type="button"
-                          style="border-color: #d9d9d9"
-                        >
-                          <i class="bi bi-dash-lg"></i>
-                        </button>
-                        <input
-                          type="text"
-                          class="form-control text-center"
-                          value="1"
-                          style="pointer-events: none"
-                        />
-                        <button
-                          class="btn btn-outline-secondary"
-                          type="button"
-                          style="border-color: #d9d9d9"
-                        >
-                          <i class="bi bi-plus-lg"></i>
-                        </button>
-                      </div>
-                      <div class="cart-price">
-                        <div class="d-flex justify-content-end">
-                          <span
-                            style="color: #9d9b9b"
-                            class="text-decoration-line-through price-origin"
-                            >$34.95</span
-                          >
-                        </div>
-                        <div class="fw-semibold text-dark price-sale">$29.99 USD</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            <!-- Quantity and Price -->
+            <div class="d-flex align-items-center justify-content-between cart-footer">
+              <div class="input-group cart-quantity qty-custom" style="width: 120px; margin-top: 15px">
+                <button class="btn btn-outline-secondary" type="button" style="border-color: #d9d9d9">
+                  <i class="bi bi-dash-lg"></i>
+                </button>
+                <input type="text" class="form-control text-center" value="1" style="pointer-events: none" />
+                <button class="btn btn-outline-secondary" type="button" style="border-color: #d9d9d9">
+                  <i class="bi bi-plus-lg"></i>
+                </button>
               </div>
-
-              <!-- Checkout Summary -->
-              <div class="col-lg-5 cart-summary">
-                <div class="bg-white summary-card">
-                  <div
-                    class="d-flex justify-content-between mb-2 summary-subtotal"
-                  >
-                    <span class="fw-bold"
-                      >Subtotal
-                      <span style="color: #9d9b9b" class="fw-light"
-                        >(1 item)</span
-                      ></span
-                    >
-                    <strong>$29.99 USD</strong>
-                  </div>
-                  <div
-                    class="d-flex justify-content-between mb-3 summary-shipping"
-                  >
-                    <span class="fw-bold"
-                      >Shipping
-                      <span style="color: #9d9b9b" class="fw-light">
-                        (Standard Shipping)
-                      </span>
-                    </span>
-                    <strong>$6.99 USD</strong>
-                  </div>
-                  <hr />
-                  <div
-                    class="d-flex justify-content-between mb-4 summary-total"
-                  >
-                    <strong>Total</strong>
-                    <strong class="fs-5">$36.98 USD</strong>
-                  </div>
-
-                  <!-- Checkout Button -->
-                  <button
-                    style="background-color: #4bb232;border-radius:10px;"
-                    class="checkout-btn btn w-100 fw-semibold mb-4 summary-checkout"
-                  >
-                    <a
-                      class="d-flex align-items-center justify-content-center gap-2"
-                      href="checkout.html"
-                    >
-                      <div class="non-pointer">
-                        <img
-                          src="assets/images/fi-sr-lock.svg"
-                          width="21"
-                          height="21"
-                        />
-                      </div>
-                      <span class="text-white">SECURE CHECKOUT</span>
-                    </a>
-                  </button>
-                  <div
-                    style="color: #4bb232"
-                    class="fw-semibold d-flex align-items-center justify-content-center gap-2 text-center mb-3 summary-note"
-                  >
-                    <div class="non-pointer">
-                      <img
-                        src="assets/images/check-security.svg"
-                        width="30"
-                        height="30"
-                      />
-                    </div>
-                    Secure Checkout with Buyer Protection
-                  </div>
-                  <hr />
-                  <!-- Payment Methods -->
-                  <div class="payments" >
-                    <h6 class="fw-bold mb-2 summary-payment-title">
-                      Payment Methods
-                    </h6>
-                    <div class="payments-icon d-flex justify-content-center flex-wrap gap-2 summary-payment-methods non-pointer">
-                      <img src="assets/images/payments/Paypal.svg" height="38" />
-                      <img
-                        src="assets/images/payments/ApplePay.svg"
-                        height="38"
-                      />
-                      <img src="assets/images/payments/Visa.svg" height="38" />
-                      <img
-                        src="assets/images/payments/master-card.svg"
-                        height="38"
-                      />
-                      <img
-                        src="assets/images/payments/amex-icon.svg"
-                        height="38"
-                      />
-                      <img
-                        src="assets/images/payments/Discover.svg"
-                        height="38"
-                      />
-                      <img src="assets/images/payments/JCB.svg" height="38" />
-                      <img
-                        src="assets/images/payments/UnionPay.svg"
-                        height="38"
-                      />
-                    </div>
-                  </div>
+              <div class="cart-price">
+                <div class="d-flex justify-content-end">
+                  <span class="text-decoration-line-through price-origin">$34.95</span>
                 </div>
+                <div class="fw-semibold text-dark price-sale">$29.99 USD</div>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </div>
 
-        <section class="pt-4 pb-5">
+      <!-- Checkout Summary -->
+      <div class="col-lg-5 cart-summary">
+        <div class="bg-white summary-card">
+          <div class="d-flex justify-content-between mb-2 summary-subtotal">
+            <span class="fw-bold">Subtotal <span class="fw-light text-muted">(1 item)</span></span>
+            <strong>$29.99 USD</strong>
+          </div>
+          <div class="d-flex justify-content-between mb-3 summary-shipping">
+            <span class="fw-bold">Shipping <span class="fw-light text-muted">(Standard Shipping)</span></span>
+            <strong>$6.99 USD</strong>
+          </div>
+          <hr />
+          <div class="d-flex justify-content-between mb-4 summary-total">
+            <strong>Total</strong>
+            <strong class="fs-5">$36.98 USD</strong>
+          </div>
+
+          <!-- Checkout Button -->
+          <button style="background-color: #4bb232; border-radius: 10px" class="checkout-btn btn w-100 fw-semibold mb-4 summary-checkout">
+            <a class="d-flex align-items-center justify-content-center gap-2 text-white text-decoration-none" href="checkout.html">
+              <img src="assets/images/fi-sr-lock.svg" width="21" height="21" />
+              <span>SECURE CHECKOUT</span>
+            </a>
+          </button>
+          <div style="color: #4bb232" class="fw-semibold d-flex align-items-center justify-content-center gap-2 text-center mb-3 summary-note">
+            <img src="assets/images/check-security.svg" width="30" height="30" />
+            Secure Checkout with Buyer Protection
+          </div>
+          <hr />
+          <div class="payments">
+            <h6 class="fw-bold mb-2 summary-payment-title">Payment Methods</h6>
+            <div class="payments-icon d-flex justify-content-center flex-wrap gap-2 summary-payment-methods">
+              <img src="assets/images/payments/Paypal.svg" height="38" />
+              <img src="assets/images/payments/ApplePay.svg" height="38" />
+              <img src="assets/images/payments/Visa.svg" height="38" />
+              <img src="assets/images/payments/master-card.svg" height="38" />
+              <img src="assets/images/payments/amex-icon.svg" height="38" />
+              <img src="assets/images/payments/Discover.svg" height="38" />
+              <img src="assets/images/payments/JCB.svg" height="38" />
+              <img src="assets/images/payments/UnionPay.svg" height="38" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <section class="py-3 pt-md-4 pb-md-5">
           <div class="container">
             <div class="d-flex justify-content-between align-items-center mb-4">
-              <h3 class="text-color text-capitalize fw-bold m-0">
+              <h3 class="text-color text-capitalize title-section-home fw-bold m-0">
                 You Might Also Like
               </h3>
+              <a href="product.html" class="d-block d-md-none text-color">
+                See all
+              </a>
             </div>
 
             <div class="row g-3 g-md-4 align-items-stretch">

@@ -30,16 +30,6 @@
 
     <!-- Custom Styles -->
     <link rel="stylesheet" href="assets/css/styles.css" />
-    <style>
-      .breadcrumb-style ol li {
-        font-size: 15px !important;
-        color: #444444 !important;
-      }
-      .breadcrumb-style ol li a {
-        color: #9d9b9b !important;
-        font-size: 15px !important;
-      }
-    </style>
   </head>
   <body>
     <div class="wrapper d-flex flex-column min-vh-100">
@@ -64,17 +54,22 @@
             </ol>
           </nav>
         </div>
-        <section class="pb-4">
+        <section class="pb-3 pb-md-4">
           <div class="container">
             <img
               src="assets/images/banner.png"
-              alt="Hero Banner"
-              class="img-fluid rounded"
+              alt="Banner"
+              class="img-fluid rounded d-none d-md-block"
+            />
+            <img
+              src="assets/images/Rectangle 287.png"
+              alt="Banner"
+              class="img-fluid rounded d-block d-md-none"
             />
           </div>
         </section>
-        <section class="pb-4 text-color-second">
-          <div class="container">
+        <section class="pb-2 pb-md-4 text-color-second">
+          <div class="container blog-detail">
             <div class="w-100 border-0 rounded-4 overflow-hidden">
               <div class="d-flex flex-column text-start">
                 <h2 style="font-size: 30px;" class="fw-bold mb-2">
@@ -83,9 +78,8 @@
                   standard dummy text ever since the 1500s
                 </h2>
 
-                <!-- Metadata -->
                 <div
-                  class="small text-muted d-flex align-items-center gap-3 mb-2"
+                  class="meta-data small fw-semibold d-flex align-items-center gap-3 mb-2"
                 >
                   <span><i class="bi bi-clock me-1"></i> 1 hour ago</span>
                   <span><i class="bi bi-eye me-1"></i> 523</span>
@@ -93,7 +87,7 @@
 
                 <!-- Nội dung -->
                 <p
-                  class="small text-secondary-custom"
+                  class="detail-text text-secondary-custom m-0"
                   style="font-size: 18px; line-height: 1.6;"
                 >
                   Lorem Ipsum is simply dummy text of the printing and
@@ -145,10 +139,10 @@
           </div>
         </section>
         <!-- You Might Also Like Section -->
-        <section class="pt-4 pb-5">
+        <section class="pt-4 pb-5 d-none d-md-block">
           <div class="container">
             <div class="d-flex justify-content-between align-items-center mb-4">
-              <h2 class="text-color text-capitalize fw-bold m-0">You Might Also Like</h2>
+              <h2 class="title-section-home text-color text-capitalize fw-bold m-0">You Might Also Like</h2>
               <a
                 href="blog.html"
                 class="btn-discover btn btn-outline-custom d-flex align-items-center"
@@ -337,6 +331,150 @@
             </div>
           </div>
         </section>
+
+        <section class="pb-3 d-block d-md-none" id="news">
+          <div class="container news-section">
+            <div class="row align-items-center">
+              <div
+                class="trustpilot-logo col-md-4 mb-md-4 py-2 py-md-3 mb-md-0 text-center text-md-start align-self-start non-pointer"
+              >
+                <h3 class="fw-bold text-capitalize text-color">
+                  You Might Also Like
+                </h3>
+              </div>
+
+              <!-- Swiper news -->
+              <div class="col-md-8 position-relative">
+                <div class="news-navigation">
+                  <div class="btn-nav blog-prev">
+                    <i class="bi bi-chevron-left"></i>
+                  </div>
+                  <div class="btn-nav blog-next">
+                    <i class="bi bi-chevron-right"></i>
+                  </div>
+                </div>
+
+                <div class="swiper blog-swiper">
+                  <div class="swiper-wrapper py-1 px-1 py-md-3 px-md-3">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                      <div class="card w-100 shadow-custom rounded-4 border-0">
+                        <img
+                          src="assets/images/news-mobile.png"
+                          class="card-img-top rounded-top-4"
+                          alt="Article"
+                        />
+                        <div
+                          class="card-body p-2 d-flex flex-column text-start"
+                        >
+                          <!-- Tiêu đề -->
+                          <h6
+                            class="fw-bold mb-1 text-truncate-2"
+                            style="font-size: 13px"
+                          >
+                            Lorem Ipsum is simply dummy text
+                          </h6>
+                          <!-- Nút -->
+                          <a
+                            href="blog-detail.html"
+                            class="btn-see-more btn btn-outline-custom fw-medium align-self-start mt-2 py-1 px-3"
+                            style="font-size: 13px; height: 30px;"
+                          >
+                            See more <i class="bi bi-chevron-right ms-1"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="card w-100 shadow-custom rounded-4 border-0">
+                        <img
+                          src="assets/images/news-mobile.png"
+                          class="card-img-top rounded-top-4"
+                          alt="Article"
+                        />
+                        <div
+                          class="card-body p-2 d-flex flex-column text-start"
+                        >
+                          <!-- Tiêu đề -->
+                          <h6
+                            class="fw-bold mb-1 text-truncate-2"
+                            style="font-size: 13px"
+                          >
+                            Lorem Ipsum is simply dummy text
+                          </h6>
+                          <!-- Nút -->
+                          <a
+                            href="blog-detail.html"
+                            class="btn-see-more btn btn-outline-custom fw-medium align-self-start mt-2 py-1 px-3"
+                            style="font-size: 13px; height: 30px;"
+                          >
+                            See more <i class="bi bi-chevron-right ms-1"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="card w-100 shadow-custom rounded-4 border-0">
+                        <img
+                          src="assets/images/news-mobile.png"
+                          class="card-img-top rounded-top-4"
+                          alt="Article"
+                        />
+                        <div
+                          class="card-body p-2 d-flex flex-column text-start"
+                        >
+                          <!-- Tiêu đề -->
+                          <h6
+                            class="fw-bold mb-1 text-truncate-2"
+                            style="font-size: 13px"
+                          >
+                            Lorem Ipsum is simply dummy text
+                          </h6>
+                          <!-- Nút -->
+                          <a
+                            href="blog-detail.html"
+                            class="btn-see-more btn btn-outline-custom fw-medium align-self-start mt-2 py-1 px-3"
+                            style="font-size: 13px; height: 30px;"
+                          >
+                            See more <i class="bi bi-chevron-right ms-1"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="card w-100 shadow-custom rounded-4 border-0">
+                        <img
+                          src="assets/images/news-mobile.png"
+                          class="card-img-top rounded-top-4"
+                          alt="Article"
+                        />
+                        <div
+                          class="card-body p-2 d-flex flex-column text-start"
+                        >
+                          <!-- Tiêu đề -->
+                          <h6
+                            class="fw-bold mb-1 text-truncate-2"
+                            style="font-size: 13px"
+                          >
+                            Lorem Ipsum is simply dummy text
+                          </h6>
+                          <!-- Nút -->
+                          <a
+                            href="blog-detail.html"
+                            class="btn-see-more btn btn-outline-custom fw-medium align-self-start mt-2 py-1 px-3"
+                            style="font-size: 13px; height: 30px;"
+                          >
+                            See more <i class="bi bi-chevron-right ms-1"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
 
       <!-- Footer -->
@@ -345,5 +483,19 @@
 
     <!-- Custom Script -->
     <script src="assets/js/main.js"></script>
+    <script>
+      const newsSwiper = new Swiper(".blog-swiper", {
+        loop: true,
+        spaceBetween: 20,
+        navigation: {
+          nextEl: ".blog-next",
+          prevEl: ".blog-prev",
+        },
+        breakpoints: {
+          0: { slidesPerView: 2.5 },
+          768: { slidesPerView: 2.5 },
+        },
+      });
+    </script>
   </body>
 </html>

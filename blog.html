@@ -30,13 +30,7 @@
 
     <!-- Custom Styles -->
     <link rel="stylesheet" href="assets/css/styles.css" />
-    <style>
-      .blog-card:hover{
-        cursor: pointer;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        transition: box-shadow 0.3s ease;
-      }
-    </style>
+
   </head>
   <body>
     <div class="wrapper d-flex flex-column min-vh-100">
@@ -45,15 +39,14 @@
 
       <!-- Main Content -->
       <main class="flex-fill">
-    
-        <section class="py-4">
+        <section class="pt-4 py-md-4">
           <div class="container">
             <div class="d-flex justify-content-between align-items-center mb-4">
-              <h2 class="text-color text-uppercase fw-bold m-0">What’s News</h2>
+              <h2 class="text-color title-section-home text-uppercase fw-bold m-0">What’s News</h2>
             </div>
             <div
               id="blog-container"
-              class="row g-4 h-100 align-items-stretch"
+              class="row g-3 g-md-4 h-100 align-items-stretch"
             >
               <!-- Sản phẩm -->
             </div>
@@ -111,20 +104,19 @@
                       alt="${item.name}"
                       style="height: 200px; object-fit: cover;"
                   />
-                  <div class="card-body d-flex flex-column text-justify">
+                  <div class="card-body d-flex flex-column">
                       <!-- Tiêu đề -->
-                      <h6 class="fw-bold mb-2 text-truncate-2 text-color-second" style="font-size: 16px">
+                      <h6 class="blog-title fw-semibold mb-2 text-truncate-2 text-color-second">
                         ${item.name}
                       </h6>
   
-                      <!-- Metadata -->
-                      <div class="small text-muted d-flex align-items-center gap-3 mb-2">
+                      <div class="blog-meta small text-muted d-flex align-items-center gap-3 mb-2">
                       <span><i class="bi bi-clock me-1"></i> 1 hour ago</span>
                       <span><i class="bi bi-eye me-1"></i> 523</span>
                       </div>
   
                       <!-- Nội dung -->
-                      <p class="text-secondary-custom text-truncate-4 flex-grow-1" style="font-size: 15px;">
+                      <p class="blog-desc text-justify text-secondary-custom text-truncate-4 flex-grow-1 m-0">
                       ${item.desc}
                       </p>
                   </div>
@@ -168,11 +160,11 @@
         }
 
         function goToPage(page) {
-        const totalPages = Math.ceil(blogs.length / itemsPerPage);
-        if (page < 1) page = 1;
-        if (page > totalPages) page = totalPages;
-        renderBlogs(page);
-        renderPagination(page);
+          const totalPages = Math.ceil(blogs.length / itemsPerPage);
+          if (page < 1) page = 1;
+          if (page > totalPages) page = totalPages;
+          renderBlogs(page);
+          renderPagination(page);
         }
 
         const initialPage = 1;
