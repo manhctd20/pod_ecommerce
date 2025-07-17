@@ -39,7 +39,7 @@
       <!-- Main Content -->
       <main class="flex-fill">
         <section
-          class="my-4 py-5"
+          class="thanks-section text-center my-3"
           style="
             background-image: url('assets/images/Rectangle 199.png');
             background-size: cover;
@@ -47,44 +47,45 @@
             background-position: center;
           "
         >
-          <div
-            class="container d-flex justify-content-center align-items-center"
-            style="min-height: 405px"
-          >
-            <div class="text-center">
-              <h2 class="fw-bold mb-4">Thank You for Your Order</h2>
+          <div class="container d-flex justify-content-center align-items-center min-vh-50 py-5">
+            <div class="thanks-box w-100" style="max-width: 715px">
+              <h2 class="fw-bold mb-4 thanks-title" style="font-size: 35px;">Thank You for Your Order</h2>
               <div class="mb-4 d-flex justify-content-center align-items-center">
-                <img
-                  src="assets/images/Checkout-success.svg"
-                  alt="Checkout-success"
-                  class="img-fluid"
-                  width="100"
-                  height="100"
-                />
+                <div class="non-pointer">
+                  <img
+                    src="assets/images/Checkout-success.svg"
+                    alt="Checkout-success"
+                    class="img-fluid thanks-icon"
+                    style="max-width: 100px; height: auto; background-color: #fff; border-radius: 50%;"
+                  />
+                </div>
               </div>
-              <p
-                class="mb-0"
-                style="max-width: 600px; margin: 0 auto; font-size: 20px; text-align: left;"
-              >
+              <p class="thanks-text px-2 px-md-0 text-start mx-auto">
                 We’ve received your order and sent a confirmation email to
-                <strong>your.email@example.com</strong>. This includes your
-                order details, estimated delivery dates, and tracking
-                information (once available). If you have any questions, we’re
-                here to help!
+                your.email@example.com. This includes your order details,
+                estimated delivery dates, and tracking information (once available). If you
+                have any questions, we’re here to help!
               </p>
             </div>
           </div>
         </section>
 
-        <section class="pt-3 pb-5">
+
+        <section class="py-2 pt-md-3 pb-md-5">
           <div class="container">
             <div class="d-flex justify-content-between align-items-center mb-4">
-              <h3 class="text-color text-capitalize fw-bold m-0">
+              <h3 class="text-color title-section-home text-capitalize fw-bold m-0">
                 You Might Also Like
               </h3>
+              <a
+                href="product.html"
+                class="d-block d-md-none text-color"
+              >
+                See all
+              </a>
             </div>
 
-            <div class="row g-4 align-items-stretch h-100">
+            <div class="row g-3 g-md-4 align-items-stretch h-100">
               <!-- Card -->
               <div class="col-6 col-md-4 col-lg-3 d-flex">
                 <div
@@ -96,15 +97,16 @@
                     alt="Product"
                   />
                   <div
-                    class="card-body text-start px-4 d-flex flex-column flex-grow-1"
+                    class="card-body text-start px-md-4 d-flex flex-column flex-grow-1"
                   >
-                    <p class="card-text text-color-second fw-medium flex-grow-1">
+                    <p class="card-text text-color-second text-truncate-4 xs-text-truncate-2 fw-medium flex-grow-1">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Lorem ipsum dolor sit amet
                     </p>
                     <h6 class="fw-bold">$29.99</h6>
-                    <a href="#" class="btn btn-outline-custom btn-h-45 mt-3 mb-2">
-                      Make it Yours 
+                    <a href="product-detail.html" class="btn btn-outline-custom btn-h-45 mt-2">
+                      Make it Yours
+                      <i class="bi bi-chevron-right ms-2"></i>
                     </a>
                   </div>
                 </div>
@@ -120,15 +122,16 @@
                     alt="Product"
                   />
                   <div
-                    class="card-body text-start px-4 d-flex flex-column flex-grow-1"
+                    class="card-body text-start px-md-4 d-flex flex-column flex-grow-1"
                   >
-                    <p class="card-text text-color-second fw-medium flex-grow-1">
+                    <p class="card-text text-color-second text-truncate-4 xs-text-truncate-2 fw-medium flex-grow-1">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Lorem ipsum dolor sit amet
                     </p>
                     <h6 class="fw-bold">$29.99</h6>
-                    <a href="#" class="btn btn-outline-custom btn-h-45 mt-3 mb-2">
-                      Make it Yours 
+                    <a href="product-detail.html" class="btn btn-outline-custom btn-h-45 mt-2">
+                      Make it Yours
+                      <i class="bi bi-chevron-right ms-2"></i>
                     </a>
                   </div>
                 </div>
@@ -144,15 +147,16 @@
                     alt="Product"
                   />
                   <div
-                    class="card-body text-start px-4 d-flex flex-column flex-grow-1"
+                    class="card-body text-start px-md-4 d-flex flex-column flex-grow-1"
                   >
-                    <p class="card-text text-color-second fw-medium flex-grow-1">
+                    <p class="card-text text-color-second text-truncate-4 xs-text-truncate-2 fw-medium flex-grow-1">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Lorem ipsum dolor sit amet
                     </p>
                     <h6 class="fw-bold">$29.99</h6>
-                    <a href="#" class="btn btn-outline-custom btn-h-45 mt-3 mb-2">
-                      Make it Yours 
+                    <a href="product-detail.html" class="btn btn-outline-custom btn-h-45 mt-2">
+                      Make it Yours
+                      <i class="bi bi-chevron-right ms-2"></i>
                     </a>
                   </div>
                 </div>
@@ -168,15 +172,16 @@
                     alt="Product"
                   />
                   <div
-                    class="card-body text-start px-4 d-flex flex-column flex-grow-1"
+                    class="card-body text-start px-md-4 d-flex flex-column flex-grow-1"
                   >
-                    <p class="card-text text-color-second fw-medium flex-grow-1">
+                    <p class="card-text text-color-second text-truncate-4 xs-text-truncate-2 fw-medium flex-grow-1">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Lorem ipsum dolor sit amet
                     </p>
                     <h6 class="fw-bold">$29.99</h6>
-                    <a href="#" class="btn btn-outline-custom btn-h-45 mt-3 mb-2">
-                      Make it Yours 
+                    <a href="product-detail.html" class="btn btn-outline-custom btn-h-45 mt-2">
+                      Make it Yours
+                      <i class="bi bi-chevron-right ms-2"></i>
                     </a>
                   </div>
                 </div>
