@@ -41,16 +41,10 @@ select {
 
 a {
   text-decoration: none !important;
-  /* color: inherit !important; */
 }
-
 a {
   transition: 0.2s ease;
 }
-/* a:hover {
-  color: var(--primary);
-} */
-
 .form-select {
   cursor: pointer;
 }

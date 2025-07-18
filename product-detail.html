@@ -30,188 +30,6 @@
 
     <!-- Custom Styles -->
     <link rel="stylesheet" href="assets/css/styles.css" />
-    <style>
-      .custom-tab .nav-link {
-        border: 1px solid #d7d7d7;
-        border-radius: 30px;
-        padding: 6px 16px;
-        color: #444444;
-        background-color: #fff;
-        font-weight: 500;
-        transition: all 0.2s;
-      }
-
-      .custom-tab .nav-link.active {
-        background-color: #ff939d;
-        color: #fff;
-        border: 1px solid #ff939d !important;
-      }
-
-      .custom-tab .nav-link:not(.active):hover {
-        color: #ff939d;
-        border: 1px solid #ff939d;
-      }
-
-      .tab-content .col img {
-        border: 1px solid transparent;
-        border-radius: 20px;
-        cursor: pointer;
-      }
-
-      .product-option {
-        cursor: pointer;
-        transition: border 0.2s ease;
-        border-radius: 10px;
-      }
-
-      .product-option.active {
-        border: 1px solid #ff939d !important;
-      }
-
-      #countdown .count-time div {
-        width: 40px;
-        border-radius: 5px;
-      }
-      .count-time {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-      }
-      .count-time span {
-        font-size: 13px;
-      }
-      .collection-thumb.active {
-        border: 2px solid #ff939d !important;
-      }
-
-      /* Navigation buttons */
-      .swiper-gallery-wrapper {
-        position: relative;
-      }
-
-      .swiper-gallery-wrapper:hover .gallery-nav {
-        opacity: 1;
-        visibility: visible;
-      }
-
-      .gallery-nav {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background-color: white;
-        color: var(--text-color);
-        border: 1px solid var(--text-color);
-        width: 36px;
-        height: 36px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        opacity: 0;
-        visibility: hidden;
-        transition: 0.3s ease;
-        z-index: 2;
-      }
-
-      .swiper-gallery-wrapper .gallery-nav:hover {
-        background-color: var(--text-color);
-        color: white;
-      }
-
-      .swiper-button-prev.gallery-nav {
-        left: -12px;
-      }
-      .swiper-button-next.gallery-nav {
-        right: -12px;
-      }
-
-      .artStyle-nav {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 36px;
-        height: 36px;
-        cursor: pointer;
-        transition: 0.3s ease;
-        z-index: 2;
-      }
-      .swiperArtStyle-prev.artStyle-nav {
-        left: -20px;
-      }
-      .swiperArtStyle-next.artStyle-nav {
-        right: -20px;
-      }
-
-      .tab-policy-content {
-        border-radius: 20px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        padding: 17px 20px;
-      }
-
-      .cart-popup {
-        border: 1px solid #FF5B6B;
-        border-radius: 20px;
-        padding: 12px;
-        background-color: #fff;
-        text-align: center;
-      }
-
-      .cart-popup .icon-check {
-        width: 67px;
-        height: 67px;
-        border-radius: 50%;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 20px;
-      }
-
-      .cart-popup .icon-check i {
-        color: white;
-        font-size: 32px;
-      }
-
-      .cart-popup h5 {
-        color: #188654;
-        font-weight: 600;
-      }
-
-      .cart-popup p {
-        color: #999999;
-        font-size: 14px;
-        margin-bottom: 30px;
-      }
-
-      .cart-popup .btn {
-        min-width: 160px;
-        padding: 14px 20px;
-        font-weight: 600;
-        border-radius: 8px;
-      }
-
-      .btn-gray {
-        background-color: #E6E6E6;
-        color: #444444;
-      }
-
-      .btn-gray:hover {
-        border: 1px solid #E6E6E6;
-        color: #444444;
-      }
-
-      .btn-viewCart {
-        background-color: #FF5B6B;
-        color: #FFFFFF;
-      }
-      .btn-viewCart:hover {
-        border: 1px solid #FF5B6B;
-        color: #FF5B6B;
-      }
-      .custom-modal-width {
-        max-width: 580px;
-      }
-    </style>
   </head>
   <body>
     <div class="wrapper min-vh-100">
@@ -924,7 +742,7 @@
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Lorem ipsum dolor sit amet
                     </p>
-                    <h6 class="fw-bold">$29.99</h6>
+                    <span class="fw-bold price-sale">$29.99</span>
                     <a href="product-detail.html" class="btn btn-outline-custom btn-h-45 mt-2">
                       Make it Yours
                       <i class="bi bi-chevron-right ms-2"></i>
@@ -949,7 +767,7 @@
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Lorem ipsum dolor sit amet
                     </p>
-                    <h6 class="fw-bold">$29.99</h6>
+                    <span class="fw-bold price-sale">$29.99</span>
                     <a href="product-detail.html" class="btn btn-outline-custom btn-h-45 mt-2">
                       Make it Yours
                       <i class="bi bi-chevron-right ms-2"></i>
@@ -974,7 +792,7 @@
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Lorem ipsum dolor sit amet
                     </p>
-                    <h6 class="fw-bold">$29.99</h6>
+                    <span class="fw-bold price-sale">$29.99</span>
                     <a href="product-detail.html" class="btn btn-outline-custom btn-h-45 mt-2">
                       Make it Yours
                       <i class="bi bi-chevron-right ms-2"></i>
@@ -999,7 +817,7 @@
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Lorem ipsum dolor sit amet
                     </p>
-                    <h6 class="fw-bold">$29.99</h6>
+                    <span class="fw-bold price-sale">$29.99</span>
                     <a href="product-detail.html" class="btn btn-outline-custom btn-h-45 mt-2">
                       Make it Yours
                       <i class="bi bi-chevron-right ms-2"></i>
@@ -1043,7 +861,7 @@
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Lorem ipsum dolor sit amet
                     </p>
-                    <h6 class="fw-bold">$29.99</h6>
+                    <span class="fw-bold price-sale">$29.99</span>
                     <a href="product-detail.html" class="btn btn-outline-custom btn-h-45 mt-2">
                       Make it Yours
                       <i class="bi bi-chevron-right ms-2"></i>
@@ -1068,7 +886,7 @@
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Lorem ipsum dolor sit amet
                     </p>
-                    <h6 class="fw-bold">$29.99</h6>
+                    <span class="fw-bold price-sale">$29.99</span>
                     <a href="product-detail.html" class="btn btn-outline-custom btn-h-45 mt-2">
                       Make it Yours
                       <i class="bi bi-chevron-right ms-2"></i>
@@ -1093,7 +911,7 @@
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Lorem ipsum dolor sit amet
                     </p>
-                    <h6 class="fw-bold">$29.99</h6>
+                    <span class="fw-bold price-sale">$29.99</span>
                     <a href="product-detail.html" class="btn btn-outline-custom btn-h-45 mt-2">
                       Make it Yours
                       <i class="bi bi-chevron-right ms-2"></i>
@@ -1118,7 +936,7 @@
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Lorem ipsum dolor sit amet
                     </p>
-                    <h6 class="fw-bold">$29.99</h6>
+                    <span class="fw-bold price-sale">$29.99</span>
                     <a href="product-detail.html" class="btn btn-outline-custom btn-h-45 mt-2">
                       Make it Yours
                       <i class="bi bi-chevron-right ms-2"></i>

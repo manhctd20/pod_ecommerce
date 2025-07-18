@@ -1,11 +1,9 @@
 :root {
   --font-base: "Montserrat", sans-serif;
-
   --primary: #ff5b6b;
   --secondary: #000000;
   --text-color: #ff939d;
   --text-color-second: #444444;
-
   --radius: 75px;
   --transition-fast: all 0.3s ease;
   --transition-slow: transform 0.4s ease;
@@ -174,23 +172,18 @@
 .radius-8 {
   border-radius: 8px !important;
 }
-
 .radius-15 {
   border-radius: 15px !important;
 }
-
 .radius-20 {
   border-radius: 20px !important;
 }
-
 .text-size-20 {
   font-size: 20px !important;
 }
-
 .btn-height {
   height: 50px !important;
 }
-
 .shadow-custom {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }

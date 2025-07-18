@@ -21,6 +21,16 @@
   EXTRA SMALL - xxs (<380px)
 -----------------------*/
 @media (max-width: 379.98px) {
+  .title-section-home,
+  .title-section {
+    font-size: 16px !important;
+  }
+  .text-fs-20 {
+    font-size: 15px !important;
+  }
+  .text-fs-15 {
+    font-size: 12px !important;
+  }
   .overlay-text {
     font-size: 12px;
   }
@@ -41,7 +51,51 @@
     font-size: 13px !important;
   }
   .certificate-swiper h6 {
-    font-size: 14px;
+    font-size: 13px;
+  }
+  .sub-section .sub-title {
+    font-size: 16px !important;
+  }
+  .footer-style h6 {
+    font-size: 15px !important;
+  }
+  .footer-style .payments a img {
+    height: 25px !important;
+  }
+  .btn-h-45 {
+    height: 35px !important;
+  }
+  .btn-h-50 {
+    height: 38px !important;
+  }
+
+  .card-custom .card-body p {
+    font-size: 13px !important;
+  }
+  .card-custom .card-body .price-sale {
+    font-size: 14px !important;
+  }
+
+  /* Cart */
+  .cart-card .cart-image {
+    width: 120px !important;
+  }
+  .cart-title h5 {
+    font-size: 12px !important;
+  }
+  .cart-meta li,
+  .cart-meta li span {
+    font-size: 9px !important;
+  }
+  .cart-price .price-sale {
+    font-size: 13px !important;
+  }
+  .payments .payments-icon img {
+    height: 23px !important;
+  }
+  .cart-card,
+  .summary-card {
+    padding: 12px !important;
   }
 }
 
@@ -55,11 +109,20 @@
   }
   .title-section-home,
   .title-section {
-    font-size: 20px !important;
+    font-size: 18px !important;
+  }
+  .sub-section .sub-title {
+    font-size: 18px !important;
+  }
+  .footer-style h6 {
+    font-size: 15px !important;
+  }
+  .footer-style .payments a img {
+    height: 27px !important;
   }
   .btn-discover {
-    font-size: 15px;
-    height: 38px;
+    font-size: 15px !important;
+    height: 40px !important;
   }
   .btn-outline-custom {
     font-size: 14px;
@@ -71,6 +134,40 @@
   .certificate-swiper h6 {
     font-size: 14px;
   }
+  .btn-h-45 {
+    height: 36px !important;
+  }
+  .btn-h-50 {
+    height: 36px !important;
+  }
+  .card-custom .card-body p {
+    font-size: 14px !important;
+  }
+  .card-custom .card-body .price-sale {
+    font-size: 14px !important;
+  }
+
+  /* Cart */
+  .cart-price .price-sale {
+    font-size: 13px !important;
+  }
+  .cart-title h5 {
+    font-size: 12px !important;
+  }
+  .cart-meta li,
+  .cart-meta li span {
+    font-size: 9px !important;
+  }
+  .cart-card .cart-image {
+    width: 120px !important;
+  }
+  .payments .payments-icon img {
+    height: 25px !important;
+  }
+  .cart-card,
+  .summary-card {
+    padding: 13px !important;
+  }
 }
 
 @media (min-width: 430px) and (max-width: 479.98px) {
@@ -81,6 +178,15 @@
   .title-section-home,
   .title-section {
     font-size: 20px !important;
+  }
+  .sub-section .sub-title {
+    font-size: 20px !important;
+  }
+  .footer-style h6 {
+    font-size: 16px !important;
+  }
+  .footer-style .payments a img {
+    height: 30px !important;
   }
   .btn-discover {
     font-size: 15px !important;
@@ -96,6 +202,35 @@
   .certificate-swiper h6 {
     font-size: 16px;
   }
+
+  .btn-h-45 {
+    height: 40px !important;
+  }
+  .btn-h-50 {
+    height: 40px !important;
+  }
+
+  /* Cart */
+  .cart-card .cart-image {
+    width: 140px !important;
+  }
+  .cart-title h5 {
+    font-size: 13px !important;
+  }
+  .cart-meta li,
+  .cart-meta li span {
+    font-size: 10px !important;
+  }
+  .cart-price .price-sale {
+    font-size: 15px !important;
+  }
+  .payments .payments-icon img {
+    height: 28px !important;
+  }
+  .cart-card,
+  .summary-card {
+    padding: 15px !important;
+  }
 }
 
 /* ----------------------
@@ -110,19 +245,51 @@
   .title-section {
     font-size: 20px !important;
   }
-
+  .sub-section .sub-title {
+    font-size: 20px !important;
+  }
+  .footer-style h6 {
+    font-size: 16px !important;
+  }
+  .footer-style .payments a img {
+    height: 30px !important;
+  }
   .btn-discover {
     font-size: 16px;
     height: 40px;
   }
-
-  .product-fomo .product-title {
-    font-size: 18px;
-  }
-
   .testimonial-card .name {
     font-size: 15px !important;
     font-weight: 600 !important;
+  }
+
+  .btn-h-45 {
+    height: 40px !important;
+  }
+  .btn-h-50 {
+    height: 40px !important;
+  }
+
+  /* Cart */
+  .cart-card .cart-image {
+    width: 140px !important;
+  }
+  .cart-title h5 {
+    font-size: 13px !important;
+  }
+  .cart-meta li,
+  .cart-meta li span {
+    font-size: 10px !important;
+  }
+  .cart-price .price-sale {
+    font-size: 15px !important;
+  }
+  .payments .payments-icon img {
+    height: 28px !important;
+  }
+  .cart-card,
+  .summary-card {
+    padding: 15px !important;
   }
 }
 
@@ -130,26 +297,22 @@
   MOBILE DEFAULT: <576px
 -----------------------*/
 @media (max-width: 575.98px) {
-  .title-section-home,
+  /* .title-section-home,
   .title-section {
     font-size: 20px !important;
-  }
+  } */
   .card-custom .card-body {
     padding: 9px !important;
   }
-
   .card-custom .card-body p {
     margin-bottom: 2px !important;
   }
-
   .card-custom .card-body .text-sale {
     font-size: 10px !important;
   }
-
   .card-custom .card-body h6 {
     margin-bottom: 0 !important;
   }
-
   .xs-text-truncate-2 {
     display: -webkit-box;
     -webkit-line-clamp: 2 !important;
@@ -174,113 +337,79 @@
     width: 25px !important;
     height: 25px !important;
   }
-  .best-selling h2,
-  .hot-trend h2 {
-    font-size: 20px !important;
-  }
-
-  .btn-h-45 {
+  /* .btn-h-45 {
     height: 40px !important;
   }
   .btn-h-50 {
     height: 40px !important;
-  }
-
+  } */
   .collection-section {
     background-image: url("../images/collection-section.png") !important;
   }
-
   .collection-section .collection-title {
     font-size: 20px !important;
   }
-
   .testimonial-card {
     padding: 10px !important;
   }
-
   .testimonial-card .name {
     font-size: 15px;
     font-weight: 600;
   }
-
   .testimonial-card .location,
   .testimonial-card .text {
     font-size: 10px !important;
   }
-
   .testimonial-card .stars-icon > img {
     height: 17px !important;
   }
-
   .trustpilot-logo h3 {
-    font-size: 20px !important;
     text-align: left !important;
   }
-
   .trustpilot-section .trustpilot-logo img {
     max-width: 127px !important;
   }
-
   .trustpilot-section .testimonial-navigation {
     top: -45px !important;
     right: 15px !important;
   }
-
   .news-navigation .btn-nav,
   .trustpilot-section .testimonial-navigation .btn-nav {
     width: 24px !important;
     height: 24px !important;
   }
-
   .news-navigation {
     top: -40px !important;
     right: 15px !important;
   }
-
   .certificate {
     margin: 10px 0 !important;
   }
-
   .sub-section {
     background-image: url("../images/banner-sub-mobile.png") !important;
     height: fit-content !important;
     padding: 12px !important;
   }
-
-  .sub-section .sub-title {
+  /* .sub-section .sub-title {
     font-size: 20px !important;
-  }
-
+  } */
   .sub-section .sub-desc {
     font-size: 14px !important;
   }
-
   .sub-section .sub-form {
     max-width: 269px !important;
   }
-
   .sub-section .sub-form > input,
   .sub-section .sub-form > button {
     height: 40px !important;
   }
-
-  .footer-style .payments a img {
+  /* .footer-style .payments a img {
     height: 30px !important;
-  }
+  } */
 
   /* Product */
   .product-fomo .product-title {
     font-size: 20px !important;
-  }
-
-  /* Cart */
-  .payments .payments-icon img {
-    height: 28px !important;
-  }
-
-  .cart-card,
-  .summary-card {
-    padding: 15px !important;
   }
 
   /* Checkout Success */
@@ -309,7 +438,7 @@
   .checkout-container .checkout-meta {
     font-size: 10px !important;
   }
-  .checkout-container .btn-paypal{
+  .checkout-container .btn-paypal {
     font-size: 20px !important;
   }
   .checkout-form-control h5 {
@@ -346,11 +475,11 @@
   #blog-container .blog-card .blog-desc {
     font-size: 13px !important;
   }
+
   /* Introduce */
   .introduce-content p {
     font-size: 12px !important;
   }
-
   .introduce-content h3 {
     font-size: 20px !important;
   }
@@ -392,7 +521,6 @@
   .product-detail .payments-icon img {
     height: 30px !important;
   }
-
   .product-detail .gallery-nav {
     width: 26px !important;
     height: 26px !important;
@@ -400,19 +528,25 @@
   .product-detail .gallery-nav .bi {
     font-size: 12px;
   }
-  /* Cart */
-  .cart-image img {
-    max-width: 100% !important;
-    width: 100% !important;
-  }
 
-  .cart-title h5 {
+  /* Cart */
+  /* .cart-card .cart-image {
+    width: 140px !important;
+  } */
+  /* .cart-title h5 {
     font-size: 13px !important;
-  }
-  .cart-meta li,
+  } */
+  /* .cart-meta li,
   .cart-meta li span {
     font-size: 10px;
-  }
+  } */
+  /* .payments .payments-icon img {
+    height: 28px !important;
+  } */
+  /* .cart-card,
+  .summary-card {
+    padding: 15px !important;
+  } */
   .cart-delivery {
     font-size: 10px !important;
   }
@@ -420,11 +554,6 @@
     width: 12px !important;
     height: 10px !important;
   }
-
-  .price-sale {
-    font-size: 22px !important;
-  }
-
   .checkout-btn span {
     font-size: 15px !important;
   }
@@ -443,9 +572,9 @@
   .summary-payment-methods img {
     height: 30px !important;
   }
-  .cart-price .price-sale {
+  /* .cart-price .price-sale {
     font-size: 15px !important;
-  }
+  } */
   .cart-price .price-origin {
     font-size: 10px !important;
   }
@@ -494,9 +623,6 @@
   .cart-remove i {
     font-size: 15px !important;
   }
-  .cart-image {
-    width: 140px !important;
-  }
 }
 
 /* ----------------------
@@ -515,24 +641,6 @@
   TABLET (768–991.98px)
 -----------------------*/
 @media (min-width: 768px) and (max-width: 991.98px) {
-  /* .checkout-container {
-    padding: 1.5rem;
-  }
-
-  .checkout-form-control input,
-  .checkout-form-control select,
-  .checkout-form-control button {
-    font-size: 15px;
-  }
-
-  .summary-subtotal,
-  .summary-shipping {
-    font-size: 14px;
-  }
-
-  .checkout-container .btn-paynow {
-    font-size: 16px;
-  } */
 }
 
 /* ----------------------
