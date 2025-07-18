@@ -53,7 +53,8 @@
     padding: 5px 0 !important;
     font-size: 14px !important;
   }
-  .title-section-home, .title-section {
+  .title-section-home,
+  .title-section {
     font-size: 20px !important;
   }
   .btn-discover {
@@ -77,7 +78,8 @@
     padding: 5px 0 !important;
     font-size: 14px !important;
   }
-  .title-section-home, .title-section {
+  .title-section-home,
+  .title-section {
     font-size: 20px !important;
   }
   .btn-discover {
@@ -104,7 +106,8 @@
     padding: 5px 0;
     font-size: 14px;
   }
-  .title-section-home, .title-section {
+  .title-section-home,
+  .title-section {
     font-size: 20px !important;
   }
 
@@ -127,7 +130,8 @@
   MOBILE DEFAULT: <576px
 -----------------------*/
 @media (max-width: 575.98px) {
-  .title-section-home, .title-section {
+  .title-section-home,
+  .title-section {
     font-size: 20px !important;
   }
   .card-custom .card-body {
@@ -183,7 +187,7 @@
   }
 
   .collection-section {
-    background-image: url('../images/collection-section.png') !important;
+    background-image: url("../images/collection-section.png") !important;
   }
 
   .collection-section .collection-title {
@@ -281,15 +285,15 @@
 
   /* Checkout Success */
   .thanks-section {
-    background-image: url('../images/bg-checkout-success.png') !important;
+    background-image: url("../images/bg-checkout-success.png") !important;
   }
-  .thanks-section .thanks-title{
+  .thanks-section .thanks-title {
     font-size: 20px !important;
   }
-  .thanks-section .thanks-icon{
+  .thanks-section .thanks-icon {
     max-width: 70px !important;
   }
-  .thanks-section .thanks-text{
+  .thanks-section .thanks-text {
     font-size: 13px !important;
     text-align: center !important;
   }
@@ -324,7 +328,7 @@
   }
 
   /* Blog */
-  .blog-card{
+  .blog-card {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   #blog-container .blog-card .blog-title {
@@ -383,21 +387,122 @@
     height: 30px !important;
   }
 
-  
+  .product-detail .gallery-nav {
+    width: 26px !important;
+    height: 26px !important;
+  }
+  .product-detail .gallery-nav .bi {
+    font-size: 12px;
+  }
+  /* Cart */
+  .cart-image img {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .cart-title h5 {
+    font-size: 13px !important;
+  }
+  .cart-meta li,
+  .cart-meta li span {
+    font-size: 10px;
+  }
+  .cart-delivery {
+    font-size: 10px !important;
+  }
+  .cart-delivery img {
+    width: 12px !important;
+    height: 10px !important;
+  }
+
+  .price-sale {
+    font-size: 22px !important;
+  }
+
+  .checkout-btn span {
+    font-size: 15px !important;
+  }
+  .checkout-btn img {
+    width: 16px !important;
+    height: 16px !important;
+  }
+  .secure-note span {
+    font-size: 13px;
+  }
+  .secure-note img {
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  .summary-payment-methods img {
+    height: 30px !important;
+  }
+  .cart-price .price-sale {
+    font-size: 15px !important;
+  }
+  .cart-price .price-origin {
+    font-size: 10px !important;
+  }
+  .vertical-rounded-bar::before {
+    bottom: 5px !important;
+  }
+  .vertical-rounded-bar {
+    height: 50px !important;
+  }
+
+  .cart-quantity {
+    width: 85px !important;
+    height: 24px !important;
+    font-size: 13px !important;
+  }
+  .cart-quantity input {
+    font-size: 13px !important;
+  }
+  .cart-quantity .bi {
+    font-size: 12px !important;
+  }
+  .cart-quantity .bi:hover,
+  .cart-quantity .bi:active {
+    color: #fff !important;
+  }
+  .cart-quantity .btn {
+    width: 28px !important;
+  }
+  .qty-custom .btn-left {
+    border-radius: 8px 0 0 8px !important;
+  }
+  .qty-custom .btn-right {
+    border-radius: 0 8px 8px 0 !important;
+  }
+  .cart-popup .btn {
+    padding: 8px 10px !important;
+    font-size: 13px;
+  }
+  .cart-popup h5 {
+    font-size: 14px !important;
+  }
+  .cart-popup p {
+    font-size: 12px !important;
+    margin-bottom: 10px !important;
+  }
+  .cart-remove i {
+    font-size: 15px !important;
+  }
+  .cart-image {
+    width: 140px !important;
+  }
 }
 
 /* ----------------------
   SM (576–599.98px)
 -----------------------*/
 @media (min-width: 576px) and (max-width: 599.98px) {
-
 }
 
 /* ----------------------
   SM+ (600–767.98px)
 -----------------------*/
 @media (min-width: 600px) and (max-width: 767.98px) {
-
 }
 
 /* ----------------------
