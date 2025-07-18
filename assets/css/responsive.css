@@ -309,6 +309,12 @@
   .checkout-container .checkout-meta {
     font-size: 10px !important;
   }
+  .checkout-container .btn-paypal{
+    font-size: 20px !important;
+  }
+  .checkout-form-control h5 {
+    font-size: 18px;
+  }
 
   /* Blog Detail */
   .breadcrumb-style ol li {

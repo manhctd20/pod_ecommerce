@@ -624,6 +624,15 @@ header .menu-item:hover {
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+.checkout-container .btn-paypal {
+  font-size: 28px;
+  background: #ffc43a;
+  color: #444444;
+  border-radius: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .checkout-form-control button {
   border-radius: 10px;
@@ -632,6 +641,9 @@ header .menu-item:hover {
 .btn-paynow {
   background-color: #4bb232;
   border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn-paynow:hover {
