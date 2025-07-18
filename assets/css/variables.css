@@ -92,6 +92,10 @@
   font-size: 15px !important;
 }
 
+.text-fs-20 {
+  font-size: 20px !important;
+}
+
 /* Custom card with shadow */
 .card-custom {
   border: none;
