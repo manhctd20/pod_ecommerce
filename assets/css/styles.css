@@ -492,6 +492,9 @@ header .menu-item:hover {
 .cart-title h5 {
   font-size: 20px;
 }
+.cart-price .price-sale {
+  font-size: 25px;
+}
 .cart-price span {
   color: #9d9b9b;
 }
