@@ -97,6 +97,10 @@
   .summary-card {
     padding: 12px !important;
   }
+  .product-detail .custom-tab .nav-link {
+    padding: 6px 10px !important;
+    font-size: 13px !important;
+  }
 }
 
 /* ----------------------
@@ -144,6 +148,10 @@
     font-size: 14px !important;
   }
   .card-custom .card-body .price-sale {
+    font-size: 14px !important;
+  }
+  .product-detail .custom-tab .nav-link {
+    padding: 6px 13px !important;
     font-size: 14px !important;
   }
 
@@ -231,6 +239,9 @@
   .summary-card {
     padding: 15px !important;
   }
+  .product-detail .custom-tab .nav-link {
+    padding: 6px 14px !important;
+  }
 }
 
 /* ----------------------
@@ -290,6 +301,9 @@
   .cart-card,
   .summary-card {
     padding: 15px !important;
+  }
+  .product-detail .custom-tab .nav-link {
+    padding: 6px 14px !important;
   }
 }
 
@@ -503,9 +517,9 @@
   .product-detail .stars-icon img {
     height: 18px !important;
   }
-  .product-detail .custom-tab .nav-link {
+  /* .product-detail .custom-tab .nav-link {
     padding: 6px 14px !important;
-  }
+  } */
   .product-detail .secure-checkout-label {
     position: absolute;
     top: -12px;
@@ -527,6 +541,20 @@
   }
   .product-detail .gallery-nav .bi {
     font-size: 12px;
+  }
+  .swiperArtStyle-next.artStyle-nav {
+    right: -10px !important;
+  }
+  .artStyle-nav {
+    width: 26px !important;
+    height: 26px !important;
+    background-color: white;
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   /* Cart */
@@ -641,6 +669,41 @@
   TABLET (768–991.98px)
 -----------------------*/
 @media (min-width: 768px) and (max-width: 991.98px) {
+  .promo-bar {
+    font-size: 13px;
+    padding: 8px 16px;
+  }
+
+  .promo-message {
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .country-info span {
+    font-size: 12px;
+  }
+
+  .search-input {
+    font-size: 14px;
+    padding: 8px 40px 8px 16px !important;
+  }
+
+  .logo {
+    font-size: 16px;
+    padding: 6px 12px;
+  }
+
+  .nav .menu-item {
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+  .cart-count {
+    font-size: 10px;
+    padding: 4px 6px;
+  }
 }
 
 /* ----------------------
@@ -648,6 +711,12 @@
 -----------------------*/
 @media (min-width: 992px) and (max-width: 1199.98px) {
   /* Laptop nhỏ */
+  .promo-bar .country-info-wrapper {
+    left: 80% !important;
+  }
+  header .promo-message {
+    left: 45% !important;
+  }
 }
 
 /* ----------------------
