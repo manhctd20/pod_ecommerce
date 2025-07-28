@@ -498,13 +498,13 @@
                   <label class="form-label fw-semibold">Baby name</label>
                   <input
                     type="text"
-                    class="form-control custom-form "
+                    class="form-control custom-form input-text"
                     placeholder="Example: Emma"
                   />
                 </div>
                 <div class="mb-4">
                   <label class="form-label fw-semibold">Enter your wish</label>
-                  <input type="text" class="form-control custom-form " placeholder="Lorem ipsum is simply" />
+                  <input type="text" class="form-control custom-form input-text" placeholder="Lorem ipsum is simply" />
                 </div>
                 <hr />
                 <div class="w-100 d-flex justify-content-center py-2">
@@ -1102,24 +1102,30 @@
         }
       });
 
-      const inputs = document.querySelectorAll('input, textarea');
+    </script>
+<script>
+  // Lắng nghe toàn bộ input
+  const inputs = document.querySelectorAll('input, textarea');
 
-  inputs.forEach((el) => {
-    el.addEventListener('focus', () => {
-      // Khi bàn phím hiện, cuộn input vào giữa
+  inputs.forEach((input) => {
+    input.addEventListener('blur', () => {
+      // Fix scroll jump khi đóng bàn phím trên iOS/Android
       setTimeout(() => {
-        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }, 300);
-    });
-
-    el.addEventListener('blur', () => {
-      // Khi bàn phím ẩn, vẫn giữ input nằm ở giữa
-      setTimeout(() => {
-        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }, 300);
+        const scrollY = window.scrollY || document.documentElement.scrollTop;
+        window.scrollTo({ top: scrollY - 1, behavior: 'smooth' });
+        window.scrollTo({ top: scrollY, behavior: 'smooth' });
+      }, 100);
     });
   });
-    </script>
+
+  const input = document.querySelectorAll('.input-text');
+
+input.forEach((input) => {
+  input.addEventListener('blur', () => {
+    window.scrollTo(0, 0);
+  });
+});
+</script>
 
   </body>
 </html>
