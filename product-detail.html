@@ -867,5 +867,25 @@
       });
 
     </script>
+    <script>
+  const mainImages = document.getElementById("mainImage");
+  const inputs = document.querySelectorAll("input");
+
+  let keyboardTimer;
+
+  inputs.forEach((input) => {
+    input.addEventListener("focus", () => {
+      mainImages.style.opacity = "0";
+    });
+
+    input.addEventListener("blur", () => {
+      clearTimeout(keyboardTimer);
+      keyboardTimer = setTimeout(() => {
+        mainImages.style.opacity = "1";
+      }, 300); // Delay để chờ animation keyboard ẩn
+    });
+  });
+</script>
+
   </body>
 </html>
