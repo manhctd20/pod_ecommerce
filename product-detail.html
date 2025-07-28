@@ -1101,6 +1101,25 @@
           });
         }
       });
+
+      const inputs = document.querySelectorAll('input, textarea');
+
+  inputs.forEach((el) => {
+    el.addEventListener('focus', () => {
+      // Khi bàn phím hiện, cuộn input vào giữa
+      setTimeout(() => {
+        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 300);
+    });
+
+    el.addEventListener('blur', () => {
+      // Khi bàn phím ẩn, vẫn giữ input nằm ở giữa
+      setTimeout(() => {
+        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 300);
+    });
+  });
     </script>
+
   </body>
 </html>
