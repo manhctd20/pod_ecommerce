@@ -1104,19 +1104,6 @@
 
     </script>
 <script>
-  // Lắng nghe toàn bộ input
-  const inputs = document.querySelectorAll('input, textarea');
-
-  inputs.forEach((input) => {
-    input.addEventListener('blur', () => {
-      // Fix scroll jump khi đóng bàn phím trên iOS/Android
-      setTimeout(() => {
-        const scrollY = window.scrollY || document.documentElement.scrollTop;
-        window.scrollTo({ top: scrollY - 1, behavior: 'smooth' });
-        window.scrollTo({ top: scrollY, behavior: 'smooth' });
-      }, 100);
-    });
-  });
 
   const input = document.querySelectorAll('.input-text');
 
