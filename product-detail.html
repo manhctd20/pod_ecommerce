@@ -45,7 +45,7 @@
 <img
   id="mainImage"
   src="assets/images/main-img.png"
-  class="img-fluid mb-3 w-100 radius-15 d-blocl d-md-none"
+  class="img-fluid mb-3 w-100 radius-15 d-block d-md-none"
   alt="Product Image"
   style="position: sticky; top: 0; z-index: 10;"
 />
@@ -866,26 +866,27 @@
         }
       });
 
+      let lastInnerHeight = window.innerHeight;
+
+window.addEventListener('resize', () => {
+  const newHeight = window.innerHeight;
+
+  // Khi bàn phím vừa được ẩn (chiều cao tăng)
+  if (newHeight > lastInnerHeight) {
+    const activeElement = document.activeElement;
+
+    if (activeElement && (activeElement.tagName === 'INPUT' || activeElement.tagName === 'TEXTAREA')) {
+      setTimeout(() => {
+        activeElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 300); // Đợi animation của OS hoàn tất
+    }
+  }
+
+  lastInnerHeight = newHeight;
+});
+
+
     </script>
-    <script>
-  const mainImages = document.getElementById("mainImage");
-  const inputs = document.querySelectorAll("input");
-
-  let keyboardTimer;
-
-  inputs.forEach((input) => {
-    input.addEventListener("focus", () => {
-      mainImages.style.opacity = "0";
-    });
-
-    input.addEventListener("blur", () => {
-      clearTimeout(keyboardTimer);
-      keyboardTimer = setTimeout(() => {
-        mainImages.style.opacity = "1";
-      }, 300); // Delay để chờ animation keyboard ẩn
-    });
-  });
-</script>
-
+    
   </body>
 </html>
