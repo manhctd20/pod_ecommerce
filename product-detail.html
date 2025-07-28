@@ -867,38 +867,5 @@
       });
 
     </script>
-<script>
-  const mainImages = document.getElementById('mainImage');
-  const inputs = document.querySelectorAll('input');
-
-  inputs.forEach(input => {
-    input.addEventListener('focus', () => {
-      mainImages.style.position = 'static'; // hoặc 'relative'
-    });
-
-    input.addEventListener('blur', () => {
-      setTimeout(() => {
-        mainImages.style.position = 'fixed';
-        mainImages.style.top = '0';
-        mainImages.style.zIndex = '999';
-      }, 100); // delay chút để tránh giật
-    });
-  });
-  if (window.visualViewport) {
-  window.visualViewport.addEventListener('resize', () => {
-    const vh = window.visualViewport.height;
-    if (vh < window.innerHeight) {
-      // Bàn phím đang mở
-      mainImage.style.position = 'static';
-    } else {
-      // Bàn phím đã đóng
-      mainImage.style.position = 'fixed';
-      mainImage.style.top = '0';
-      mainImage.style.zIndex = '999';
-    }
-  });
-}
-</script>
-
   </body>
 </html>
