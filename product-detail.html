@@ -866,27 +866,34 @@
         }
       });
 
-      let lastInnerHeight = window.innerHeight;
-
-window.addEventListener('resize', () => {
-  const newHeight = window.innerHeight;
-
-  // Khi bàn phím vừa được ẩn (chiều cao tăng)
-  if (newHeight > lastInnerHeight) {
-    const activeElement = document.activeElement;
-
-    if (activeElement && (activeElement.tagName === 'INPUT' || activeElement.tagName === 'TEXTAREA')) {
-      setTimeout(() => {
-        activeElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }, 300); // Đợi animation của OS hoàn tất
-    }
-  }
-
-  lastInnerHeight = newHeight;
-});
-
-
     </script>
-    
+    <script>
+    const stickyEl = document.getElementById('mainImage');
+    let prevHeight = window.innerHeight;
+    let keyboardVisible = false;
+    let resizeTimeout = null;
+
+    window.addEventListener('resize', () => {
+      const currentHeight = window.innerHeight;
+
+      // Bàn phím mở → chiều cao giảm
+      if (currentHeight < prevHeight) {
+        keyboardVisible = true;
+        stickyEl.classList.add('unsticky');
+      }
+
+      // Bàn phím tắt → chiều cao tăng
+      if (currentHeight > prevHeight && keyboardVisible) {
+        keyboardVisible = false;
+
+        if (resizeTimeout) clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+          stickyEl.classList.remove('unsticky');
+        }, 300); // delay cho layout ổn định
+      }
+
+      prevHeight = currentHeight;
+    });
+  </script>
   </body>
 </html>
