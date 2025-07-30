@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Face Image Editor</title>
+    <style>
+      canvas {
+        border: 1px solid #ccc;
+        display: block;
+        margin-top: 10px;
+      }
+      input {
+        margin: 5px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Upload Ảnh Nền:</h3>
+    <input type="file" id="bodyUpload" accept="image/*" />
+
+    <h3>Upload Ảnh Khuôn Mặt:</h3>
+    <input type="file" id="faceUpload" accept="image/*" />
+
+    <canvas id="canvas" width="500" height="500"></canvas>
+    <br />
+    <button id="downloadBtn">Tải ảnh kết quả</button>
+
+    <script>
+      const canvas = document.getElementById("canvas");
+      const ctx = canvas.getContext("2d");
+
+      const bodyUpload = document.getElementById("bodyUpload");
+      const faceUpload = document.getElementById("faceUpload");
+
+      let bodyImg = new Image();
+      let faceImg = new Image();
+      let isFocused = false;
+
+      const faceRect = { x: 150, y: 150, w: 100, h: 100 };
+
+      let dragging = false;
+      let resizing = false;
+      let dragOffset = { x: 0, y: 0 };
+      let resizeCorner = "";
+
+      const aspectRatio = faceRect.w / faceRect.h;
+
+      function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        if (bodyImg.src) {
+          ctx.drawImage(bodyImg, 0, 0, canvas.width, canvas.height);
+        }
+
+        if (faceImg.src && faceImg.complete && faceImg.naturalWidth > 0) {
+          ctx.drawImage(faceImg, faceRect.x, faceRect.y, faceRect.w, faceRect.h);
+
+          if (isFocused) {
+            ctx.fillStyle = "blue";
+            drawHandle(faceRect.x, faceRect.y);
+            drawHandle(faceRect.x + faceRect.w, faceRect.y);
+            drawHandle(faceRect.x, faceRect.y + faceRect.h);
+            drawHandle(faceRect.x + faceRect.w, faceRect.y + faceRect.h);
+          }
+        }
+      }
+
+      function drawHandle(x, y) {
+        ctx.beginPath();
+        ctx.arc(x, y, 5, 0, 2 * Math.PI);
+        ctx.fill();
+      }
+
+      function isInRect(x, y, rect) {
+        return (
+          x >= rect.x &&
+          x <= rect.x + rect.w &&
+          y >= rect.y &&
+          y <= rect.y + rect.h
+        );
+      }
+
+      function getHandleUnderMouse(x, y) {
+        const handles = {
+          "top-left": [faceRect.x, faceRect.y],
+          "top-right": [faceRect.x + faceRect.w, faceRect.y],
+          "bottom-left": [faceRect.x, faceRect.y + faceRect.h],
+          "bottom-right": [faceRect.x + faceRect.w, faceRect.y + faceRect.h],
+        };
+        for (const [corner, [hx, hy]] of Object.entries(handles)) {
+          const dx = x - hx;
+          const dy = y - hy;
+          if (dx * dx + dy * dy <= 25) return corner;
+        }
+        return null;
+      }
+
+      canvas.addEventListener("mousedown", (e) => {
+        const rect = canvas.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        const handle = getHandleUnderMouse(x, y);
+        if (handle) {
+          isFocused = true;
+          resizing = true;
+          resizeCorner = handle;
+          draw();
+          return;
+        }
+
+        if (isInRect(x, y, faceRect)) {
+          isFocused = true;
+          dragging = true;
+          dragOffset.x = x - faceRect.x;
+          dragOffset.y = y - faceRect.y;
+        } else {
+          isFocused = false;
+        }
+
+        draw();
+      });
+
+      canvas.addEventListener("mousemove", (e) => {
+        if (!dragging && !resizing) return;
+
+        const rect = canvas.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const minSize = 20;
+
+        if (dragging) {
+          faceRect.x = x - dragOffset.x;
+          faceRect.y = y - dragOffset.y;
+        }
+
+        if (resizing) {
+          let newW, newH;
+
+          switch (resizeCorner) {
+            case "top-left":
+              newW = faceRect.x + faceRect.w - x;
+              newH = newW / aspectRatio;
+              faceRect.x = faceRect.x + faceRect.w - newW;
+              faceRect.y = faceRect.y + faceRect.h - newH;
+              faceRect.w = newW;
+              faceRect.h = newH;
+              break;
+
+            case "top-right":
+              newW = x - faceRect.x;
+              newH = newW / aspectRatio;
+              faceRect.y = faceRect.y + faceRect.h - newH;
+              faceRect.w = newW;
+              faceRect.h = newH;
+              break;
+
+            case "bottom-left":
+              newW = faceRect.x + faceRect.w - x;
+              newH = newW / aspectRatio;
+              faceRect.x = faceRect.x + faceRect.w - newW;
+              faceRect.w = newW;
+              faceRect.h = newH;
+              break;
+
+            case "bottom-right":
+              newW = x - faceRect.x;
+              newH = newW / aspectRatio;
+              faceRect.w = newW;
+              faceRect.h = newH;
+              break;
+          }
+
+          // Giới hạn kích thước tối thiểu
+          faceRect.w = Math.max(minSize, faceRect.w);
+          faceRect.h = Math.max(minSize, faceRect.h);
+        }
+
+        draw();
+      });
+
+      canvas.addEventListener("mouseup", () => {
+        dragging = false;
+        resizing = false;
+      });
+
+      canvas.addEventListener("mouseleave", () => {
+        dragging = false;
+        resizing = false;
+      });
+
+      bodyUpload.addEventListener("change", (e) => {
+        const file = e.target.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.onload = (event) => {
+          const tempImg = new Image();
+          tempImg.onload = () => {
+            bodyImg = tempImg;
+            draw();
+          };
+          tempImg.src = event.target.result;
+        };
+        reader.readAsDataURL(file);
+      });
+
+      faceUpload.addEventListener("change", (e) => {
+        const file = e.target.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.onload = (event) => {
+          const tempImg = new Image();
+          tempImg.onload = () => {
+            faceImg = tempImg;
+            isFocused = true;
+            draw();
+          };
+          tempImg.src = event.target.result;
+        };
+        reader.readAsDataURL(file);
+      });
+
+      const downloadBtn = document.getElementById("downloadBtn");
+      downloadBtn.addEventListener("click", () => {
+        const link = document.createElement("a");
+        link.download = "ket-qua.png";
+        link.href = canvas.toDataURL("image/png");
+        link.click();
+      });
+
+      draw();
+    </script>
+  </body>
+</html>
