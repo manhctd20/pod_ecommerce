@@ -52,7 +52,13 @@
         }
 
         if (faceImg.src && faceImg.complete && faceImg.naturalWidth > 0) {
-          ctx.drawImage(faceImg, faceRect.x, faceRect.y, faceRect.w, faceRect.h);
+          ctx.drawImage(
+            faceImg,
+            faceRect.x,
+            faceRect.y,
+            faceRect.w,
+            faceRect.h
+          );
 
           if (isFocused) {
             ctx.fillStyle = "blue";
@@ -230,6 +236,100 @@
       });
 
       draw();
+
+      function getTouchPos(e) {
+        const rect = canvas.getBoundingClientRect();
+        const touch = e.touches[0];
+        return {
+          x: touch.clientX - rect.left,
+          y: touch.clientY - rect.top,
+        };
+      }
+
+      canvas.addEventListener("touchstart", (e) => {
+        e.preventDefault();
+        const { x, y } = getTouchPos(e);
+        const handle = getHandleUnderMouse(x, y);
+
+        if (handle) {
+          isFocused = true;
+          resizing = true;
+          resizeCorner = handle;
+          draw();
+          return;
+        }
+
+        if (isInRect(x, y, faceRect)) {
+          isFocused = true;
+          dragging = true;
+          dragOffset.x = x - faceRect.x;
+          dragOffset.y = y - faceRect.y;
+        } else {
+          isFocused = false;
+        }
+
+        draw();
+      });
+
+      canvas.addEventListener("touchmove", (e) => {
+        if (!dragging && !resizing) return;
+        e.preventDefault();
+        const { x, y } = getTouchPos(e);
+        const minSize = 20;
+
+        if (dragging) {
+          faceRect.x = x - dragOffset.x;
+          faceRect.y = y - dragOffset.y;
+        }
+
+        if (resizing) {
+          let newW, newH;
+
+          switch (resizeCorner) {
+            case "top-left":
+              newW = faceRect.x + faceRect.w - x;
+              newH = newW / aspectRatio;
+              faceRect.x = faceRect.x + faceRect.w - newW;
+              faceRect.y = faceRect.y + faceRect.h - newH;
+              faceRect.w = newW;
+              faceRect.h = newH;
+              break;
+
+            case "top-right":
+              newW = x - faceRect.x;
+              newH = newW / aspectRatio;
+              faceRect.y = faceRect.y + faceRect.h - newH;
+              faceRect.w = newW;
+              faceRect.h = newH;
+              break;
+
+            case "bottom-left":
+              newW = faceRect.x + faceRect.w - x;
+              newH = newW / aspectRatio;
+              faceRect.x = faceRect.x + faceRect.w - newW;
+              faceRect.w = newW;
+              faceRect.h = newH;
+              break;
+
+            case "bottom-right":
+              newW = x - faceRect.x;
+              newH = newW / aspectRatio;
+              faceRect.w = newW;
+              faceRect.h = newH;
+              break;
+          }
+
+          faceRect.w = Math.max(minSize, faceRect.w);
+          faceRect.h = Math.max(minSize, faceRect.h);
+        }
+
+        draw();
+      });
+
+      canvas.addEventListener("touchend", () => {
+        dragging = false;
+        resizing = false;
+      });
     </script>
   </body>
 </html>
