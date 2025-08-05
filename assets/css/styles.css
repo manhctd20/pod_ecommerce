@@ -245,6 +245,10 @@ header .menu-item:hover {
   display: flex;
   flex-direction: column;
 }
+.card-custom .card-text {
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
 
 .btn-discover {
   font-size: 20px;
@@ -262,13 +266,25 @@ header .menu-item:hover {
   aspect-ratio: 1 / 1;
   border-radius: 16px;
   overflow: hidden;
+  transition: transform 0.3s ease;
 }
-.category-slide img {
+.image-wrapper {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.image-wrapper img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 0.3s ease;
 }
+.image-wrapper:hover img {
+  transform: scale(1.06);
+}
+
 .swiper-button-prev:after,
 .swiper-button-next:after {
   display: none !important;
@@ -770,6 +786,23 @@ header .menu-item:hover {
 .swiper-gallery-wrapper {
   position: relative;
 }
+.swiper-gallery .swiper-wrapper {
+  position: relative;
+}
+.swiper-gallery .swiper-wrapper .swiper-slide {
+  inset: 0;
+  overflow: hidden;
+  border-radius: 15px;
+}
+.swiper-gallery .swiper-wrapper .swiper-slide img {
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+.swiper-gallery .swiper-wrapper .swiper-slide:hover img:not(.collection-thumb.active) {
+  transform: scale(1.06);
+}
+
 .swiper-gallery-wrapper:hover .gallery-nav {
   opacity: 1;
   visibility: visible;
@@ -803,6 +836,31 @@ header .menu-item:hover {
 .swiper-button-next.gallery-nav {
   right: -12px;
 }
+
+.swiper-artStyle-wrapper {
+  position: relative;
+}
+.swiper-artStyle .swiper-wrapper {
+  position: relative;
+}
+.swiper-artStyle .swiper-wrapper .swiper-slide {
+  inset: 0;
+  overflow: hidden;
+  border-radius: 15px;
+}
+.swiper-artStyle .swiper-wrapper .swiper-slide img {
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+.swiper-artStyle .swiper-wrapper .swiper-slide:hover:not(:first-child) img:not(.artStyle-thumb.active) {
+  transform: scale(1.06);
+}
+.artStyle-thumb.active {
+  border: 2px solid #ff939d !important;
+}
+
+
 .artStyle-nav {
   position: absolute;
   top: 50%;
