@@ -558,23 +558,6 @@
   }
 
   /* Cart */
-  /* .cart-card .cart-image {
-    width: 140px !important;
-  } */
-  /* .cart-title h5 {
-    font-size: 13px !important;
-  } */
-  /* .cart-meta li,
-  .cart-meta li span {
-    font-size: 10px;
-  } */
-  /* .payments .payments-icon img {
-    height: 28px !important;
-  } */
-  /* .cart-card,
-  .summary-card {
-    padding: 15px !important;
-  } */
   .cart-delivery {
     font-size: 10px !important;
   }
@@ -717,6 +700,9 @@
   header .promo-message {
     left: 45% !important;
   }
+  .btn-outline-custom {
+    font-size: 14px !important;
+  }
 }
 
 /* ----------------------
@@ -724,6 +710,9 @@
 -----------------------*/
 @media (min-width: 1200px) and (max-width: 1399.98px) {
   /* Desktop vừa */
+  .hot-trend .btn-outline-custom, .collection-section .btn-outline-custom, .best-selling .btn-outline-custom {
+    font-size: 14px !important;
+  }
 }
 
 /* ----------------------
